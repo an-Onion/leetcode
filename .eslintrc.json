@@ -11,6 +11,7 @@
   ],
   "rules": {
     "semi": [2, "always"],
+    "semi-spacing": ["error", {"before": false, "after": true}],
     "quotes": ["error", "single"],
     "object-curly-spacing": ["error", "always"]
   }
