@@ -8,7 +8,7 @@
 export function isValid(s: string): boolean {
   const stack = [];
 
-  const pairs: Record<string, string> = Object.freeze({'(': ')', '[': ']', '{': '}'});
+  const pairs: Record<string, string> = Object.freeze({ '(': ')', '[': ']', '{': '}' });
 
   for(const c of s){
     if( ['(', '[', '{'].includes(c) ){

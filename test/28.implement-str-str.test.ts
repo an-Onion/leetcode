@@ -1,4 +1,4 @@
-import {strStr} from '../src/28.implement-str-str';
+import { strStr } from '../src/28.implement-str-str';
 
 describe('Implement strStr()', () => {
   it('hello && ll', () => {

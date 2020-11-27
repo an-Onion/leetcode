@@ -1,4 +1,4 @@
-import {isValid} from '../src/20.valid-parentheses';
+import { isValid } from '../src/20.valid-parentheses';
 
 describe('Valid Parentheses', () => {
   it('()', () => {
