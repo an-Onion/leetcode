@@ -18,6 +18,11 @@ export class ListNode {
     return header.next;
   }
 
+  static toArray(list: ListNode): number[] {
+    if( !list ) return [];
+    return list.toArray();
+  }
+
   toArray(): number[] {
 
     const array: number[] = [this.val];
