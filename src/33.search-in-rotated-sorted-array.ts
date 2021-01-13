@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-function search(nums: number[], target: number): number {
+export function search(nums: number[], target: number): number {
 
   let [low, up] = [0, nums.length-1];
 
