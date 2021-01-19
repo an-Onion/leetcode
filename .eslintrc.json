@@ -10,6 +10,7 @@
     "plugin:@typescript-eslint/recommended"
   ],
   "rules": {
+    "no-unused-vars": "error",
     "semi": [2, "always"],
     "semi-spacing": ["error", {"before": false, "after": true}],
     "quotes": ["error", "single"],
