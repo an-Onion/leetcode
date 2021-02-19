@@ -6,7 +6,7 @@ export class ListNode {
     this.next = next === undefined ? null : next;
   }
 
-  static of(array: number[]): ListNode {
+  static of(array: number[]): ListNode | null {
     const header = new ListNode(-1);
     let tail = header;
 
@@ -18,7 +18,7 @@ export class ListNode {
     return header.next;
   }
 
-  static toArray(list: ListNode): number[] {
+  static toArray(list: ListNode | null): number[] {
     if( !list ) return [];
     return list.toArray();
   }
