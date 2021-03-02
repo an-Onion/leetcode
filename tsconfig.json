@@ -3,7 +3,6 @@
     "outDir": "./dist",
     "module": "commonjs",
     "target": "es2019",
-    "strict": true,
     "experimentalDecorators": true,
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
