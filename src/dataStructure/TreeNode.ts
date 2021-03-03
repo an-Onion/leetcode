@@ -18,19 +18,24 @@ export class TreeNode {
       const node = queue.shift();
       const left = array.shift();
 
-      if( left !== undefined ){
+      if( left !== undefined && left !== null ){
         node.left = new TreeNode(left);
         queue.push(node.left);
       }
       const right = array.shift();
 
-      if( right !== undefined ){
+      if( right !== undefined && right !== null ){
         node.right = new TreeNode(right);
         queue.push(node.right);
       }
     }
 
     return root;
+  }
+
+  static toArray(node: TreeNode | null) : number[] {
+    if( !node ) return [];
+    return node.toArray();
   }
 
   toArray(): number[] {

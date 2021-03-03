@@ -9,7 +9,7 @@ describe('Subtree of Another Tree', () => {
   });
 
   it('[3,4,5,1,2, undefined, undefined, undefined, undefined, 0] & [4,1,2]', () => {
-    const s = TreeNode.of([3, 4, 5, 1, 2, undefined, undefined, undefined, undefined, 0]);
+    const s = TreeNode.of([3, 4, 5, 1, 2, null, null, null, null, 0]);
     const t = TreeNode.of([4, 1, 2]);
     expect(isSubtree(s, t)).toBeFalsy();
   });
