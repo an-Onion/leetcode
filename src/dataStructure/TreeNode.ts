@@ -4,8 +4,8 @@ export class TreeNode {
   right: TreeNode | null;
   constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
     this.val = val === undefined ? 0 : val;
-    this.left = left === undefined ? null : left;
-    this.right = right === undefined ? null : right;
+    this.left = left || null;
+    this.right = right || null;
   }
 
   static of(array: number[]): TreeNode {
@@ -35,7 +35,11 @@ export class TreeNode {
 
   static toArray(node: TreeNode | null) : number[] {
     if( !node ) return [];
-    return node.toArray();
+    const arr =  node.toArray();
+    const last  = arr.reduceRight((acc, e, idx) => {
+      return acc || e !== null && idx;
+    }, undefined);
+    return arr.slice(0, last+1);
   }
 
   toArray(): number[] {
@@ -44,7 +48,7 @@ export class TreeNode {
 
     while( queue.length ) {
       const node = queue.shift();
-      array.push(node?.val);
+      array.push(node?.val || null);
 
       if( node ){
         queue.push(node.left);
