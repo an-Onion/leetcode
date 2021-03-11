@@ -37,7 +37,7 @@ export class TreeNode {
     if( !node ) return [];
     const arr =  node.toArray();
     const last  = arr.reduceRight((acc, e, idx) => {
-      return acc || e !== null && idx;
+      return acc || (e !== null && idx);
     }, undefined);
     return arr.slice(0, last+1);
   }
@@ -48,7 +48,7 @@ export class TreeNode {
 
     while( queue.length ) {
       const node = queue.shift();
-      array.push(node?.val || null);
+      array.push(node?.val ?? null);
 
       if( node ){
         queue.push(node.left);
