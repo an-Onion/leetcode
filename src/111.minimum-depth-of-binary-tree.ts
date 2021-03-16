@@ -1,7 +1,7 @@
 /*
- * @lc app=leetcode id=104 lang=typescript
+ * @lc app=leetcode id=111 lang=typescript
  *
- * [104] Maximum Depth of Binary Tree
+ * [111] Minimum Depth of Binary Tree
  */
 
 // @lc code=start
@@ -18,20 +18,27 @@
  *     }
  * }
  */
+
 import { TreeNode } from './dataStructure/TreeNode';
 
-export function maxDepth(root: TreeNode | null): number {
+export function minDepth(root: TreeNode | null): number {
+
+  if(!root) return 0;
 
   return DFS(root, (depth) => depth);
 
-  function DFS(node: TreeNode | null, next: (depth: number) => number): number {
-    if( !node ) return next(0);
-    return DFS(node.left, (leftDepth) => {
-      return DFS(node.right, (rightDepth) => {
-        return next( Math.max(leftDepth, rightDepth) + 1);
+  function DFS(node: TreeNode | null, next: (depth: number) => number): number{
+    if(!node) return next(Infinity);
+    if(!node.left && !node.right) return next(1);
+
+    return DFS(node.left, (left) => {
+      return DFS(node.right, (right) => {
+        const depth = Math.min(left, right) + 1;
+        return next(depth);
       });
     });
   }
+
 }
 // @lc code=end
 
