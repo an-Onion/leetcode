@@ -22,24 +22,26 @@ import { TreeNode } from './dataStructure/TreeNode';
 
 export function pathSum(root: TreeNode | null, targetSum: number): number[][] {
 
-  const ret: number[][] = [];
+  return DFS(root, [], (ret) => ret);
 
-  DFS(root, [], () => {return;});
+  type nextFunc = (res: number[][]) => number[][];
 
-  return ret;
+  function DFS(node: TreeNode | null, path: number[], cb: nextFunc): number[][] {
 
-  function DFS(node: TreeNode | null, path: number[], cb): void {
-
-    if( !node ) return cb();
+    if( !node ) return cb([]);
 
     const next = [...path, node.val];
 
-    if( node.left || node.right )
-      return DFS(node.left, next, () => DFS(node.right, next, cb));
-
     // node is leaf
-    if( sum(next) === targetSum ) ret.push(next);
-    return cb();
+    if( !node.left && !node.right )
+      return cb(sum(next) === targetSum ? [next]: []);
+
+    return DFS(node.left, next,
+      (left) => DFS(node.right, next,
+        (right) => cb([...left, ...right])
+      )
+    );
+
   }
 
   function sum(path: number[]): number {
