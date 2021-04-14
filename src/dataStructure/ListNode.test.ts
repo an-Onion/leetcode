@@ -14,4 +14,13 @@ describe('Linked List Node', () => {
     expect(ListNode.of([1, 2, 3]).toArray()).toStrictEqual([1, 2, 3]);
     expect(ListNode.of([1]).toArray()).toStrictEqual([1]);
   });
+
+  it('getTail', () => {
+    const e1: ListNode = ListNode.of([1]);
+    expect(ListNode.getTail(e1).val).toBe(1);
+
+    const e2: ListNode = ListNode.of([1,2]);
+    expect(ListNode.getTail(e2).val).toBe(2);
+
+  });
 });

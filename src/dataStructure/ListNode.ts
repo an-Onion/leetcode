@@ -23,6 +23,11 @@ export class ListNode {
     return list.toArray();
   }
 
+  static getTail(list: ListNode | null): ListNode {
+    while( list?.next ) list = list.next;
+    return list;
+  }
+
   toArray(): number[] {
 
     const array: number[] = [this.val];
