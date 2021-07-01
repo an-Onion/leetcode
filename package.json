@@ -1,5 +1,5 @@
 {
-  "license" : "MIT",
+  "license": "MIT",
   "scripts": {
     "lint": "eslint . --ext .ts",
     "test": "jest"

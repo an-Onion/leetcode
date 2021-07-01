@@ -4003,7 +4003,7 @@ typedarray-to-buffer@^3.1.5:
 
 typescript-collections@^1.3.3:
   version "1.3.3"
-  resolved "https://registry.npm.taobao.org/typescript-collections/download/typescript-collections-1.3.3.tgz#62d50d93c018c094d425eabee649f00ec5cc0fea"
+  resolved "https://registry.nlark.com/typescript-collections/download/typescript-collections-1.3.3.tgz#62d50d93c018c094d425eabee649f00ec5cc0fea"
   integrity sha1-YtUNk8AYwJTUJeq+5knwDsXMD+o=
 
 typescript@^4.1.2:
