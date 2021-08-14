@@ -9,6 +9,10 @@ describe('Jump Game II', () => {
   it('[2,3,0,1,4]', () => {
     expect(jump([2,3,0,1,4])).toBe(2);
   });
+
+  it('[0]', () => {
+    expect(jump([0])).toBe(0);
+  });
 });
 
 

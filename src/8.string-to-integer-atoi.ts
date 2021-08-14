@@ -7,25 +7,22 @@
 // @lc code=start
 export function myAtoi(s: string): number {
 
-  const regex = /([+-]?)([0-9]*)(\D*)(\.*)/g;
+  const regex = /([+-]?)(\d*)/g;
 
-  const match = regex.exec(s.trim());
+  const [, sign, numeric] = regex.exec(s.trimStart());
 
-  const [, sign, numeric] = match;
-
-  if( !numeric ) return 0;
+  if(!numeric) return 0;
 
   let res = 0;
-
-  for(const c of numeric){
-    const cur: number = c.charCodeAt(0) - 48;
-    res = 10*res + cur;
+  for(let i = 0; i < numeric.length; ++i){
+    res = res*10 + (numeric[i].charCodeAt(0) - '0'.charCodeAt(0));
   }
 
-  if( sign === '-' )
-    return Math.max(-2147483648, -res);
+  if( sign === '-' ){
+    return Math.max(1 << 31, -res);
+  }
 
-  return Math.min(2147483647, res);
+  return Math.min( Math.abs(1<<31)-1, res);
 }
 // @lc code=end
 

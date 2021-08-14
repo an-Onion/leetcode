@@ -6,14 +6,14 @@
 
 // @lc code=start
 export function jump(nums: number[]): number {
-  let [nextCovered, thePreviousRange, step] = [0,0,0];
+  let step = 0, covered = 0, next = 0;
 
-  for(let i = 0; i < nums.length; i++) {
-    if( i > thePreviousRange ){
+  for(let i = 0; i < nums.length && covered < nums.length-1; ++i){
+    if( i > covered ){
+      covered = next;
       step++;
-      thePreviousRange = nextCovered;
     }
-    nextCovered = Math.max(nextCovered, i+nums[i]);
+    next = Math.max(next, i+nums[i]);
   }
 
   return step;
