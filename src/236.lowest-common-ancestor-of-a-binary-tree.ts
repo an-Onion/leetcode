@@ -21,16 +21,26 @@
 import { TreeNode } from './dataStructure/TreeNode';
 
 export function lowestCommonAncestor(root: TreeNode | null, p: TreeNode | null, q: TreeNode | null): TreeNode | null {
-  function dfs(node: TreeNode): TreeNode | null {
-    if( !node || node.val === p.val || node.val === q.val ) return node;
 
-    const left = dfs(node.left);
-    const right = dfs(node.right);
+  type nextFunc = (val: TreeNode | null) => TreeNode | null;
 
-    return (left && right) ? node : (left || right);
+  return DFS(root, (node) => node);
+
+  function DFS(node: TreeNode, next: nextFunc): TreeNode | null{
+
+    if( !node ) return next(null);
+
+    if([p.val, q.val].includes(node.val))
+      return next(node);
+
+    return DFS(node.left, (left) => {
+      return DFS(node.right, (right) => {
+        const ret = (left && right) ? node : (left || right);
+        return next(ret);
+      });
+    });
+
   }
-
-  return dfs(root);
 }
 // @lc code=end
 

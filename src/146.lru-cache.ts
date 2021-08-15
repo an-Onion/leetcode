@@ -44,13 +44,13 @@ export class LRUCache {
       return node;
   }
 
-  toTop(node: DoubleLink) {
+  toTop(node: DoubleLink): void {
      node.next = this.head.next;
      if (node.next) node.next.pre = node;
      this.head.next = node;
      if( !this.tail ) this.tail = node;
   }
-  checkLength() {
+  checkLength(): void {
       if( this.length > this.limit ){
         const key = this.tail.key;
         this.map.delete(key);
@@ -58,7 +58,7 @@ export class LRUCache {
         this.length--;
       }
   }
-  delete(node: DoubleLink) {
+  delete(node: DoubleLink): DoubleLink {
     if( this.tail === node ){
       this.tail = node.pre;
     }

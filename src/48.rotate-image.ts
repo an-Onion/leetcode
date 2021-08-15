@@ -11,20 +11,15 @@
 export function rotate(matrix: number[][]): void {
   const N = matrix.length;
 
-  for(let i = 0; i < (N / 2 | 0); i++) {
-    const len = N - 1 - i;
-    for(let j = i; j < len; j++) {
-      swap([i,j], [j, N-1-i]);
-      swap([i,j], [N-1-i, N-1-j]);
-      swap([i,j], [N-1-j, i]);
+  for(let i = 0; i < N / 2; ++i){
+    for(let j = i; j < N-1-i; ++j ){
+      const temp = matrix[i][j];
+      matrix[i][j] = matrix[N-1-j][i];
+      matrix[N-1-j][i] = matrix[N-1-i][N-1-j];
+      matrix[N-1-i][N-1-j] = matrix[j][N-1-i];
+      matrix[j][N-1-i] = temp;
     }
   }
-
-
-  function swap(a: [number, number], b: [number, number]): void {
-    [ matrix[a[0]][a[1]], matrix[b[0]][b[1]] ] = [ matrix[b[0]][b[1]], matrix[a[0]][a[1]] ];
-  }
-
 }
 // @lc code=end
 
