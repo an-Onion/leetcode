@@ -20,19 +20,32 @@
 import { ListNode } from './dataStructure/ListNode';
 
 export function addTwoNumbers(l1: ListNode | null, l2: ListNode | null): ListNode | null {
-  const dummy: ListNode =  new ListNode();
-  let cursor: ListNode | null = dummy;
+
+  const dummy: ListNode = new ListNode(-1);
+
   let carry = 0;
 
-  while( l1 || l2 || carry){
-    const sum = (l1?.val || 0) + (l2?.val || 0) + carry;
-    cursor.next = new ListNode(sum % 10);
-    carry = sum / 10 | 0;
-    cursor = cursor.next;
-    l1 = l1?.next;
-    l2 = l2?.next;
+  let pre = dummy;
+
+  while(l1 || l2){
+
+    if( l2 ){
+      carry += l2.val;
+      l2 = l2.next;
+    }
+
+    if( l1 ){
+      carry += l1.val;
+      l1 = l1.next;
+    }
+    pre.next = new ListNode(carry % 10);
+    carry = carry / 10 | 0;
+    pre = pre.next;
   }
+
+  if( carry ) pre.next = new ListNode(carry);
 
   return dummy.next;
 }
+
 // @lc code=end
