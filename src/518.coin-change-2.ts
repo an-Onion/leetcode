@@ -10,12 +10,11 @@ export function change(amount: number, coins: number[]): number {
   const dp: number[] = Array(amount+1).fill(0);
 
   dp[0] = 1;
-  for(const c of coins){
-    for(let i = c; i <= amount; ++i){
-      dp[i] += dp[i-c];
+  for( const coin of coins ){
+    for(let j = coin; j <= amount; ++j){
+      dp[j] += dp[j-coin];
     }
   }
-
   return dp[amount];
 }
 // @lc code=end
