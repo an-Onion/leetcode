@@ -7,7 +7,7 @@
 // @lc code=start
 export function removeKdigits(num: string, k: number): string {
 
-  const stack = [];
+  const stack: string[] = [];
 
   for(let i = 0; i < num.length; i++) {
     while(k && stack[stack.length-1] > num[i]){
