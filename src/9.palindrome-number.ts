@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-export function isPalindrome(x: number): boolean {
+export function isPalindrome( x: number ): boolean {
 
   if( x < 0 ) return false;
   if( x === 0 ) return true;
@@ -20,7 +20,7 @@ export function isPalindrome(x: number): boolean {
     if( tail === x ) return true;
 
     x = x / 10 | 0;
-    if( tail === x) return true;
+    if( tail === x ) return true;
   }
 
   return false;

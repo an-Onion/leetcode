@@ -5,27 +5,27 @@
  */
 
 // @lc code=start
-export function longestCommonPrefix(strs: string[]): string {
+export function longestCommonPrefix( strs: string[] ): string {
 
-  function commonPrefix(pre: string, target: string): string {
+  function commonPrefix( pre: string, target: string ): string {
     let low = 0, high = pre.length;
 
     while( low <= high ){
-      const mid = (low + high) / 2 | 0;
+      const mid = ( low + high ) / 2 | 0;
 
-      if( target.startsWith(pre.substring(0, mid)) )
+      if( target.startsWith( pre.substring( 0, mid ) ) )
         low = mid + 1;
       else
         high = mid -1;
     }
 
-    return pre.substring(0, high);
+    return pre.substring( 0, high );
   }
-  strs.sort((a, b) => a.length - b.length);
+  strs.sort( ( a, b ) => a.length - b.length );
   let pre = strs[0] || '';
 
-  for(const str of strs){
-    pre = commonPrefix(pre, str);
+  for( const str of strs ){
+    pre = commonPrefix( pre, str );
   }
 
   return pre;

@@ -19,24 +19,24 @@
  * }
  */
 import { TreeNode } from './dataStructure/TreeNode';
-export function rightSideView(root: TreeNode | null): number[] {
+export function rightSideView( root: TreeNode | null ): number[] {
 
   if( !root ) return [];
 
   const queue = [root];
   let count = 1;
   const ret = [];
-  while(queue.length) {
+  while( queue.length ) {
 
     const node = queue.shift();
 
-    node.left && queue.push(node.left);
-    node.right && queue.push(node.right);
+    node.left && queue.push( node.left );
+    node.right && queue.push( node.right );
 
-    if(--count) continue;
+    if( --count ) continue;
 
     count = queue.length;
-    ret.push(node.val);
+    ret.push( node.val );
   }
   return ret;
 }

@@ -19,17 +19,17 @@
 
 import { ListNode } from './dataStructure/ListNode';
 
-export function partition(head: ListNode | null, x: number): ListNode | null {
+export function partition( head: ListNode | null, x: number ): ListNode | null {
 
-  const dummy = new ListNode(-1, head);
+  const dummy = new ListNode( -1, head );
   let pre = dummy;
-  const partition = new ListNode(-1);
+  const partition = new ListNode( -1 );
   let pivot = partition;
 
   while( pre.next ){
     const p = pre.next;
 
-    if(p.val >= x) {
+    if( p.val >= x ) {
       pre = pre.next;
       continue;
     }

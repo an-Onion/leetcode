@@ -21,27 +21,27 @@
 
 import { TreeNode } from './dataStructure/TreeNode';
 
-export function levelOrder(root: TreeNode | null): number[][] {
+export function levelOrder( root: TreeNode | null ): number[][] {
 
   if( !root ) return [];
 
-  const queue: (TreeNode | null)[] = [];
+  const queue: ( TreeNode | null )[] = [];
 
-  queue.push(root);
+  queue.push( root );
   const ret = [];
   let count = 1, cur = [];
 
-  while(queue.length) {
+  while( queue.length ) {
 
     const node = queue.shift();
-    cur.push(node.val);
+    cur.push( node.val );
 
-    node.left && queue.push(node.left);
-    node.right && queue.push(node.right);
+    node.left && queue.push( node.left );
+    node.right && queue.push( node.right );
 
     if( --count ) continue;
 
-    ret.push(cur);
+    ret.push( cur );
     cur = [];
     count = queue.length;
   }

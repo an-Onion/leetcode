@@ -12,27 +12,27 @@ export class MyCircularDeque {
     queue: number[];
     front: number;
 
-    constructor(k: number) {
+    constructor( k: number ) {
       this.capacity = k;
       this.length = 0;
-      this.queue = Array(k).fill(-1);
+      this.queue = Array( k ).fill( -1 );
       this.front = k-1;
     }
 
     getRearIndex(): number {
-      return (this.front + this.length-1 + this.capacity) % this.capacity;
+      return ( this.front + this.length-1 + this.capacity ) % this.capacity;
     }
 
-    insertFront(value: number): boolean {
+    insertFront( value: number ): boolean {
       if( this.isFull() ) return false;
 
       this.length++;
-      this.front = (this.front - 1 + this.capacity ) % this.capacity;
+      this.front = ( this.front - 1 + this.capacity ) % this.capacity;
       this.queue[this.front] =  value;
       return true;
     }
 
-    insertLast(value: number): boolean {
+    insertLast( value: number ): boolean {
       if( this.isFull() ) return false;
 
       this.length++;
@@ -42,14 +42,14 @@ export class MyCircularDeque {
     }
 
     deleteFront(): boolean {
-      if(this.isEmpty()) return false;
+      if( this.isEmpty() ) return false;
       this.length--;
-      this.front = (this.front + 1 + this.capacity) % this.capacity;
+      this.front = ( this.front + 1 + this.capacity ) % this.capacity;
       return true;
     }
 
     deleteLast(): boolean {
-      if(this.isEmpty()) return false;
+      if( this.isEmpty() ) return false;
       this.length--;
       return true;
     }

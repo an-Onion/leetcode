@@ -21,20 +21,20 @@
 
 import { TreeNode } from './dataStructure/TreeNode';
 
-export function sumRootToLeaf(root: TreeNode | null): number {
+export function sumRootToLeaf( root: TreeNode | null ): number {
 
-  return DFS(root, 0, (ret) => ret);
+  return DFS( root, 0, ( ret ) => ret );
 
-  function DFS(node: TreeNode | null, sum: number, next: (val: number) => number): number {
+  function DFS( node: TreeNode | null, sum: number, next: ( val: number ) => number ): number {
 
-    if( !node ) return next(0);
-    sum = (sum << 1) | node.val;
-    if( node.left === node.right ) return next(sum);
+    if( !node ) return next( 0 );
+    sum = ( sum << 1 ) | node.val;
+    if( node.left === node.right ) return next( sum );
 
-    return DFS(node.left, sum,
-      (left) => DFS(node.right, sum,
-        (right) => next(left + right)
-    ));
+    return DFS( node.left, sum,
+      ( left ) => DFS( node.right, sum,
+        ( right ) => next( left + right )
+    ) );
   }
 }
 // @lc code=end

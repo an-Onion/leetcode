@@ -19,13 +19,13 @@
 
 import { ListNode } from './dataStructure/ListNode';
 
-export function deleteDuplicates(head: ListNode | null): ListNode | null {
+export function deleteDuplicates( head: ListNode | null ): ListNode | null {
 
-  const dummy = new ListNode(Infinity, head);
+  const dummy = new ListNode( Infinity, head );
 
   let pre = dummy, slow = head, fast = head;
 
-  while(slow) {
+  while( slow ) {
 
     while( fast?.val === slow.val )
       fast = fast.next;

@@ -21,44 +21,44 @@
 
 import { TreeNode } from './dataStructure/TreeNode';
 
-export function distanceK(root: TreeNode | null, target: TreeNode | null, k: number): number[] {
+export function distanceK( root: TreeNode | null, target: TreeNode | null, k: number ): number[] {
 
-  const dist = Array(501).fill(-1);
+  const dist = Array( 501 ).fill( -1 );
   dist[target.val] = 0;
 
-  findTarget(root);
+  findTarget( root );
 
-  calcDistance(root, -1);
+  calcDistance( root, -1 );
 
   const ret: number[] = [];
 
-  for(let i = 0; i < dist.length; i++) {
+  for( let i = 0; i < dist.length; i++ ) {
     if( dist[i] === k ){
-      ret.push(i);
+      ret.push( i );
     }
   }
 
   return ret;
 
-  function calcDistance(node: TreeNode | null, pre: number): void {
+  function calcDistance( node: TreeNode | null, pre: number ): void {
     if( !node ) return;
     if( dist[node.val] === -1 ){
       dist[node.val] = pre + 1;
     }
-    calcDistance(node.left, dist[node.val]);
-    calcDistance(node.right, dist[node.val]);
+    calcDistance( node.left, dist[node.val] );
+    calcDistance( node.right, dist[node.val] );
   }
 
-  function findTarget(node: TreeNode | null):number {
+  function findTarget( node: TreeNode | null ):number {
     if( !node ) return -1;
     if( node.val === target.val ) return 0;
 
-    const left = findTarget(node.left);
+    const left = findTarget( node.left );
     if( left >= 0 ){
       return dist[node.val] = left+1;
     }
 
-    const right = findTarget(node.right);
+    const right = findTarget( node.right );
     if( right >= 0 ){
       return dist[node.val] = right+1;
     }

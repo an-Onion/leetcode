@@ -20,25 +20,25 @@
  */
 import { TreeNode } from './dataStructure/TreeNode';
 
-export function lowestCommonAncestor(root: TreeNode | null, p: TreeNode | null, q: TreeNode | null): TreeNode | null {
+export function lowestCommonAncestor( root: TreeNode | null, p: TreeNode | null, q: TreeNode | null ): TreeNode | null {
 
-  type nextFunc = (val: TreeNode | null) => TreeNode | null;
+  type nextFunc = ( val: TreeNode | null ) => TreeNode | null;
 
-  return DFS(root, (node) => node);
+  return DFS( root, ( node ) => node );
 
-  function DFS(node: TreeNode, next: nextFunc): TreeNode | null{
+  function DFS( node: TreeNode, next: nextFunc ): TreeNode | null{
 
-    if( !node ) return next(null);
+    if( !node ) return next( null );
 
-    if([p.val, q.val].includes(node.val))
-      return next(node);
+    if( [p.val, q.val].includes( node.val ) )
+      return next( node );
 
-    return DFS(node.left, (left) => {
-      return DFS(node.right, (right) => {
-        const ret = (left && right) ? node : (left || right);
-        return next(ret);
-      });
-    });
+    return DFS( node.left, ( left ) => {
+      return DFS( node.right, ( right ) => {
+        const ret = ( left && right ) ? node : ( left || right );
+        return next( ret );
+      } );
+    } );
 
   }
 }

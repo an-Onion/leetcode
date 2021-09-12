@@ -19,9 +19,9 @@
 
 import { ListNode } from './dataStructure/ListNode';
 
-export function mergeTwoLists(l1: ListNode | null, l2: ListNode | null): ListNode | null {
+export function mergeTwoLists( l1: ListNode | null, l2: ListNode | null ): ListNode | null {
 
-  const dummy = new ListNode(-1);
+  const dummy = new ListNode( -1 );
   let link: ListNode = dummy;
 
   while( l1 || l2 ) {

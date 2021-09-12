@@ -20,16 +20,16 @@
  */
 import { TreeNode } from './dataStructure/TreeNode';
 
-export function sortedArrayToBST(nums: number[]): TreeNode | null {
+export function sortedArrayToBST( nums: number[] ): TreeNode | null {
 
-  if(!nums?.length) return null;
+  if( !nums?.length ) return null;
 
   const pivot = nums.length  >> 1;
-  const left = sortedArrayToBST(nums.splice(0, pivot));
+  const left = sortedArrayToBST( nums.splice( 0, pivot ) );
   const val = nums.shift();
-  const right = sortedArrayToBST(nums);
+  const right = sortedArrayToBST( nums );
 
-  return new TreeNode(val, left, right);
+  return new TreeNode( val, left, right );
 
 }
 // @lc code=end

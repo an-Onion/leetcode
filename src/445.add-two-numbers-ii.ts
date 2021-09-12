@@ -18,45 +18,45 @@
  */
 import { ListNode } from './dataStructure/ListNode';
 
-export function addTwoNumbers(l1: ListNode | null, l2: ListNode | null): ListNode | null {
+export function addTwoNumbers( l1: ListNode | null, l2: ListNode | null ): ListNode | null {
 
-  if(!l1) return l2;
-  if(!l2) return l1;
+  if( !l1 ) return l2;
+  if( !l2 ) return l1;
 
-  function length(list: ListNode | null): number {
+  function length( list: ListNode | null ): number {
     let len = 0;
     let header = list;
-    while(header){
+    while( header ){
       len++;
       header = header.next;
     }
     return len;
   }
   //  calculate length of lists
-  const [len1, len2] = [length(l1), length(l2)];
+  const [len1, len2] = [length( l1 ), length( l2 )];
 
-  const delta = Math.abs(len1 - len2);
+  const delta = Math.abs( len1 - len2 );
   let [long, short] = len1 > len2 ? [l1, l2] : [l2, l1];
 
   let header = null;
 
   // add long list
-  for(let i = 0; i < delta; i++){
-    header = new ListNode(long.val, header);
+  for( let i = 0; i < delta; i++ ){
+    header = new ListNode( long.val, header );
     long = long.next;
   }
 
   // sum of 2 lists;
-  while(short){
+  while( short ){
     const sum = long.val+short.val;
-    header = new ListNode(sum, header);
+    header = new ListNode( sum, header );
     long = long.next;
     short = short.next;
   }
 
-  const dummy = new ListNode(-1);
+  const dummy = new ListNode( -1 );
   let carry = 0;
-  while(header){
+  while( header ){
     const val = header.val + carry;
     carry = val / 10 | 0;
     header.val = val % 10;
@@ -67,7 +67,7 @@ export function addTwoNumbers(l1: ListNode | null, l2: ListNode | null): ListNod
   }
 
   if( carry ) {
-    const sig = new ListNode(carry, dummy.next);
+    const sig = new ListNode( carry, dummy.next );
     dummy.next = sig;
   }
 

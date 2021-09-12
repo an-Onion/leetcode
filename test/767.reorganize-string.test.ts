@@ -1,15 +1,15 @@
 import { reorganizeString } from '../src/767.reorganize-string';
 
-describe('Reorganize String', () => {
+describe( 'Reorganize String', () => {
 
-  it('aab', () => {
+  it( 'aab', () => {
     const s = 'aab';
-    expect(reorganizeString(s)).toBe('aba');
-  });
+    expect( reorganizeString( s ) ).toBe( 'aba' );
+  } );
 
-  it('aaab', () => {
+  it( 'aaab', () => {
     const s = 'aaab';
-    expect(reorganizeString(s)).toBe('');
-  });
+    expect( reorganizeString( s ) ).toBe( '' );
+  } );
 
-});
+} );

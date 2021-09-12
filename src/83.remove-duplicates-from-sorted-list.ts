@@ -18,12 +18,12 @@
  */
 import { ListNode } from './dataStructure/ListNode';
 
-export function deleteDuplicates(head: ListNode | null): ListNode | null {
-  const dummy: ListNode = new ListNode(Infinity, head);
+export function deleteDuplicates( head: ListNode | null ): ListNode | null {
+  const dummy: ListNode = new ListNode( Infinity, head );
 
   let pre = dummy, point = head;
 
-  while(point){
+  while( point ){
     if( pre.val === point.val ){
       pre.next = point.next;
     } else {

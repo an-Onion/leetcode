@@ -20,23 +20,23 @@
  */
 import { TreeNode } from './dataStructure/TreeNode';
 
-export function sumNumbers(root: TreeNode | null): number {
+export function sumNumbers( root: TreeNode | null ): number {
 
-  return DFS(root, 0, (arr) => arr.reduce((a, b) => a + b, 0));
+  return DFS( root, 0, ( arr ) => arr.reduce( ( a, b ) => a + b, 0 ) );
 
-  type nextFunc = (val: number[]) => number;
+  type nextFunc = ( val: number[] ) => number;
 
-  function DFS(node: TreeNode | null, pre: number, next: nextFunc) {
+  function DFS( node: TreeNode | null, pre: number, next: nextFunc ) {
 
-    if( !node ) return next([]);
+    if( !node ) return next( [] );
 
     const sum = pre * 10 + node.val;
 
-    if( !node.left && !node.right ) return next([sum]);
+    if( !node.left && !node.right ) return next( [sum] );
 
-    return DFS(node.left, sum,
-      (left) => DFS(node.right, sum,
-        (right) => next([...left, ...right])
+    return DFS( node.left, sum,
+      ( left ) => DFS( node.right, sum,
+        ( right ) => next( [...left, ...right] )
       )
     );
   }

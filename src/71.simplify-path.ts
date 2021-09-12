@@ -5,23 +5,23 @@
  */
 
 // @lc code=start
-export function simplifyPath(path: string): string {
+export function simplifyPath( path: string ): string {
 
-  const paths = path.split('/').filter(p => p && p !== '.');
+  const paths = path.split( '/' ).filter( p => p && p !== '.' );
 
   const res = [];
 
-  for(const p of paths){
+  for( const p of paths ){
 
     if( p !== '..' ){
-      res.push(p);
+      res.push( p );
       continue;
     }
 
     if( res.length ) res.pop();
   }
 
-  return '/' + res.join('/');
+  return '/' + res.join( '/' );
 }
 // @lc code=end
 

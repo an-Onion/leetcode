@@ -8,17 +8,17 @@
 
 import { PriorityQueue } from 'typescript-collections';
 
-export function lastStoneWeight(stones: number[]): number {
+export function lastStoneWeight( stones: number[] ): number {
   const Q = new PriorityQueue<number>();
 
-  stones.forEach((stone) => Q.enqueue(stone));
+  stones.forEach( ( stone ) => Q.enqueue( stone ) );
 
   while( Q.size() > 1 ){
     const first = Q.dequeue();
     const second = Q.dequeue();
     if( first === second ) continue;
 
-    Q.enqueue(first -second);
+    Q.enqueue( first -second );
   }
 
   const res = Q.dequeue();

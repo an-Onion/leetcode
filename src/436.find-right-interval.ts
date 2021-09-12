@@ -5,14 +5,14 @@
  */
 
 // @lc code=start
-export function findRightInterval(intervals: number[][]): number[] {
+export function findRightInterval( intervals: number[][] ): number[] {
 
 
   const sortedIntervals: number[][] = intervals
-                                        .map((interval, idx) => [...interval, idx])
-                                        .sort((a, b) => a[0] - b[0]);
+                                        .map( ( interval, idx ) => [...interval, idx] )
+                                        .sort( ( a, b ) => a[0] - b[0] );
 
-  const bsUpBound = (target: number): number => {
+  const bsUpBound = ( target: number ): number => {
     let l = 0, u = sortedIntervals.length-1;
 
     while( l <= u ){
@@ -24,7 +24,7 @@ export function findRightInterval(intervals: number[][]): number[] {
     return l >= sortedIntervals.length ? -1 : sortedIntervals[l][2];
   };
 
-  return intervals.map(([, end]) => bsUpBound(end));
+  return intervals.map( ( [, end] ) => bsUpBound( end ) );
 }
 // @lc code=end
 

@@ -5,14 +5,14 @@
  */
 
 // @lc code=start
-export function countAndSay(n: number): string {
+export function countAndSay( n: number ): string {
 
   if( n === 1 ) return '1';
 
-  const nMinus1: string = countAndSay(n-1);
+  const nMinus1: string = countAndSay( n-1 );
   let res = '', pre: string = nMinus1[0], count = 0;
 
-  for(const c of  nMinus1+'#') {
+  for( const c of  nMinus1+'#' ) {
     if( c === pre )  count += 1;
     else {
       res += count+pre;

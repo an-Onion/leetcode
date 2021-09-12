@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-export function sortedSquares(nums: number[]): number[] {
+export function sortedSquares( nums: number[] ): number[] {
 
   let i = 0, j = nums.length-1;
 
@@ -15,10 +15,10 @@ export function sortedSquares(nums: number[]): number[] {
     const head = nums[i] * nums[i], tail = nums[j] * nums[j];
 
     if( head > tail ) {
-      output.push(head);
+      output.push( head );
       i++;
     } else {
-      output.push(tail);
+      output.push( tail );
       j--;
     }
   }

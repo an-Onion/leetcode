@@ -5,26 +5,26 @@
  */
 
 // @lc code=start
-export function eventualSafeNodes(graph: number[][]): number[] {
+export function eventualSafeNodes( graph: number[][] ): number[] {
 
-  const color: number[] = Array(graph.length).fill(0);
+  const color: number[] = Array( graph.length ).fill( 0 );
 
   const ret: number[] = [];
 
-  for(let i = 0; i < graph.length; i++) {
-    if( DFS(i) ) ret.push(i);
+  for( let i = 0; i < graph.length; i++ ) {
+    if( DFS( i ) ) ret.push( i );
   }
 
   return ret;
 
-  function DFS(start: number): boolean {
+  function DFS( start: number ): boolean {
 
     if( color[start] ) return color[start] === 1;
 
     color[start] = 2;
 
-    for(const next of graph[start]) {
-      if( !DFS(next) ) return false;
+    for( const next of graph[start] ) {
+      if( !DFS( next ) ) return false;
     }
 
     color[start] = 1;

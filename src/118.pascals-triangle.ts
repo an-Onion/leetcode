@@ -5,18 +5,18 @@
  */
 
 // @lc code=start
-export function generate(numRows: number): number[][] {
+export function generate( numRows: number ): number[][] {
 
   const res: number[][] = [];
 
-  for(let i = 0; i < numRows; i++) {
+  for( let i = 0; i < numRows; i++ ) {
     const pre: number[] = res[i-1] || [];
     const next: number[] = [1];
 
-    for(let j = 0; j <  i; ++j ){
-      next.push( pre[j] + (pre[j+1] || 0));
+    for( let j = 0; j <  i; ++j ){
+      next.push( pre[j] + ( pre[j+1] || 0 ) );
     }
-    res.push(next);
+    res.push( next );
   }
 
   return res;

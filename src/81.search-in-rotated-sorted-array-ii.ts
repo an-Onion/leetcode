@@ -5,11 +5,11 @@
  */
 
 // @lc code=start
-export function search(nums: number[], target: number): boolean {
+export function search( nums: number[], target: number ): boolean {
 
   let low = 0, up = nums.length-1;
 
-  while(low <= up){
+  while( low <= up ){
 
     if( low !== up && nums[low] === nums[up] ){
       low++;
@@ -18,10 +18,10 @@ export function search(nums: number[], target: number): boolean {
 
     const mid = low+up >> 1;
 
-    if(nums[mid] === target) return true;
+    if( nums[mid] === target ) return true;
 
     if( nums[mid] < nums[low] ){
-      if( target > nums[mid] && target <= nums[up]) low = mid + 1;
+      if( target > nums[mid] && target <= nums[up] ) low = mid + 1;
       else up = mid - 1;
     } else {
       if( target < nums[mid] && target >= nums[low] ) up = mid -1;

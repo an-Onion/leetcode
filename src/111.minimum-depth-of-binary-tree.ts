@@ -21,22 +21,22 @@
 
 import { TreeNode } from './dataStructure/TreeNode';
 
-export function minDepth(root: TreeNode | null): number {
+export function minDepth( root: TreeNode | null ): number {
 
-  if(!root) return 0;
+  if( !root ) return 0;
 
-  return DFS(root, (depth) => depth);
+  return DFS( root, ( depth ) => depth );
 
-  function DFS(node: TreeNode | null, next: (depth: number) => number): number{
-    if(!node) return next(Infinity);
-    if(!node.left && !node.right) return next(1);
+  function DFS( node: TreeNode | null, next: ( depth: number ) => number ): number{
+    if( !node ) return next( Infinity );
+    if( !node.left && !node.right ) return next( 1 );
 
-    return DFS(node.left, (left) => {
-      return DFS(node.right, (right) => {
-        const depth = Math.min(left, right) + 1;
-        return next(depth);
-      });
-    });
+    return DFS( node.left, ( left ) => {
+      return DFS( node.right, ( right ) => {
+        const depth = Math.min( left, right ) + 1;
+        return next( depth );
+      } );
+    } );
   }
 
 }

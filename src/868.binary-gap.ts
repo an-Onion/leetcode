@@ -5,15 +5,15 @@
  */
 
 // @lc code=start
-export function binaryGap(n: number): number {
+export function binaryGap( n: number ): number {
 
   let ans = 0, sofar = -1;
 
-  for(let i = 0; i <= 30; i++) {
-    if( ! (n & (1<<i)) ) continue;
+  for( let i = 0; i <= 30; i++ ) {
+    if( ! ( n & ( 1<<i ) ) ) continue;
 
     if( sofar >= 0 )
-      ans = Math.max(ans, i-sofar);
+      ans = Math.max( ans, i-sofar );
 
     sofar = i;
   }

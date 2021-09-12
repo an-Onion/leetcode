@@ -20,27 +20,27 @@
  */
 import { TreeNode } from './dataStructure/TreeNode';
 
-export function isBalanced(root: TreeNode | null): boolean {
+export function isBalanced( root: TreeNode | null ): boolean {
 
-  return DFS(root, (isValid: boolean) => isValid);
+  return DFS( root, ( isValid: boolean ) => isValid );
 
-  type nextFuc = (isValid: boolean, depth: number) => boolean;
+  type nextFuc = ( isValid: boolean, depth: number ) => boolean;
 
-  function DFS(node: TreeNode | null, next: nextFuc): boolean {
-    if( !node ) return next(true, 0);
+  function DFS( node: TreeNode | null, next: nextFuc ): boolean {
+    if( !node ) return next( true, 0 );
 
-    return DFS(node.left, ( isL, lD ) => {
-      if(!isL) return next(false, 0);
+    return DFS( node.left, ( isL, lD ) => {
+      if( !isL ) return next( false, 0 );
 
-      return DFS(node.right, ( isR, rD ) => {
-        if(!isR ) return next(false, 0);
+      return DFS( node.right, ( isR, rD ) => {
+        if( !isR ) return next( false, 0 );
 
-        if( Math.abs(lD-rD) > 1) return next(false, 0);
+        if( Math.abs( lD-rD ) > 1 ) return next( false, 0 );
 
-        const depth = Math.max(lD, rD) + 1;
-        return next(true, depth);
-      });
-    });
+        const depth = Math.max( lD, rD ) + 1;
+        return next( true, depth );
+      } );
+    } );
   }
 }
 // @lc code=end

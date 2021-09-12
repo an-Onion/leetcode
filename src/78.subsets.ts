@@ -5,18 +5,18 @@
  */
 
 // @lc code=start
-export function subsets(nums: number[]): number[][] {
+export function subsets( nums: number[] ): number[][] {
 
-  return DFS(0);
+  return DFS( 0 );
 
-  function DFS(idx: number): number[][] {
+  function DFS( idx: number ): number[][] {
 
     if( idx === nums.length ) return [[]];
 
-    return DFS(idx+1).reduce((acc, x) => {
-      acc.push(x, [nums[idx], ...x]);
+    return DFS( idx+1 ).reduce( ( acc, x ) => {
+      acc.push( x, [nums[idx], ...x] );
       return acc;
-    }, [] as number[][]);
+    }, [] as number[][] );
 
   }
 }

@@ -18,10 +18,10 @@
  */
 import { ListNode } from './dataStructure/ListNode';
 
-export function reverseKGroup(head: ListNode | null, k: number): ListNode | null {
+export function reverseKGroup( head: ListNode | null, k: number ): ListNode | null {
 
-  function reverse(start: ListNode, end: ListNode) {
-    const dummy = new ListNode(-1, end);
+  function reverse( start: ListNode, end: ListNode ) {
+    const dummy = new ListNode( -1, end );
     while( start != end ){
       const p = start;
       start = start.next;
@@ -31,11 +31,11 @@ export function reverseKGroup(head: ListNode | null, k: number): ListNode | null
     return dummy.next;
   }
 
-  const dummy = new ListNode(-1, head);
+  const dummy = new ListNode( -1, head );
   let pre = dummy;
-  for(let i = 1; head; ++i ){
+  for( let i = 1; head; ++i ){
     if( i % k === 0 ){
-      const start = reverse(pre.next, head.next);
+      const start = reverse( pre.next, head.next );
       head = pre.next;
       pre.next = start;
       pre = head;

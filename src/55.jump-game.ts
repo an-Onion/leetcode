@@ -5,11 +5,11 @@
  */
 
 // @lc code=start
-export function canJump(nums: number[]): boolean {
+export function canJump( nums: number[] ): boolean {
 
   let sofar = nums.length - 1;
 
-  for(let i = nums.length -1; i >=0; i-- ){
+  for( let i = nums.length -1; i >=0; i-- ){
     if( i+nums[i] >= sofar )
       sofar = i;
   }

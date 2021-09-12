@@ -5,15 +5,15 @@
  */
 
 // @lc code=start
-export function myPow(x: number, n: number): number {
+export function myPow( x: number, n: number ): number {
 
   let ans = 1;
 
-  if(n === -2147483648) {
+  if( n === -2147483648 ) {
     ans = x, n = -2147483647;
   }
 
-  let exp = Math.abs(n);
+  let exp = Math.abs( n );
 
   while( exp > 0 ){
     if( exp & 1 )  ans *= x;

@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-export function lengthOfLastWord(s: string): number {
-  return s.trim().split(' ').pop()?.length || 0;
+export function lengthOfLastWord( s: string ): number {
+  return s.trim().split( ' ' ).pop()?.length || 0;
 }
 // @lc code=end

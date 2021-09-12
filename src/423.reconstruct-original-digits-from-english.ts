@@ -5,11 +5,11 @@
  */
 
 // @lc code=start
-export function originalDigits(s: string): string {
+export function originalDigits( s: string ): string {
 
-  const counts:number[] = Array(10).fill(0);
+  const counts:number[] = Array( 10 ).fill( 0 );
 
-  for(let i = 0; i < s.length; ++i){
+  for( let i = 0; i < s.length; ++i ){
     if( s[i] === 'z' ) counts[0]++;
     if( s[i] === 'w' ) counts[2]++;
     if( s[i] === 'u' ) counts[4]++;
@@ -25,14 +25,14 @@ export function originalDigits(s: string): string {
   counts[7] -= counts[6];
   counts[5] -= counts[4];
   counts[3] -= counts[8];
-  counts[1] -= (counts[0]+counts[2]+counts[4]);
-  counts[9] = (counts[9] - counts[7] - counts[1]) >> 1;
+  counts[1] -= ( counts[0]+counts[2]+counts[4] );
+  counts[9] = ( counts[9] - counts[7] - counts[1] ) >> 1;
 
   const res = [];
-  for(let i = 0; i <= 9; i++){
-    while(counts[i]--) res.push(i);
+  for( let i = 0; i <= 9; i++ ){
+    while( counts[i]-- ) res.push( i );
   }
-  return res.join('');
+  return res.join( '' );
 }
 // @lc code=end
 

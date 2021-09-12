@@ -5,13 +5,13 @@
  */
 
 // @lc code=start
-export function change(amount: number, coins: number[]): number {
+export function change( amount: number, coins: number[] ): number {
 
-  const dp: number[] = Array(amount+1).fill(0);
+  const dp: number[] = Array( amount+1 ).fill( 0 );
 
   dp[0] = 1;
   for( const coin of coins ){
-    for(let j = coin; j <= amount; ++j){
+    for( let j = coin; j <= amount; ++j ){
       dp[j] += dp[j-coin];
     }
   }

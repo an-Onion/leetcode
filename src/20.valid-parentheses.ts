@@ -5,14 +5,14 @@
  */
 
 // @lc code=start
-export function isValid(s: string): boolean {
+export function isValid( s: string ): boolean {
   const stack = [];
 
-  const pairs: Record<string, string> = Object.freeze({ '(': ')', '[': ']', '{': '}' });
+  const pairs: Record<string, string> = Object.freeze( { '(': ')', '[': ']', '{': '}' } );
 
-  for(const c of s){
-    if( ['(', '[', '{'].includes(c) ){
-      stack.push(c);
+  for( const c of s ){
+    if( ['(', '[', '{'].includes( c ) ){
+      stack.push( c );
       continue;
     }
     const left = pairs[stack.pop()];

@@ -18,9 +18,9 @@
  */
 import { ListNode } from '../src/dataStructure/ListNode';
 
-export function swapPairs(head: ListNode | null): ListNode | null {
+export function swapPairs( head: ListNode | null ): ListNode | null {
 
-  const dummy: ListNode = new ListNode(-1, head);
+  const dummy: ListNode = new ListNode( -1, head );
 
   let q = head, pre = dummy;
 

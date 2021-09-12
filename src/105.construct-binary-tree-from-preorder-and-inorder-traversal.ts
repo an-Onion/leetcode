@@ -21,23 +21,23 @@
 
 import { TreeNode } from './dataStructure/TreeNode';
 
-export function buildTree(preorder: number[], inorder: number[]): TreeNode | null {
+export function buildTree( preorder: number[], inorder: number[] ): TreeNode | null {
 
-  return DFS(preorder, inorder);
+  return DFS( preorder, inorder );
 
-  function DFS(preO: number[], inO: number[]): TreeNode | null {
+  function DFS( preO: number[], inO: number[] ): TreeNode | null {
 
-    if(!preO?.length) return null;
+    if( !preO?.length ) return null;
 
     const val = preO[0];
 
     let i = 0;
 
-    while(inO[i] !== val) i++;
+    while( inO[i] !== val ) i++;
 
-    const left = DFS(preO.splice(1, i), inO.splice(0, i));
-    const right = DFS(preO.splice(1), inO.splice(1));
-    return new TreeNode(val, left, right);
+    const left = DFS( preO.splice( 1, i ), inO.splice( 0, i ) );
+    const right = DFS( preO.splice( 1 ), inO.splice( 1 ) );
+    return new TreeNode( val, left, right );
   }
 
 }

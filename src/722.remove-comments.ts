@@ -5,21 +5,21 @@
  */
 
 // @lc code=start
-export function removeComments(source: string[]): string[] {
+export function removeComments( source: string[] ): string[] {
 
   const res: string[] = [];
   let blockOpen = false;
   let buff = '';
-  for(const line of source) {
-    for(let i = 0; i < line.length; i++) {
+  for( const line of source ) {
+    for( let i = 0; i < line.length; i++ ) {
 
       // //
-      if( !blockOpen && !blockOpen && line[i] === '/' && line[i+1] === '/'){
+      if( !blockOpen && !blockOpen && line[i] === '/' && line[i+1] === '/' ){
         break;
       }
 
       // /*
-      else if( !blockOpen && line[i] === '/' && line[i+1] === '*'){
+      else if( !blockOpen && line[i] === '/' && line[i+1] === '*' ){
         blockOpen = true;
         i++;
       }
@@ -27,7 +27,7 @@ export function removeComments(source: string[]): string[] {
       // */
       /* /*
       //sdf */
-      else if( blockOpen && line[i] === '*' && line[i+1] === '/'){
+      else if( blockOpen && line[i] === '*' && line[i+1] === '/' ){
         blockOpen = false;
         i++;
       }
@@ -39,7 +39,7 @@ export function removeComments(source: string[]): string[] {
     }
 
     if( buff && !blockOpen ){
-      res.push(buff);
+      res.push( buff );
       buff = '';
     }
 

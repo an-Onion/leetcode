@@ -5,13 +5,13 @@
  */
 
 // @lc code=start
-export function splitArray(nums: number[], m: number): number {
+export function splitArray( nums: number[], m: number ): number {
 
-  function split(bound: number){
+  function split( bound: number ){
 
     let [count, sum] = [1, 0];
 
-    for(let i = 0; i < nums.length; i++){
+    for( let i = 0; i < nums.length; i++ ){
 
 
       if( sum + nums[i] <= bound ){
@@ -24,13 +24,13 @@ export function splitArray(nums: number[], m: number): number {
     return count;
   }
 
-  let low = Math.max(...nums);
+  let low = Math.max( ...nums );
   let up = 1 << 30;
 
   while ( low <= up ){
     const mid = low+up >> 1;
 
-    const count = split(mid);
+    const count = split( mid );
 
     if( count <= m ) up = mid - 1;
     else low = mid + 1;

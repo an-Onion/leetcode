@@ -5,11 +5,11 @@
  */
 
 // @lc code=start
-export function maxTurbulenceSize(arr: number[]): number {
+export function maxTurbulenceSize( arr: number[] ): number {
 
   let [sofar, inc, dec] = [1,1,1];
 
-  for(let i = 1; i < arr.length; i++) {
+  for( let i = 1; i < arr.length; i++ ) {
 
     if( arr[i] < arr[i-1] ){
       dec = inc + 1;
@@ -21,7 +21,7 @@ export function maxTurbulenceSize(arr: number[]): number {
       inc = dec = 1;
     }
 
-    sofar = Math.max(sofar, inc, dec);
+    sofar = Math.max( sofar, inc, dec );
   }
   return sofar;
 }

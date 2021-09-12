@@ -5,13 +5,13 @@
  */
 
 // @lc code=start
-export function minPathSum(grid: number[][]): number {
+export function minPathSum( grid: number[][] ): number {
 
   const dp = [0];
 
-  for( let i = 0; i < grid.length; i++){
-    for(let j = 0; j < grid[0].length; ++j ){
-      dp[j] = Math.min(dp[j] ?? Infinity, dp[j-1] ?? Infinity) + grid[i][j];
+  for( let i = 0; i < grid.length; i++ ){
+    for( let j = 0; j < grid[0].length; ++j ){
+      dp[j] = Math.min( dp[j] ?? Infinity, dp[j-1] ?? Infinity ) + grid[i][j];
     }
   }
 

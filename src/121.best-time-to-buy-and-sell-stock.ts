@@ -5,11 +5,11 @@
  */
 
 // @lc code=start
-export function maxProfit(prices: number[]): number {
+export function maxProfit( prices: number[] ): number {
 
   let [sofar, min] = [0, Infinity];
 
-  for(const p of prices) {
+  for( const p of prices ) {
     if( p - min > sofar ) sofar = p - min;
     if( p < min ) min = p;
   }

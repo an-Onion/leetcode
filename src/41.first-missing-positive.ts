@@ -5,9 +5,9 @@
  */
 
 // @lc code=start
-export function firstMissingPositive(nums: number[]): number {
+export function firstMissingPositive( nums: number[] ): number {
 
-  for(let i = 0; i < nums.length; i++) {
+  for( let i = 0; i < nums.length; i++ ) {
     while ( 0 < nums[i] && nums[i] <= i ){
       const j = nums[i] - 1;
       if( nums[i] === nums[j] )
@@ -18,8 +18,8 @@ export function firstMissingPositive(nums: number[]): number {
   }
 
   let res = 1;
-  for(let i = 0; i < nums.length; i++){
-    if(nums[i] === i+1) res++;
+  for( let i = 0; i < nums.length; i++ ){
+    if( nums[i] === i+1 ) res++;
     else return res;
   }
 

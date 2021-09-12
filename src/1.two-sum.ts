@@ -6,16 +6,16 @@
 
 // @lc code=start
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-export function twoSum(nums: number[], target: number): number[] {
+export function twoSum( nums: number[], target: number ): number[] {
     const myMap = new Map();
-    for(let i = 0; i < nums.length; ++i){
+    for( let i = 0; i < nums.length; ++i ){
       const num = nums[i];
 
-      if( myMap.has(target-num) ){
-        return [myMap.get(target-num), i];
+      if( myMap.has( target-num ) ){
+        return [myMap.get( target-num ), i];
       }
 
-      myMap.set(num, i);
+      myMap.set( num, i );
     }
     return [];
 }

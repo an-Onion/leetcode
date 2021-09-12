@@ -19,15 +19,15 @@
 
 import { ListNode } from './dataStructure/ListNode';
 
-export function addTwoNumbers(l1: ListNode | null, l2: ListNode | null): ListNode | null {
+export function addTwoNumbers( l1: ListNode | null, l2: ListNode | null ): ListNode | null {
 
-  const dummy: ListNode = new ListNode(-1);
+  const dummy: ListNode = new ListNode( -1 );
 
   let carry = 0;
 
   let pre = dummy;
 
-  while(l1 || l2){
+  while( l1 || l2 ){
 
     if( l2 ){
       carry += l2.val;
@@ -38,12 +38,12 @@ export function addTwoNumbers(l1: ListNode | null, l2: ListNode | null): ListNod
       carry += l1.val;
       l1 = l1.next;
     }
-    pre.next = new ListNode(carry % 10);
+    pre.next = new ListNode( carry % 10 );
     carry = carry / 10 | 0;
     pre = pre.next;
   }
 
-  if( carry ) pre.next = new ListNode(carry);
+  if( carry ) pre.next = new ListNode( carry );
 
   return dummy.next;
 }

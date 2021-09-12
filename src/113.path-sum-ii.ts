@@ -20,32 +20,32 @@
  */
 import { TreeNode } from './dataStructure/TreeNode';
 
-export function pathSum(root: TreeNode | null, targetSum: number): number[][] {
+export function pathSum( root: TreeNode | null, targetSum: number ): number[][] {
 
-  return DFS(root, [], (ret) => ret);
+  return DFS( root, [], ( ret ) => ret );
 
-  type nextFunc = (res: number[][]) => number[][];
+  type nextFunc = ( res: number[][] ) => number[][];
 
-  function DFS(node: TreeNode | null, path: number[], cb: nextFunc): number[][] {
+  function DFS( node: TreeNode | null, path: number[], cb: nextFunc ): number[][] {
 
-    if( !node ) return cb([]);
+    if( !node ) return cb( [] );
 
     const next = [...path, node.val];
 
     // node is leaf
     if( !node.left && !node.right )
-      return cb(sum(next) === targetSum ? [next]: []);
+      return cb( sum( next ) === targetSum ? [next]: [] );
 
-    return DFS(node.left, next,
-      (left) => DFS(node.right, next,
-        (right) => cb([...left, ...right])
+    return DFS( node.left, next,
+      ( left ) => DFS( node.right, next,
+        ( right ) => cb( [...left, ...right] )
       )
     );
 
   }
 
-  function sum(path: number[]): number {
-    return path.reduce((acc, val) => acc+val, 0);
+  function sum( path: number[] ): number {
+    return path.reduce( ( acc, val ) => acc+val, 0 );
   }
 
 }

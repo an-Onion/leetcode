@@ -5,10 +5,10 @@
  */
 
 // @lc code=start
-export function fib(N: number): number {
+export function fib( N: number ): number {
   const dp = [0, 1];
-  for(let i = 2; i <=N; ++i)
-    dp.push(dp[i-1]+dp[i-2]);
+  for( let i = 2; i <=N; ++i )
+    dp.push( dp[i-1]+dp[i-2] );
 
   return dp[N];
 }

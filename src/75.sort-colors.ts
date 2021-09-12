@@ -8,24 +8,24 @@
 /**
  Do not return anything, modify nums in-place instead.
  */
-export function sortColors(nums: number[]): void {
+export function sortColors( nums: number[] ): void {
 
   let red = -1, blue = nums.length, idx = 0;
 
-  while(idx < blue){
+  while( idx < blue ){
 
     if( nums[idx] === 0 ){
-      swap(++red, idx);
+      swap( ++red, idx );
     }
 
-    if( nums[idx] === 2){
-      swap(--blue, idx);
+    if( nums[idx] === 2 ){
+      swap( --blue, idx );
       continue;
     }
     idx++;
   }
 
-  function swap(a: number, b: number){
+  function swap( a: number, b: number ){
     [nums[a], nums[b]] = [nums[b], nums[a]];
   }
 }

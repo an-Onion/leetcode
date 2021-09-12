@@ -5,17 +5,17 @@
  */
 
 // @lc code=start
-export function partitionDisjoint(nums: number[]): number {
+export function partitionDisjoint( nums: number[] ): number {
 
   let [max, possible, length] = [nums[0], nums[0], 1];
 
-  for(let i = 1; i < nums.length; ++i){
-    if(nums[i] < max){
+  for( let i = 1; i < nums.length; ++i ){
+    if( nums[i] < max ){
       length = i+1;
       max = possible;
       continue;
     }
-    possible = Math.max(possible, nums[i]);
+    possible = Math.max( possible, nums[i] );
   }
 
   return length;

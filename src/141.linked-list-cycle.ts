@@ -19,8 +19,8 @@
 
 import { ListNode } from './dataStructure/ListNode';
 
-export function hasCycle(head: ListNode | null): boolean {
-  const dummy = new ListNode(-1, head);
+export function hasCycle( head: ListNode | null ): boolean {
+  const dummy = new ListNode( -1, head );
 
   let fast = dummy, slow = dummy;
 

@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-export function canTransform(start: string, end: string): boolean {
+export function canTransform( start: string, end: string ): boolean {
 
   if( start.length !== end.length ) return false;
   const N = start.length;

@@ -5,16 +5,16 @@
  */
 
 // @lc code=start
-export function generateParenthesis(n: number): string[] {
+export function generateParenthesis( n: number ): string[] {
 
   const res: string[] = [];
 
-  function DFS(left: number, right: number, sub:string){
-    if( !right ) res.push(sub);
-    if( left > 0 ) DFS(left-1, right, sub+'(');
-    if(right > left ) DFS(left, right-1, sub+')');
+  function DFS( left: number, right: number, sub:string ){
+    if( !right ) res.push( sub );
+    if( left > 0 ) DFS( left-1, right, sub+'(' );
+    if( right > left ) DFS( left, right-1, sub+')' );
   }
-  DFS(n, n, '');
+  DFS( n, n, '' );
   return res;
 }
 // @lc code=end

@@ -5,23 +5,23 @@
  */
 
 // @lc code=start
-export function shiftingLetters(s: string, shifts: number[]): string {
+export function shiftingLetters( s: string, shifts: number[] ): string {
 
   let sum = 0;
-  for(let i = shifts.length-1; i >= 0; i--) {
-    sum = (sum + shifts[i]) % 26;
+  for( let i = shifts.length-1; i >= 0; i-- ) {
+    sum = ( sum + shifts[i] ) % 26;
     shifts[i] = sum;
   }
 
   const ret: string[] = [];
-  const basic = 'a'.charCodeAt(0);
+  const basic = 'a'.charCodeAt( 0 );
 
-  for(let i = 0; i < s.length; ++i){
-    const delta = s[i].charCodeAt(0) - basic;
-    const code = (delta+shifts[i]) % 26 + basic;
-    ret.push( String.fromCharCode(code) );
+  for( let i = 0; i < s.length; ++i ){
+    const delta = s[i].charCodeAt( 0 ) - basic;
+    const code = ( delta+shifts[i] ) % 26 + basic;
+    ret.push( String.fromCharCode( code ) );
   }
-  return ret.join('');
+  return ret.join( '' );
 }
 // @lc code=end
 

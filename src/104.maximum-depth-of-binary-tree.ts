@@ -20,17 +20,17 @@
  */
 import { TreeNode } from './dataStructure/TreeNode';
 
-export function maxDepth(root: TreeNode | null): number {
+export function maxDepth( root: TreeNode | null ): number {
 
-  return DFS(root, (depth) => depth);
+  return DFS( root, ( depth ) => depth );
 
-  function DFS(node: TreeNode | null, next: (depth: number) => number): number {
-    if( !node ) return next(0);
-    return DFS(node.left, (leftDepth) => {
-      return DFS(node.right, (rightDepth) => {
-        return next( Math.max(leftDepth, rightDepth) + 1);
-      });
-    });
+  function DFS( node: TreeNode | null, next: ( depth: number ) => number ): number {
+    if( !node ) return next( 0 );
+    return DFS( node.left, ( leftDepth ) => {
+      return DFS( node.right, ( rightDepth ) => {
+        return next( Math.max( leftDepth, rightDepth ) + 1 );
+      } );
+    } );
   }
 }
 // @lc code=end

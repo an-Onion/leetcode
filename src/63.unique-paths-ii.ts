@@ -5,15 +5,15 @@
  */
 
 // @lc code=start
-export function uniquePathsWithObstacles(obstacleGrid: number[][]): number {
+export function uniquePathsWithObstacles( obstacleGrid: number[][] ): number {
   const dp =[1];
 
-  for(let i = 0; i < obstacleGrid.length; i++) {
-    for(let j = 0; j < obstacleGrid[0].length; j++){
+  for( let i = 0; i < obstacleGrid.length; i++ ) {
+    for( let j = 0; j < obstacleGrid[0].length; j++ ){
       if( obstacleGrid[i][j] ){
         dp[j] = 0; continue;
       }
-      dp[j] = (dp[j] || 0) + (dp[j-1] || 0);
+      dp[j] = ( dp[j] || 0 ) + ( dp[j-1] || 0 );
     }
   }
   return dp[obstacleGrid[0].length-1];

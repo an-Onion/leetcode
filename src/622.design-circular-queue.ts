@@ -12,14 +12,14 @@ export class MyCircularQueue {
     queue: number[];
     front: number;
 
-    constructor(k: number) {
+    constructor( k: number ) {
       this.capacity = k;
       this.length = 0;
-      this.queue = Array(k).fill(-1);
+      this.queue = Array( k ).fill( -1 );
       this.front = 0;
     }
 
-    enQueue(value: number): boolean {
+    enQueue( value: number ): boolean {
 
       if( this.isFull() ) return false;
       this.length++;
@@ -29,13 +29,13 @@ export class MyCircularQueue {
     }
 
     getRearIndex(): number {
-      return (this.front + this.length - 1 + this.capacity) % this.capacity;
+      return ( this.front + this.length - 1 + this.capacity ) % this.capacity;
     }
 
     deQueue(): boolean {
       if( this.isEmpty() ) return false;
 
-      this.front = (this.front + 1 + this.capacity) % this.capacity;
+      this.front = ( this.front + 1 + this.capacity ) % this.capacity;
       this.length--;
       return true;
     }

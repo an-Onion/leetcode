@@ -5,16 +5,16 @@
  */
 
 // @lc code=start
-export function bagOfTokensScore(tokens: number[], power: number): number {
+export function bagOfTokensScore( tokens: number[], power: number ): number {
 
   let ret = 0, score = 0;
-  tokens.sort((a, b) => a-b);
+  tokens.sort( ( a, b ) => a-b );
   let l = 0, u = tokens.length-1;
-  while(l <= u){
+  while( l <= u ){
 
     if( power >= tokens[l] ){
       power -= tokens[l++];
-      ret = Math.max(ret, ++score);
+      ret = Math.max( ret, ++score );
       continue;
     }
     if( !score ) break;

@@ -5,12 +5,12 @@
  */
 
 // @lc code=start
-export function removeElement(nums: number[], val: number): number {
+export function removeElement( nums: number[], val: number ): number {
 
   let head = 0, tail = nums.length;
 
   while( head < tail ) {
-    if(nums[head] === val ) nums[head] = nums[--tail];
+    if( nums[head] === val ) nums[head] = nums[--tail];
     else head++;
   }
 

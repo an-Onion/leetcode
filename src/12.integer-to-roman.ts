@@ -5,14 +5,14 @@
  */
 
 // @lc code=start
-export function intToRoman(num: number): string {
+export function intToRoman( num: number ): string {
   type Args = {up: string, mid: string, low: string}
 
-  function toRoman(n: number, { up, mid, low }: Args): string {
+  function toRoman( n: number, { up, mid, low }: Args ): string {
     if( n === 9 ) return low + up;
-    if( n >= 5 ) return mid + low.repeat(n-5);
+    if( n >= 5 ) return mid + low.repeat( n-5 );
     if( n === 4 ) return low + mid;
-    return low.repeat(n);
+    return low.repeat( n );
   }
 
   const Symbol: Record<number, Args> = {
@@ -24,9 +24,9 @@ export function intToRoman(num: number): string {
 
   let res = '';
 
-  for(const div of [1000, 100, 10 ,1]){
+  for( const div of [1000, 100, 10 ,1] ){
     const quotient = num / div | 0;
-    res += toRoman(quotient, Symbol[div]);
+    res += toRoman( quotient, Symbol[div] );
     num %= div;
   }
 

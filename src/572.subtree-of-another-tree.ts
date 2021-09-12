@@ -20,30 +20,30 @@
  */
 import { TreeNode } from './dataStructure/TreeNode';
 
-export function isSubtree(s: TreeNode | null, t: TreeNode | null): boolean {
+export function isSubtree( s: TreeNode | null, t: TreeNode | null ): boolean {
 
   type TreeVal = string | number;
 
-  function preOrder(tree: TreeNode, array: TreeVal [] = ['']): TreeVal [] {
-    array.push(tree.val);
+  function preOrder( tree: TreeNode, array: TreeVal [] = [''] ): TreeVal [] {
+    array.push( tree.val );
     if( !tree.left ) {
-      array.push('l');
+      array.push( 'l' );
     } else {
-      preOrder(tree.left, array);
+      preOrder( tree.left, array );
     }
 
     if( !tree.right ) {
-      array.push('r');
+      array.push( 'r' );
     } else {
-      preOrder(tree.right, array);
+      preOrder( tree.right, array );
     }
     return array;
   }
 
-  const preS = preOrder(s, ['']).join('#');
-  const preT = preOrder(t, ['']).join('#');
+  const preS = preOrder( s, [''] ).join( '#' );
+  const preT = preOrder( t, [''] ).join( '#' );
 
-  return preS.includes(preT);
+  return preS.includes( preT );
 }
 // @lc code=end
 

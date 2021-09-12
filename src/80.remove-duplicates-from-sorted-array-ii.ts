@@ -5,11 +5,11 @@
  */
 
 // @lc code=start
-export function removeDuplicates(nums: number[]): number {
+export function removeDuplicates( nums: number[] ): number {
    let res = 0, limit = 0;
 
-   for(let i = 0; i < nums.length; i++) {
-     if( nums[i] !== nums[i-1]) limit = 0;
+   for( let i = 0; i < nums.length; i++ ) {
+     if( nums[i] !== nums[i-1] ) limit = 0;
 
      if( ++limit > 2 ) continue;
 

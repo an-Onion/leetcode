@@ -5,17 +5,17 @@
  */
 
 // @lc code=start
-export function subsetsWithDup(nums: number[]): number[][] {
+export function subsetsWithDup( nums: number[] ): number[][] {
   const res: number[][] = [];
-  nums.sort((a,b) => a-b);
-  DFS(0, []);
+  nums.sort( ( a,b ) => a-b );
+  DFS( 0, [] );
   return res;
 
-  function DFS(start: number, path: number[]): void {
-    res.push(path);
-    for(let i = start; i < nums.length; i++){
+  function DFS( start: number, path: number[] ): void {
+    res.push( path );
+    for( let i = start; i < nums.length; i++ ){
       if( i > start && nums[i] === nums[i-1] ) continue;
-      DFS(i+1, [...path, nums[i]]);
+      DFS( i+1, [...path, nums[i]] );
     }
   }
 }

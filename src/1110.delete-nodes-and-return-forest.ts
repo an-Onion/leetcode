@@ -21,36 +21,36 @@
 
 import { TreeNode } from './dataStructure/TreeNode';
 
-export function delNodes(root: TreeNode | null, to_delete: number[]): Array<TreeNode | null> {
+export function delNodes( root: TreeNode | null, to_delete: number[] ): Array<TreeNode | null> {
 
-  type nextFunc = (child: TreeNode[]) => TreeNode[];
+  type nextFunc = ( child: TreeNode[] ) => TreeNode[];
 
-  return DFS(root, (trees) => trees.filter((tree) => tree) );
+  return DFS( root, ( trees ) => trees.filter( ( tree ) => tree ) );
 
-  function DFS(node, next: nextFunc): Array<TreeNode | null> {
+  function DFS( node, next: nextFunc ): Array<TreeNode | null> {
 
-    if( !node ) return next([null]);
+    if( !node ) return next( [null] );
 
     const res = [];
 
-    if(!to_delete.includes(node.val))
-      res.push(node);
+    if( !to_delete.includes( node.val ) )
+      res.push( node );
 
-    return DFS(node.left, (left) => {
+    return DFS( node.left, ( left ) => {
 
-      if( res.length && left[0] === node.left){
+      if( res.length && left[0] === node.left ){
         left.shift();
       } else node.left = null;
 
-      return DFS(node.right, (right) => {
+      return DFS( node.right, ( right ) => {
 
         if( res.length && right[0] === node.right ){
           right.shift();
         } else node.right = null;
 
-        return next([...res, ...left, ...right]);
-      });
-    });
+        return next( [...res, ...left, ...right] );
+      } );
+    } );
   }
 }
 // @lc code=end

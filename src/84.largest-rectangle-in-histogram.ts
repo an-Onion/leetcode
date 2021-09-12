@@ -5,26 +5,26 @@
  */
 
 // @lc code=start
-export function largestRectangleArea(heights: number[]): number {
+export function largestRectangleArea( heights: number[] ): number {
 
   const tail: () => number = () => stack[stack.length-1] ?? -1;
 
   let sofar = 0;
 
-  heights.push(0);
+  heights.push( 0 );
 
   const stack = [];
 
-  for(let i = 0; i < heights.length; i++) {
+  for( let i = 0; i < heights.length; i++ ) {
 
     while( heights[tail()] >= heights[i] ){
       const h = heights[tail()];
       stack.pop();
       const w = i - tail()  - 1;
-      sofar = Math.max(sofar, h * w);
+      sofar = Math.max( sofar, h * w );
     }
 
-    stack.push(i);
+    stack.push( i );
   }
   return sofar;
 }

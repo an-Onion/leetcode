@@ -5,19 +5,19 @@
  */
 
 // @lc code=start
-export function romanToInt(s: string): number {
+export function romanToInt( s: string ): number {
 
-  const symbols: Record<string, number> = Object.freeze({
+  const symbols: Record<string, number> = Object.freeze( {
     I: 1,  V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000,
-  });
+  } );
 
   let pre = 'M', sum = 0;
 
-  for(const cur of s){
+  for( const cur of s ){
     if( symbols[cur] <= symbols[pre] ) {
       sum += symbols[cur];
     } else {
-      sum += ( symbols[cur] - 2 * symbols[pre]);
+      sum += ( symbols[cur] - 2 * symbols[pre] );
     }
 
     pre = cur;

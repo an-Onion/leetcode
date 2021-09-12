@@ -19,14 +19,14 @@
 
 import { ListNode } from './dataStructure/ListNode';
 
-export function detectCycle(head: ListNode | null): ListNode | null {
+export function detectCycle( head: ListNode | null ): ListNode | null {
 
   let p = hasCycle();
   if( !p ) return null;
 
   let q = head;
 
-  while(p !== q){
+  while( p !== q ){
     p = p.next;
     q = q.next;
   }
@@ -37,7 +37,7 @@ export function detectCycle(head: ListNode | null): ListNode | null {
 
     let fast = head, slow = head;
 
-    while(slow && fast){
+    while( slow && fast ){
       slow = slow.next;
       fast = fast?.next?.next;
       if( slow === fast ) return slow;

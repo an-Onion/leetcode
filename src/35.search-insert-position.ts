@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-export function searchInsert(nums: number[], target: number): number {
+export function searchInsert( nums: number[], target: number ): number {
 
   let l = 0, u = nums.length - 1;
 

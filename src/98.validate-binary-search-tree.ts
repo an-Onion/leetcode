@@ -20,11 +20,11 @@
  */
 import { TreeNode } from './dataStructure/TreeNode';
 
-export function isValidBST(root: TreeNode | null): boolean {
+export function isValidBST( root: TreeNode | null ): boolean {
 
-  return DFS(root, -Infinity, Infinity);
+  return DFS( root, -Infinity, Infinity );
 
-  function DFS(node: TreeNode | null, low: number, up: number): boolean {
+  function DFS( node: TreeNode | null, low: number, up: number ): boolean {
 
     if( !node ) return true;
 
@@ -32,7 +32,7 @@ export function isValidBST(root: TreeNode | null): boolean {
 
     if( val <= low || val >= up ) return false;
 
-    return DFS(node.left, low, val) && DFS(node.right, val, up);
+    return DFS( node.left, low, val ) && DFS( node.right, val, up );
 
   }
 }

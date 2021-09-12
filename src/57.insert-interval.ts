@@ -5,16 +5,16 @@
  */
 
 // @lc code=start
-export function insert(intervals: number[][], newInterval: number[]): number[][] {
+export function insert( intervals: number[][], newInterval: number[] ): number[][] {
 
   const start = bsStart(), end = bsEnd();
 
   const overlap = [
-    Math.min(newInterval[0], intervals[start]?.[0] ?? 100000),
-    Math.max(newInterval[1], intervals[end]?.[1] ?? 0),
+    Math.min( newInterval[0], intervals[start]?.[0] ?? 100000 ),
+    Math.max( newInterval[1], intervals[end]?.[1] ?? 0 ),
   ];
 
-  intervals.splice(start, end-start+1, overlap);
+  intervals.splice( start, end-start+1, overlap );
 
   return intervals;
 

@@ -21,14 +21,14 @@
 
 import { TreeNode } from './dataStructure/TreeNode';
 
-export function flipMatchVoyage(root: TreeNode | null, voyage: number[]): number[] {
+export function flipMatchVoyage( root: TreeNode | null, voyage: number[] ): number[] {
 
   const stack: TreeNode[] = [];
-  stack.push(root);
+  stack.push( root );
   const ret: number[] = [];
   let i = 0;
 
-  while(stack.length){
+  while( stack.length ){
     const node = stack.pop();
 
     if( !node ) continue;
@@ -38,14 +38,14 @@ export function flipMatchVoyage(root: TreeNode | null, voyage: number[]): number
     i++;
 
     if( node.left && node.left.val === voyage[i] ){
-      stack.push(node.right, node.left);
+      stack.push( node.right, node.left );
       continue;
     }
 
 
-    stack.push(node.left, node.right);
+    stack.push( node.left, node.right );
 
-    if( node.left && node.right ) ret.push(node.val);
+    if( node.left && node.right ) ret.push( node.val );
   }
 
   return ret;

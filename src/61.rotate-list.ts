@@ -18,13 +18,13 @@
  */
 import { ListNode } from '../src/dataStructure/ListNode';
 
-export function rotateRight(head: ListNode | null, k: number): ListNode | null {
+export function rotateRight( head: ListNode | null, k: number ): ListNode | null {
 
-  const N = length(head);
+  const N = length( head );
   k = k % N;
   let point = head, pivot;
 
-  for(let i = 0; i < N-1; ++i){
+  for( let i = 0; i < N-1; ++i ){
     if( i === N-k-1 ){
       pivot = point;
     }
@@ -39,7 +39,7 @@ export function rotateRight(head: ListNode | null, k: number): ListNode | null {
 
   return head;
 
-  function length(node: ListNode){
+  function length( node: ListNode ){
 
     let len = 0;
 

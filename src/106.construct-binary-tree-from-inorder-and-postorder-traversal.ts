@@ -20,17 +20,17 @@
  */
 import { TreeNode } from './dataStructure/TreeNode';
 
-export function buildTree(inorder: number[], postorder: number[]): TreeNode | null {
+export function buildTree( inorder: number[], postorder: number[] ): TreeNode | null {
 
   if( !inorder?.length ) return null;
 
   const val = postorder.pop();
   let i = 0;
-  while(inorder[i] !== val) i++;
+  while( inorder[i] !== val ) i++;
 
-  const left = buildTree(inorder.splice(0,i), postorder.splice(0,i));
-  const right = buildTree(inorder.splice(1), postorder);
-  return new TreeNode(val, left, right);
+  const left = buildTree( inorder.splice( 0,i ), postorder.splice( 0,i ) );
+  const right = buildTree( inorder.splice( 1 ), postorder );
+  return new TreeNode( val, left, right );
 }
 // @lc code=end
 

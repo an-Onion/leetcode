@@ -5,11 +5,11 @@
  */
 
 // @lc code=start
-export function numRescueBoats(people: number[], limit: number): number {
+export function numRescueBoats( people: number[], limit: number ): number {
 
-  const buckets: number[] = Array(limit+1).fill(0);
+  const buckets: number[] = Array( limit+1 ).fill( 0 );
 
-  people.forEach((p) => buckets[p]++);
+  people.forEach( ( p ) => buckets[p]++ );
 
   let start = 1, end = limit, res = 0;
 

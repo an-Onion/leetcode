@@ -5,27 +5,27 @@
  */
 
 // @lc code=start
-export function maxSubarraySumCircular(nums: number[]): number {
+export function maxSubarraySumCircular( nums: number[] ): number {
 
   const max = maxSub();
 
   if( max <= 0 ) return max;
 
-  const sum = nums.reduce((acc, num) => acc+num, 0);
+  const sum = nums.reduce( ( acc, num ) => acc+num, 0 );
   const min = minSub();
 
-  return Math.max(max, sum-min);
+  return Math.max( max, sum-min );
 
   function maxSub() {
     let [sofar, rear] = [nums[0], nums[0]];
 
-    for(let i = 1; i < nums.length; ++i){
+    for( let i = 1; i < nums.length; ++i ){
 
       if( rear <= 0 ) rear = 0;
 
       rear += nums[i];
 
-      sofar = Math.max(sofar, rear);
+      sofar = Math.max( sofar, rear );
     }
     return sofar;
   }
@@ -33,13 +33,13 @@ export function maxSubarraySumCircular(nums: number[]): number {
   function minSub() {
     let [sofar, rear] = [nums[0], nums[0]];
 
-    for(let i = 1; i < nums.length; ++i){
+    for( let i = 1; i < nums.length; ++i ){
 
       if( rear >= 0 ) rear = 0;
 
       rear += nums[i];
 
-      sofar = Math.min(sofar, rear);
+      sofar = Math.min( sofar, rear );
     }
     return sofar;
   }

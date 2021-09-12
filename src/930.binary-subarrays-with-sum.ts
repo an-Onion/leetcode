@@ -5,17 +5,17 @@
  */
 
 // @lc code=start
-export function numSubarraysWithSum(nums: number[], goal: number): number {
+export function numSubarraysWithSum( nums: number[], goal: number ): number {
 
   let pSum = 0, ret = 0;
-  const count: number[] = Array(nums.length+1).fill(0);
+  const count: number[] = Array( nums.length+1 ).fill( 0 );
 
   count[0] = 1;
 
-  for(const num of nums) {
+  for( const num of nums ) {
     pSum += num;
 
-    if(pSum >= goal) ret += count[pSum-goal];
+    if( pSum >= goal ) ret += count[pSum-goal];
 
     count[pSum]++;
   }

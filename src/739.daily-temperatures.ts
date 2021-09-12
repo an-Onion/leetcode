@@ -5,17 +5,17 @@
  */
 
 // @lc code=start
-export function dailyTemperatures(temperatures: number[]): number[] {
+export function dailyTemperatures( temperatures: number[] ): number[] {
 
-  const res: number[] = Array(temperatures.length).fill(0);
+  const res: number[] = Array( temperatures.length ).fill( 0 );
   const mono: number[] = [];
 
-  for(let i = 0; i < temperatures.length; ++i){
+  for( let i = 0; i < temperatures.length; ++i ){
     while( monoPeek() < temperatures[i] ){
       const top = mono.pop();
       res[top] = i - top;
     }
-    mono.push(i);
+    mono.push( i );
   }
 
   return res;

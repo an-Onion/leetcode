@@ -20,9 +20,9 @@
  */
 import { TreeNode } from '../src/dataStructure/TreeNode';
 
-export function levelOrderBottom(root: TreeNode | null): number[][] {
+export function levelOrderBottom( root: TreeNode | null ): number[][] {
 
-  if(!root) return [];
+  if( !root ) return [];
   const queue = [root];
   let count = 1, cur = [];
   const res: number[][] = [];
@@ -31,15 +31,15 @@ export function levelOrderBottom(root: TreeNode | null): number[][] {
 
     const node = queue.shift();
 
-    cur.push(node.val);
+    cur.push( node.val );
 
-    node.left && queue.push(node.left);
-    node.right && queue.push(node.right);
+    node.left && queue.push( node.left );
+    node.right && queue.push( node.right );
 
-    if(--count) continue;
+    if( --count ) continue;
 
     count = queue.length;
-    res.push(cur);
+    res.push( cur );
     cur = [];
   }
   return res.reverse();

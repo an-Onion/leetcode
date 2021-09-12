@@ -18,7 +18,7 @@
  */
 import { ListNode } from './dataStructure/ListNode';
 
-export function removeNthFromEnd(head: ListNode | null, n: number): ListNode | null {
+export function removeNthFromEnd( head: ListNode | null, n: number ): ListNode | null {
 
   let fast: ListNode | null = head;
 

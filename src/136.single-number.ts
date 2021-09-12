@@ -5,8 +5,8 @@
  */
 
 // @lc code=start
-export function singleNumber(nums: number[]): number {
-  return nums.reduce((acc,e) => acc ^ e, 0);
+export function singleNumber( nums: number[] ): number {
+  return nums.reduce( ( acc,e ) => acc ^ e, 0 );
 }
 // @lc code=end
 

@@ -1,10 +1,10 @@
 import { combine } from '../src/77.combinations';
 
-describe('Combinations',() => {
+describe( 'Combinations',() => {
 
-  it('4,2', () => {
-    const output = combine(4,2).sort();
-    expect(output).toStrictEqual(
+  it( '4,2', () => {
+    const output = combine( 4,2 ).sort();
+    expect( output ).toStrictEqual(
       [
         [2,4],
         [3,4],
@@ -14,11 +14,11 @@ describe('Combinations',() => {
         [1,4],
       ].sort()
     );
-  });
+  } );
 
-  it('1,1', () => {
-    const output = combine(1,1).sort();
-    expect(output).toStrictEqual([[1]]);
-  });
+  it( '1,1', () => {
+    const output = combine( 1,1 ).sort();
+    expect( output ).toStrictEqual( [[1]] );
+  } );
 
-});
+} );

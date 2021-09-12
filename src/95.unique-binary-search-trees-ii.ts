@@ -20,25 +20,25 @@
  */
 import { TreeNode } from './dataStructure/TreeNode';
 
-export function generateTrees(n: number): Array<TreeNode | null> {
+export function generateTrees( n: number ): Array<TreeNode | null> {
 
-  return DFS(1,n);
+  return DFS( 1,n );
 
-  function DFS(low: number, up: number): Array<TreeNode | null> {
+  function DFS( low: number, up: number ): Array<TreeNode | null> {
 
-    if(low > up) return [null];
+    if( low > up ) return [null];
 
     const res = [];
 
-    for(let i = low; i <=up; i++) {
+    for( let i = low; i <=up; i++ ) {
 
-      const left = DFS(low, i-1);
-      const right = DFS(i+1, up);
+      const left = DFS( low, i-1 );
+      const right = DFS( i+1, up );
 
-      for(const l of left) {
-        for(const r of right) {
-          const node = new TreeNode(i, l, r);
-          res.push(node);
+      for( const l of left ) {
+        for( const r of right ) {
+          const node = new TreeNode( i, l, r );
+          res.push( node );
         }
       }
     }

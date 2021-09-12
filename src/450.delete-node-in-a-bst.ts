@@ -20,38 +20,38 @@
  */
 import { TreeNode } from './dataStructure/TreeNode';
 
-export function deleteNode(root: TreeNode | null, key: number): TreeNode | null {
+export function deleteNode( root: TreeNode | null, key: number ): TreeNode | null {
 
-  return DFS(root, (node) => node);
+  return DFS( root, ( node ) => node );
 
-  type nextFunc = (node: TreeNode | null) => TreeNode | null;
+  type nextFunc = ( node: TreeNode | null ) => TreeNode | null;
 
-  function DFS(node: TreeNode | null, next: nextFunc): TreeNode | null {
-    if (!node) return next(null);
+  function DFS( node: TreeNode | null, next: nextFunc ): TreeNode | null {
+    if ( !node ) return next( null );
 
-    if (node.val > key) {
-      return DFS(node.left, (left) => {
+    if ( node.val > key ) {
+      return DFS( node.left, ( left ) => {
         node.left = left;
-        return next(node);
-      });
+        return next( node );
+      } );
     }
 
-    if (node.val < key) {
-      return DFS(node.right, (right) => {
+    if ( node.val < key ) {
+      return DFS( node.right, ( right ) => {
         node.right = right;
-        return next(node);
-      });
+        return next( node );
+      } );
     }
 
-    if(!node.left) return next(node.right);
-    if(!node.right) return next(node.left);
+    if( !node.left ) return next( node.right );
+    if( !node.right ) return next( node.left );
 
-    const successor = leftRotate(node);
+    const successor = leftRotate( node );
 
-    return next(successor);
+    return next( successor );
   }
 
-  function leftRotate(node: TreeNode): TreeNode {
+  function leftRotate( node: TreeNode ): TreeNode {
 
     let minMoreThan = node.right;
     while( minMoreThan.left )

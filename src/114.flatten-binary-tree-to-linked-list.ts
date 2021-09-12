@@ -24,25 +24,25 @@
  */
 import { TreeNode } from './dataStructure/TreeNode';
 
-export function flatten(root: TreeNode | null): void {
+export function flatten( root: TreeNode | null ): void {
 
-  DFS(root, (ret) => ret);
+  DFS( root, ( ret ) => ret );
 
-  type nextFunc = (node: TreeNode | null) => TreeNode | null;
+  type nextFunc = ( node: TreeNode | null ) => TreeNode | null;
 
-  function DFS(node: TreeNode | null, next: nextFunc): TreeNode | null {
+  function DFS( node: TreeNode | null, next: nextFunc ): TreeNode | null {
 
-    if(!node) return next(null);
+    if( !node ) return next( null );
 
-    return DFS(node.right ,(right) => DFS(node.left,
-      (left) => {
+    return DFS( node.right ,( right ) => DFS( node.left,
+      ( left ) => {
         if( left ){
           left.right = node.right;
           node.right = node.left;
           node.left = null;
         }
-        return next(right || left || node);
-      })
+        return next( right || left || node );
+      } )
     );
   }
 }

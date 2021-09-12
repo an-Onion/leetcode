@@ -5,10 +5,10 @@
  */
 
 // @lc code=start
-export function removeStones(stones: number[][]): number {
+export function removeStones( stones: number[][] ): number {
 
   const ds = new DisjointSet();
-  stones.forEach(([x,y]) => ds.union(x, ~y));
+  stones.forEach( ( [x,y] ) => ds.union( x, ~y ) );
   return stones.length - ds.countDisjoint();
 }
 
@@ -19,27 +19,27 @@ class DisjointSet{
     this.parent = new Map();
   }
 
-  find(x: number){
-    if( !this.parent.has(x) ){
-      this.parent.set(x, x);
+  find( x: number ){
+    if( !this.parent.has( x ) ){
+      this.parent.set( x, x );
     }
 
-    while(this.parent.get(x) !== x){
-      x = this.parent.get(x);
+    while( this.parent.get( x ) !== x ){
+      x = this.parent.get( x );
     }
     return x;
   }
 
-  union(x: number, y: number){
-    x = this.find(x), y = this.find(y);
+  union( x: number, y: number ){
+    x = this.find( x ), y = this.find( y );
     if( x === y ) return;
-    this.parent.set(x, y);
+    this.parent.set( x, y );
   }
 
   countDisjoint(): number {
     let count = 0;
-    for(const [k, v] of this.parent){
-      if( k === v) count++;
+    for( const [k, v] of this.parent ){
+      if( k === v ) count++;
     }
     return count;
   }

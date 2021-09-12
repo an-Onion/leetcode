@@ -5,10 +5,10 @@
  */
 
 // @lc code=start
-export function maxSubArray(nums: number[]): number {
+export function maxSubArray( nums: number[] ): number {
   let sofar = nums[0], end = 0;
 
-  for(const cur of nums ){
+  for( const cur of nums ){
     if( end < 0 ) end = cur;
     else end += cur;
 

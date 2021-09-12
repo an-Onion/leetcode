@@ -21,17 +21,17 @@
 
 import { TreeNode } from './dataStructure/TreeNode';
 
-export function inorderTraversal(root: TreeNode | null): number[] {
+export function inorderTraversal( root: TreeNode | null ): number[] {
 
   const res = [];
-  DFS(root);
+  DFS( root );
   return res;
 
-  function DFS(node: TreeNode | null): void {
+  function DFS( node: TreeNode | null ): void {
     if( !node ) return;
-    DFS(node.left);
-    res.push(node.val);
-    DFS(node.right);
+    DFS( node.left );
+    res.push( node.val );
+    DFS( node.right );
   }
 
 }

@@ -20,11 +20,11 @@
  */
 import { TreeNode } from './dataStructure/TreeNode';
 
-export function searchBST(root: TreeNode | null, val: number): TreeNode | null {
+export function searchBST( root: TreeNode | null, val: number ): TreeNode | null {
 
   let node = root;
 
-  while(node) {
+  while( node ) {
     if( node.val === val ) return node;
     else if( node.val < val ) node = node.right;
     else node = node.left;
