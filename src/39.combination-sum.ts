@@ -7,26 +7,22 @@
 // @lc code=start
 export function combinationSum( candidates: number[], target: number ): number[][] {
 
+  candidates.sort( ( a, b ) => a - b );
 
-  function DFS( start: number, t: number ): number[][]{
+  function DFS( start: number, remaining: number ): number[][] {
 
-    if( t === 0 ) return [[]];
+    if ( remaining === 0 ) return [[]];
+    const results: number[][] = [];
 
-    const res: number[][] = [];
-
-    for( let i = start; i < candidates.length; i++ ){
-
-      if( t < candidates[i] ) continue;
-
-      const sub = DFS( i, t-candidates[i] )
-      .map( ( x ) => {
-        x.push( candidates[i] );
-        return x;
-      } );
-
-      res.push( ...sub );
+    for ( let i = start; i < candidates.length; i++ ) {
+      if ( candidates[i] > remaining ) break;
+      const subs = DFS( i, remaining - candidates[i] )
+        .map( ( sub ) => sub.concat( candidates[i] ) );
+      results.push( ...subs );
     }
-    return res;
+
+    return results;
+
   }
 
   return DFS( 0, target );
