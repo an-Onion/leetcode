@@ -2,6 +2,10 @@ import { firstMissingPositive } from '../src/41.first-missing-positive';
 
 describe( 'First Missing Positive', () => {
 
+  it( '[1,1]', () => {
+    expect( firstMissingPositive( [1,1] ) ).toBe( 2 );
+  } );
+
   it( '[2,1]', () => {
     expect( firstMissingPositive( [2,1] ) ).toBe( 3 );
   } );
