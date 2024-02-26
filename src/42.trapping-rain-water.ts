@@ -7,15 +7,21 @@
 // @lc code=start
 export function trap( height: number[] ): number {
 
-  let l = 0, r = height.length -1;
-  let [L, R, water] = [0,0,0];
-  while( l < r ) {
-    L = Math.max( L, height[l] );
-    R = Math.max( R, height[r] );
-    if( L < R )
-      water += L - height[l++];
-    else
-      water += R - height[r--];
+  let water = 0;
+
+  const stack: number[] = [];
+
+  for ( let i = 0; i < height.length; i++ ) {
+    while( height[i] > height[stack.at( -1 )] ){
+      const top = stack.pop();
+      if( !stack.length ) break;
+
+      const l = stack.at( -1 );
+      const w = i - l - 1;
+      const h = Math.min( height[l], height[i] ) - height[top];
+      water += w * h;
+    }
+    stack.push( i );
   }
 
   return water;

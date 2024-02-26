@@ -2,6 +2,10 @@ import { trap } from '../src/42.trapping-rain-water';
 
 describe( 'Trapping Rain Water', () => {
 
+  it( '[2,0,1]', () => {
+    expect( trap( [2,0,1] ) ).toBe( 1 );
+  } );
+
   it( '[1]', () => {
     expect( trap( [1] ) ).toBe( 0 );
   } );
