@@ -8,9 +8,10 @@
 export function myPow( x: number, n: number ): number {
 
   let ans = 1;
-
-  if( n === -2147483648 ) {
-    ans = x, n = -2147483647;
+  const min = -2147483648; // - 2**31
+  
+  if( n === min ) {
+    ans = x, n = min+1;
   }
 
   let exp = Math.abs( n );
@@ -21,7 +22,7 @@ export function myPow( x: number, n: number ): number {
     x *= x;
   }
 
-  return n < 0 ? 1/ans : ans;
+  return n > 0 ? ans : 1 / ans;
 }
 // @lc code=end
 
