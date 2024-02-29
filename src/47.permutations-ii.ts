@@ -9,23 +9,26 @@ export function permuteUnique( nums: number[] ): number[][] {
 
   const visited: boolean[] = Array( nums.length );
   nums.sort( ( a, b ) => a-b );
-  return backTrack( 0 );
+  return DFS( );
 
-  function backTrack( step: number ): number[][] {
+  function DFS( step: number = 0 ): number[][] {
     if( step === nums.length ) return [[]];
 
-    const res: number[][] = [];
+    const ret: number[][] = [];
 
     for( let i = 0; i < nums.length; i++ ){
+      
       if( visited[i] ) continue;
+      
       if( nums[i] === nums[i-1] && !visited[i-1] ) continue;
 
       visited[i] = true;
-      const tail: number[][] = backTrack( step+1 ).map( ( x ) =>{x.push( nums[i] ); return x;} );
-      res.push( ...tail );
+      const tail: number[][] = DFS( step+1 );
+      tail.forEach( ( x ) => x.push( nums[i] ) );
+      ret.push( ...tail );
       visited[i] = false;
     }
-    return res;
+    return ret;
   }
 }
 // @lc code=end
