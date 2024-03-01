@@ -11,13 +11,11 @@
 export function rotate( matrix: number[][] ): void {
   const N = matrix.length;
 
-  for( let i = 0; i < N / 2; ++i ){
-    for( let j = i; j < N-1-i; ++j ){
-      const temp = matrix[i][j];
-      matrix[i][j] = matrix[N-1-j][i];
-      matrix[N-1-j][i] = matrix[N-1-i][N-1-j];
-      matrix[N-1-i][N-1-j] = matrix[j][N-1-i];
-      matrix[j][N-1-i] = temp;
+  matrix.reverse();
+
+  for( let i = 0; i < N; ++i ){
+    for( let j=0; j < i; ++j ) {
+      [matrix[i][j], matrix[j][i]] = [matrix[j][i], matrix[i][j]];
     }
   }
 }

@@ -6,23 +6,27 @@
 
 // @lc code=start
 export function groupAnagrams( strs: string[] ): string[][] {
-  const skipList: Record<string,string[]> = {};
+  
 
-  for( let i = 0; i < strs.length; i++ ) {
-    const idx: string = sToB( strs[i] );
-    if( !skipList[idx] ) skipList[idx] = [];
-    skipList[idx].push( strs[i] );
+  const map = new Map<string, string[]>();
+
+  for( const s of strs ) {
+    const key = toBits( s );
+    if( !map.has( key ) ) {
+      map.set( key, [] );
+    }
+    map.get( key )!.push( s );
   }
-  return Object.values( skipList );
 
-  function sToB( str: string ): string {
-    return str.split( '' )
-    .map( ( c ) => c.charCodeAt( 0 ) - 97 )
-    .reduce( ( acc, l ) => {
-      acc[l]++;
-      return acc;
-    }, Array( 26 ).fill( 0 ) )
-    .toString();
+  return Array.from( map.values() );
+
+  function toBits( s: string ): string {
+    const bits = Array( 26 ).fill( 0 );
+    for( let i = 0; i < s.length; i++ ) {
+      const c = s.charCodeAt( i ) - 97;
+      bits[c]++;
+    }
+    return bits.toString();
   }
 
 }
