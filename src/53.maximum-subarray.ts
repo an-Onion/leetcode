@@ -6,13 +6,13 @@
 
 // @lc code=start
 export function maxSubArray( nums: number[] ): number {
-  let sofar = nums[0], end = 0;
+  
+  let [sofar, ending] = [nums[0], 0];
 
-  for( const cur of nums ){
-    if( end < 0 ) end = cur;
-    else end += cur;
-
-    if( end > sofar ) sofar = end;
+  for( const num of nums ) {
+    ending += num;
+    sofar = Math.max( sofar, ending );
+    ending = Math.max( 0, ending );
   }
 
   return sofar;
