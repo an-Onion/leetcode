@@ -1,6 +1,5 @@
 function solveNQueens( n: number ): string[][] {
 
-
     const visited = Array.from( { length: n }, () => Array( n ).fill( false ) );
 
     function isValid( row: number, col: number ): boolean {
