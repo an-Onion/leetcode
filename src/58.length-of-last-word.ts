@@ -6,6 +6,17 @@
 
 // @lc code=start
 export function lengthOfLastWord( s: string ): number {
-  return s.trim().split( ' ' ).pop()?.length || 0;
+
+  let ret = 0;
+
+  for ( let i = s.length - 1; i >= 0; i-- ) {
+    if( s[i] !== ' ' ) {
+      ret++;
+      continue;
+    } 
+
+    if( ret !== 0 ) break;
+  }
+  return ret;
 }
 // @lc code=end

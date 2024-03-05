@@ -13,4 +13,8 @@ describe( 'Length of Last Word', () => {
   it( 'a ', ()=>{
     expect( lengthOfLastWord( 'a ' ) ).toBe( 1 );
   } );
+
+  it( 'the moon  ', ()=>{
+    expect( lengthOfLastWord( 'the moon  ' ) ).toBe( 4 );
+  } );
 } );
