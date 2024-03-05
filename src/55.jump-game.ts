@@ -7,14 +7,17 @@
 // @lc code=start
 export function canJump( nums: number[] ): boolean {
 
-  let sofar = nums.length - 1;
+  let [sofar, next] = [0, nums[0]];
 
-  for( let i = nums.length -1; i >=0; i-- ){
-    if( i+nums[i] >= sofar )
-      sofar = i;
+  while( sofar <= next ) {
+    next = Math.max( next, sofar + nums[sofar] );
+
+    if( next >= nums.length - 1 ) return true;
+    sofar++;
   }
 
-  return sofar === 0;
+  return sofar > nums.length - 1;
+  
 }
 // @lc code=end
 
