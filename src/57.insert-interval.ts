@@ -7,38 +7,25 @@
 // @lc code=start
 export function insert( intervals: number[][], newInterval: number[] ): number[][] {
 
-  const start = bsStart(), end = bsEnd();
+  let start = intervals.findIndex( ( v ) => v[1] >= newInterval[0] );
+  
+  if( start === -1 ) {
+    start = intervals.length;
+  }
 
-  const overlap = [
-    Math.min( newInterval[0], intervals[start]?.[0] ?? 100000 ),
-    Math.max( newInterval[1], intervals[end]?.[1] ?? 0 ),
-  ];
+  let end = intervals.findIndex( ( v ) => v[0] > newInterval[1] );
+  
+  if( end === -1 ){
+    end = intervals.length;
+  }
 
-  intervals.splice( start, end-start+1, overlap );
-
+  
+  for( let i = start; i < end; i++ ) {
+    newInterval[0] = Math.min( newInterval[0], intervals[i][0] );
+    newInterval[1] = Math.max( newInterval[1], intervals[i][1] );
+  }
+  intervals.splice( start, end - start, newInterval );
   return intervals;
-
-  function bsStart(){
-    let [low, up] = [0, intervals.length-1];
-    while( low <= up ){
-      const mid = low+up >> 1;
-      if( intervals[mid][1] >= newInterval[0] ) up = mid -1;
-      else low = mid + 1;
-    }
-
-    return low;
-  }
-
-  function bsEnd(){
-    let [low, up] = [0, intervals.length-1];
-    while( low <= up ){
-      const mid = low+up >> 1;
-      if( intervals[mid][0] <= newInterval[1] ) low = mid + 1;
-      else up = mid - 1;
-    }
-
-    return up;
-  }
 }
 // @lc code=end
 

@@ -7,21 +7,20 @@
 // @lc code=start
 export function merge( intervals: number[][] ): number[][] {
 
-  intervals.sort( ( a: number[], b: number[] ) => {
-    return a[0] === b[0] ? a[1] - b[1] : a[0] - b[0];
-  } );
+  intervals.sort( ( a, b ) => a[0] - b[0] );
 
-  const res: number[][] = [];
-  res.push( intervals[0] );
+  const ret = [ intervals[0] ];
 
-  for( let i = 1; i < intervals.length; i++ ){
-    const tail = res[res.length - 1];
-    const cur  = intervals[i];
-    if( cur[0] > tail[1] ) res.push( cur );
-    else tail[1] = Math.max( cur[1], tail[1] );
+  for ( let i = 1; i < intervals.length; i++ ) {
+    if ( ret.at( -1 )[1] < intervals[i][0] ) {
+      ret.push( intervals[i] );
+      continue;
+    }
+
+    const rear = ret.pop();
+    ret.push( [ rear[0], Math.max( rear[1], intervals[i][1] ) ] );
   }
-
-  return res;
+  return ret;
 }
 // @lc code=end
 

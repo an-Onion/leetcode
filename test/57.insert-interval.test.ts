@@ -22,4 +22,9 @@ describe( 'Insert Interval', () => {
     .toStrictEqual( [[0,5],[8,9]] );
   } );
 
+  it( '[[1,5]], [5,7]', () => {
+    expect( insert( [[1,5]], [5,7] ) )
+    .toStrictEqual( [[1,7]] );
+  } );
+
 } );
