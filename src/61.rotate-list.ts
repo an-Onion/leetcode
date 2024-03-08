@@ -20,36 +20,27 @@ import { ListNode } from '../src/dataStructure/ListNode';
 
 export function rotateRight( head: ListNode | null, k: number ): ListNode | null {
 
-  const N = length( head );
-  k = k % N;
-  let point = head, pivot;
+  if( !head || !head.next ) return head;
 
-  for( let i = 0; i < N-1; ++i ){
-    if( i === N-k-1 ){
-      pivot = point;
-    }
-    point = point.next;
+  let len = 1;
+
+  let tail = head;
+
+  while( tail.next ) {
+    tail = tail.next;
+    len++;
   }
 
-  if( pivot ){
-    point.next = head;
-    head = pivot.next;
-    pivot.next = null;
-  }
+  tail.next = head;
+
+  let gap = len - k % len;
+
+  while( gap--  ) tail = tail.next;
+
+  head = tail.next;
+  tail.next = null;
 
   return head;
-
-  function length( node: ListNode ){
-
-    let len = 0;
-
-    while( node ){
-      len++;
-      node = node.next;
-    }
-
-    return len;
-  }
 
 }
 // @lc code=end
