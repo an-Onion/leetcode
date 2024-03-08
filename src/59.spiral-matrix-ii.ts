@@ -6,39 +6,41 @@
 
 // @lc code=start
 export function generateMatrix( n: number ): number[][] {
-  const matrix: number[][] = [];
-  let globalV = 1;
+    
+    const matrix: number[][] = Array.from( { length: n }, () => Array( n ).fill( 0 ) );
 
-  for( let i = 0; i < n; i++ ) matrix.push( [] );
+    let [top, bottom, left, right] = [0, n - 1, 0, n - 1];
 
-  const directions: [number, number][] = [[0, 1], [1, 0], [0, -1], [-1, 0]];
+    let count = 1;
 
-  let start: [number, number] = [0,0];
-  matrix[0][0] = globalV;
+    while( count <= n * n ) {
+        
+        for( let i = left; i <= right; i++ ) {
+            matrix[top][i] = count++;
+        }
 
-  for( let i = 0; i < ( n+1 >> 1 ); ++i ) {
-    for( const dir of directions )
-      start = move( start, dir );
-  }
+        top++;
 
-  return matrix;
+        for( let i = top; i <= bottom; i++ ) {
+            matrix[i][right] = count++;
+        }
+        right--;
 
-  function move( [i, j]: [number, number], [h,v]: [number, number] ): [number, number]{
+        for( let i = right; i >= left; i-- ) {
+            matrix[bottom][i] = count++;
+        }
 
-    while( isVisited( i+h, j+v ) ){
-      i += h, j += v;
-      matrix[i][j] = ++globalV;
+        bottom--;
+
+        for( let i = bottom; i >= top; i-- ) {
+            matrix[i][left] = count++;
+        }
+
+        left++;
+
     }
 
-    return [i,j];
-  }
-
-  function isVisited( x: number, y: number ): boolean {
-
-    if( x < 0 || x >=n || y < 0 || y >= n ) return false;
-    return matrix[x][y] === undefined;
-  }
-
+    return matrix;
 }
 // @lc code=end
 
