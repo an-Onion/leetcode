@@ -6,14 +6,18 @@
 
 // @lc code=start
 export function mySqrt( x: number ): number {
-  let l = 0, u = 1 << 16;
+  
+  if( x === 0 ) return 0;
 
-  while( l <= u ){
-    const m = ( l+u ) / 2 | 0;
-    if( m * m <= x ) l = m + 1;
-    else u = m - 1;
+  let [l, u] = [0, x];
+
+  while( l <= u ) {
+    const m = u - ( ( u - l ) >> 1 );
+
+    if( m <= x / m ) {
+      l = m + 1;
+    } else u = m - 1;
   }
-
   return u;
 }
 // @lc code=end

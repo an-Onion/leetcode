@@ -42,6 +42,10 @@ describe( 'Sqrt(x)', () => {
   it( '9', () => {
     expect( mySqrt( 9 ) ).toBe( 3 );
   } );
+
+  it( ' 2^31 - 1', () => {
+    expect( mySqrt( 2 ** 31 - 1 ) ).toBe( 46340 );
+  } );
 } );
 
 
