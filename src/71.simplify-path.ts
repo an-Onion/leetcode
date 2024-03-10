@@ -7,21 +7,23 @@
 // @lc code=start
 export function simplifyPath( path: string ): string {
 
-  const paths = path.split( '/' ).filter( p => p && p !== '.' );
+  const paths = path.split( '/' );
 
-  const res = [];
+  const ret: string[] = [];
 
   for( const p of paths ){
-
-    if( p !== '..' ){
-      res.push( p );
+    if( p=='' || p==='.' ){
       continue;
     }
-
-    if( res.length ) res.pop();
+    if( p==='..' ){
+      ret.pop();
+      continue;
+    }
+    ret.push( p );
   }
 
-  return '/' + res.join( '/' );
+  return '/' + ret.join( '/' );
+ 
 }
 // @lc code=end
 

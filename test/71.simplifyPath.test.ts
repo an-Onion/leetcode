@@ -17,4 +17,8 @@ describe( 'Simplify Path', () => {
   it( '/a/./b/../../c/', () => {
     expect( simplifyPath( '/a/./b/../../c/' ) ).toBe( '/c' );
   } );
+
+  it( '/a/.../b/', () => {
+    expect( simplifyPath( '/a/.../b/' ) ).toBe( '/a/.../b' );
+  } );
 } );

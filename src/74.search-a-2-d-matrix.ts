@@ -7,28 +7,21 @@
 // @lc code=start
 export function searchMatrix( matrix: number[][], target: number ): boolean {
 
-  const m = matrix.length, n = matrix[0].length;
+  const [row, col] = [matrix.length, matrix[0].length];
 
-  let l = 0, u = m*n-1;
+  let [l, u] = [0, row * col - 1];
 
   while ( l <= u ) {
+    const m = l + u >> 1;
 
-    const mid = l+u >> 1;
-    const [pos, offset] = toPoint( mid );
+    const [i, j] = [m / col | 0, m % col];
 
-    if( matrix[pos][offset] < target ) l = mid + 1;
-    else if( matrix[pos][offset] > target ) u = mid -1;
-    else return true;
+    if ( matrix[i][j] == target ) return true;
+    else if ( matrix[i][j] < target ) l = m + 1;
+    else u = m - 1;
   }
-
   return false;
 
-  function toPoint( mid: number ): [number, number] {
-    const pos = mid / n | 0;
-    const offset = mid % n;
-
-    return [pos, offset];
-  }
 }
 // @lc code=end
 
