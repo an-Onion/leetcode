@@ -2,6 +2,12 @@ import { sortColors } from '../src/75.sort-colors';
 
 describe( 'Sort Colors', () => {
 
+  it( '[1,2,0]', () => {
+    const nums = [1,2,0];
+    sortColors( nums );
+    expect( nums ).toStrictEqual( [0,1,2] );
+  } );
+
   it( '[2,0,2,1,1,0]', () => {
     const nums = [2,0,2,1,1,0];
     sortColors( nums );

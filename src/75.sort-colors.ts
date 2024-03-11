@@ -10,23 +10,25 @@
  */
 export function sortColors( nums: number[] ): void {
 
-  let red = -1, blue = nums.length, idx = 0;
-
-  while( idx < blue ){
-
-    if( nums[idx] === 0 ){
-      swap( ++red, idx );
-    }
-
-    if( nums[idx] === 2 ){
-      swap( --blue, idx );
-      continue;
-    }
-    idx++;
-  }
-
   function swap( a: number, b: number ){
     [nums[a], nums[b]] = [nums[b], nums[a]];
+  }
+
+  let i = 0;
+  let [red, blue] = [0, nums.length];
+
+  while( i < blue ){
+    if( nums[i] === 0 ){
+      swap( i, red++ );
+      if( i < red ) i++;
+      continue;
+    }
+
+    if( nums[i] === 2 ){
+      swap( i, --blue );
+      continue;
+    }
+    i++;
   }
 }
 // @lc code=end

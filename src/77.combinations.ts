@@ -7,18 +7,26 @@
 // @lc code=start
 export function combine( n: number, k: number ): number[][] {
 
-  return DFS( 1, k );
+  const result: number[][] = [];
 
-  function DFS( start: number, left: number ): number[][] {
+  function DFS( start: number, path: number[] = [] ): void {
+    
+    
+    if( path.length == k ) {
+      result.push( [...path] );
+      return;
+    }
 
-    if( left <=0 ) return [[]];
-    if( start > n ) return [];
+    if( start > n ) return;
 
-    return DFS( start+1, left-1 )
-    .map( ( x ) => [start, ...x] )
-    .concat( DFS( start+1, left ) );
+    DFS( start+1, [...path, start] );
+
+    DFS( start+1, [...path] );
   }
 
+  DFS( 1 );
+
+  return result;
 }
 // @lc code=end
 
