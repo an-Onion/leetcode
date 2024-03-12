@@ -11,7 +11,6 @@ export function combine( n: number, k: number ): number[][] {
 
   function DFS( start: number, path: number[] = [] ): void {
     
-    
     if( path.length == k ) {
       result.push( [...path] );
       return;

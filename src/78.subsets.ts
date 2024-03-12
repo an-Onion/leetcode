@@ -7,18 +7,15 @@
 // @lc code=start
 export function subsets( nums: number[] ): number[][] {
 
-  return DFS( 0 );
-
-  function DFS( idx: number ): number[][] {
-
-    if( idx === nums.length ) return [[]];
-
-    return DFS( idx+1 ).reduce( ( acc, x ) => {
-      acc.push( x, [nums[idx], ...x] );
-      return acc;
-    }, [] as number[][] );
-
-  }
+  function DFS( start: number ) {
+    if( start === 0 ){
+      return [[]];
+    }
+   return DFS( start-1 ).reduce(  
+    ( acc, curr ) => ( [...acc, curr, [...curr, nums[start-1]]] ), 
+    [] );
+   }
+  return DFS( nums.length );
 }
 // @lc code=end
 
