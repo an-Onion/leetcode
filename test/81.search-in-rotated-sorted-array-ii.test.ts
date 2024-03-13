@@ -18,4 +18,8 @@ describe( 'Search in Rotated Sorted Array II', () => {
     expect( search( [0,0,1,1,2,0], 2 ) ).toBeTruthy();
   } );
 
+  it( 'nums = [2,2,2,3,2,2,2], target = 3', () => {
+    expect( search( [2,2,2,3,2,2,2], 3 ) ).toBeTruthy();
+  } );
+
 } );

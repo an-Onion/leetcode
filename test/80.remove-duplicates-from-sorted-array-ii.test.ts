@@ -4,13 +4,17 @@ describe( 'Remove Duplicates from Sorted Array II', () => {
 
   it( '[1,1,1,2,2,3]', () => {
     const input = [1,1,1,2,2,3];
-    expect( removeDuplicates( input ) ).toBe( 5 );
+    const k = removeDuplicates( input );
+    expect( k ).toBe( 5 );
+    input.length = k;
     expect( input ).toStrictEqual( [1,1,2,2,3] );
   } );
 
   it( '[0,0,1,1,1,1,2,3,3]', () => {
     const input = [0,0,1,1,1,1,2,3,3];
-    expect( removeDuplicates( input ) ).toBe( 7 );
+    const k = removeDuplicates( input );
+    expect( k ).toBe( 7 );
+    input.length = k;
     expect( input ).toStrictEqual( [0,0,1,1,2,3,3] );
   } );
 

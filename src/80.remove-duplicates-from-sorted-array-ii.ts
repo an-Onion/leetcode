@@ -6,19 +6,28 @@
 
 // @lc code=start
 export function removeDuplicates( nums: number[] ): number {
-   let res = 0, limit = 0;
+   
+  function swap( i: number, j: number ): void {
+    [nums[i], nums[j]] = [nums[j], nums[i]];
+  }
 
-   for( let i = 0; i < nums.length; i++ ) {
-     if( nums[i] !== nums[i-1] ) limit = 0;
+  let [prev, win, k] = [undefined, 0, 0];
 
-     if( ++limit > 2 ) continue;
+  for( let i = 0; i < nums.length; i++ ) {
+    if( nums[i] !== prev ){
+      prev = nums[i];
+      win = 1;
+      swap( k++, i );
+      continue;
+    }
+    win++;
 
-     nums[res++] = nums[i];
-   }
-
-   nums.length = res;
-
-   return res;
+    if( win <= 2 ) {
+      swap( k++, i );
+    }
+  }
+  
+  return k;
 }
 // @lc code=end
 

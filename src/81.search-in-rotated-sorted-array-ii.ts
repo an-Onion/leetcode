@@ -7,26 +7,23 @@
 // @lc code=start
 export function search( nums: number[], target: number ): boolean {
 
-  let low = 0, up = nums.length-1;
+  let [l, u] = [0, nums.length - 1];
 
-  while( low <= up ){
-
-    if( low !== up && nums[low] === nums[up] ){
-      low++;
+  while( l <= u ) {
+    if( l !== u && nums[l] === nums[u] ){
+      l++; 
       continue;
     }
+    const m = l+u >> 1;
+    if( nums[m] === target ) return true;
 
-    const mid = low+up >> 1;
-
-    if( nums[mid] === target ) return true;
-
-    if( nums[mid] < nums[low] ){
-      if( target > nums[mid] && target <= nums[up] ) low = mid + 1;
-      else up = mid - 1;
-    } else {
-      if( target < nums[mid] && target >= nums[low] ) up = mid -1;
-      else low = mid + 1;
-    }
+    if( nums[m] < nums[l] ){
+      if( target > nums[m] && target <= nums[u] ) l = m + 1;
+      else u = m - 1;
+      continue;
+    } 
+    if( target < nums[m] && target >= nums[l] ) u = m -1;
+    else l = m + 1;
   }
 
   return false;
