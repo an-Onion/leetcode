@@ -10,13 +10,10 @@
  */
 export function merge( nums1: number[], m: number, nums2: number[], n: number ): void {
 
-  let i = m-1, j = n-1;
-  for( let k = m+n-1; k >= 0; k-- ){
-    if( j < 0 ) break;
-    if( i < 0 || nums1[i] < nums2[j] )
-      nums1[k] = nums2[j--];
-    else
-      nums1[k] = nums1[i--];
+  let total = m + n;
+
+  while( total-- ){
+    nums1[total] = nums1[m-1] > ( nums2[n-1] ?? -Infinity ) ? nums1[--m] : nums2[--n];
   }
 }
 // @lc code=end

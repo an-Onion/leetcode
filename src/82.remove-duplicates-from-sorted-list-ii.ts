@@ -22,20 +22,29 @@ import { ListNode } from './dataStructure/ListNode';
 export function deleteDuplicates( head: ListNode | null ): ListNode | null {
 
   const dummy = new ListNode( Infinity, head );
+  let prev = new ListNode( -Infinity, dummy );
 
-  let pre = dummy, slow = head, fast = head;
+  let [slow, fast] = [dummy, head];
 
+  let tag = false;
   while( slow ) {
-
-    while( fast?.val === slow.val )
+    
+    if( fast?.val === slow.val ){
+      tag = true;
       fast = fast.next;
+      slow.next = fast;
+      continue;
+    }
 
-    if( fast === slow.next )
-      pre = pre.next as ListNode;
-    else
-      pre.next = fast;
-
-    slow = fast;
+    fast = fast?.next;
+    slow = slow.next;
+    
+    if( tag ){
+      prev.next = slow;
+      tag = false;
+    } else {
+      prev = prev.next;
+    }
   }
 
   return dummy.next;

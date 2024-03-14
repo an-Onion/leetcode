@@ -3,6 +3,12 @@ import { ListNode } from '../src/dataStructure/ListNode';
 
 describe( 'Remove Duplicates from Sorted List II', () => {
 
+  it( '1,1', () => {
+    const input = ListNode.of( [1,1] );
+    const output = ListNode.toArray( deleteDuplicates( input ) );
+    expect( output ).toStrictEqual( [] );
+  } );
+
   it( '1,2,3,3,4,4,5', () => {
     const input = ListNode.of( [1,2,3,3,4,4,5] );
     const output = ListNode.toArray( deleteDuplicates( input ) );
@@ -14,5 +20,5 @@ describe( 'Remove Duplicates from Sorted List II', () => {
     const output = ListNode.toArray( deleteDuplicates( input ) );
     expect( output ).toStrictEqual( [2,3] );
   } );
-
+  
 } );
