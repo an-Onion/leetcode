@@ -6,12 +6,16 @@
 
 // @lc code=start
 export function grayCode( n: number ): number[] {
-  const res: number[] = [];
-  const N = 1 << n;
+  const result: number[] = [0,1];
 
-  for( let i = 0; i < N; i++ )
-    res.push( i ^ i>>1 );
-  return res;
+  for( let i = 1; i < n; i++ ){
+    const size = result.length;
+    for( let j = size - 1; j >= 0; j-- ){
+      result.push( result[j] + ( 1 << ( i ) ) );
+    }
+  }
+
+  return result;
 }
 // @lc code=end
 

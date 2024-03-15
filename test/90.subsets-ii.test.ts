@@ -21,6 +21,6 @@ describe( 'Subsets II', () => {
   } );
 
   it( '[0]', () => {
-    expect( subsetsWithDup( [0] ) ).toStrictEqual( [[],[0]] );
+    expect( subsetsWithDup( [0] ).sort() ).toStrictEqual( [[],[0]] );
   } );
 } );

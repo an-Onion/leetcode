@@ -21,27 +21,26 @@ import { ListNode } from './dataStructure/ListNode';
 
 export function partition( head: ListNode | null, x: number ): ListNode | null {
 
-  const dummy = new ListNode( -1, head );
-  let pre = dummy;
-  const partition = new ListNode( -1 );
-  let pivot = partition;
+  const dummyLess = new ListNode( Infinity );
+  const dummyGreater = new ListNode( Infinity );
+  let less = dummyLess;
+  let greater = dummyGreater;
 
-  while( pre.next ){
-    const p = pre.next;
 
-    if( p.val >= x ) {
-      pre = pre.next;
-      continue;
+  while ( head ) {
+    if ( head.val < x ) {
+      less.next = head;
+      less = less.next;
+    } else {
+      greater.next = head;
+      greater = greater.next;
     }
-
-    pivot.next = p;
-    pre.next = p.next;
-    pivot = pivot.next;
+    head = head.next;
   }
-
-  pivot.next = dummy.next;
-
-  return partition.next;
+  
+  greater.next = null;
+  less.next = dummyGreater.next;
+  return dummyLess.next;
 }
 // @lc code=end
 
