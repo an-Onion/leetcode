@@ -21,32 +21,24 @@ import { ListNode } from './dataStructure/ListNode';
 
 export function reverseBetween( head: ListNode | null, left: number, right: number ): ListNode | null {
 
-  const first = new ListNode( -1, head );
-  let pre: ListNode | null = first;
+  const dummy = new ListNode( 0, head );
 
-  let point: ListNode | null = first;
+  let prev = dummy;
 
-  for( let i = 1; i <= right; i++ ){
-    if( i === left ) pre = point;
-    point = point.next as ListNode;
+  for ( let i = 0; i < left - 1; i++ ) {
+    prev = prev.next;
+  }
+  const cur = prev.next;
+  
+  for ( let i = left; i < right; i++ ) {
+    const next = cur.next;
+    cur.next = next.next;
+    next.next = prev.next;
+    prev.next = next;
   }
 
-  reverse( pre, point.next );
+  return dummy.next;
 
-  return first.next;
-
-  function reverse( pre: ListNode, post: ListNode | null ){
-    let p: ListNode = pre.next as ListNode;
-    pre.next = post;
-    let q: ListNode | null;
-
-    while( p !== post ) {
-      q = p.next as ListNode;
-      p.next = pre.next;
-      pre.next = p;
-      p= q;
-    }
-  }
 
 }
 // @lc code=end

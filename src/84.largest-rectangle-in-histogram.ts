@@ -7,26 +7,20 @@
 // @lc code=start
 export function largestRectangleArea( heights: number[] ): number {
 
-  const tail: () => number = () => stack[stack.length-1] ?? -1;
-
-  let sofar = 0;
-
+  const mono: number[] = [-1];
+    
   heights.push( 0 );
-
-  const stack = [];
-
-  for( let i = 0; i < heights.length; i++ ) {
-
-    while( heights[tail()] >= heights[i] ){
-      const h = heights[tail()];
-      stack.pop();
-      const w = i - tail()  - 1;
-      sofar = Math.max( sofar, h * w );
-    }
-
-    stack.push( i );
+  let maxArea = 0;
+  for( let i = 0; i < heights.length; i++ ){
+      while( heights[mono.at( -1 )] > heights[i] ) {
+          const h = mono.pop();
+          const w = i - mono.at( -1 ) - 1;
+          maxArea = Math.max( maxArea, heights[h] * w );
+      }
+      mono.push( i );
   }
-  return sofar;
+  
+  return maxArea;
 }
 // @lc code=end
 
