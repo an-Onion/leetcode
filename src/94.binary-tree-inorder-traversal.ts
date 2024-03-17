@@ -23,17 +23,19 @@ import { TreeNode } from './dataStructure/TreeNode';
 
 export function inorderTraversal( root: TreeNode | null ): number[] {
 
-  const res = [];
-  DFS( root );
-  return res;
+  function DFS( node: TreeNode | null, cb: ( params: number[] ) => number[] ): number[] {
+  
+    if( !node ) return cb( [] );
 
-  function DFS( node: TreeNode | null ): void {
-    if( !node ) return;
-    DFS( node.left );
-    res.push( node.val );
-    DFS( node.right );
+    return DFS( node.left, ( left ) =>{
+      return DFS( node.right, ( right ) =>{
+        return cb( [...left, node.val, ...right] );
+      } );
+    } );
+    
   }
 
+  return DFS( root, ( ret ) => ( ret ) );
 }
 // @lc code=end
 

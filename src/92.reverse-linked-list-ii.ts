@@ -28,13 +28,13 @@ export function reverseBetween( head: ListNode | null, left: number, right: numb
   for ( let i = 0; i < left - 1; i++ ) {
     prev = prev.next;
   }
-  const cur = prev.next;
-  
+  const p = prev.next;
+
   for ( let i = left; i < right; i++ ) {
-    const next = cur.next;
-    cur.next = next.next;
-    next.next = prev.next;
-    prev.next = next;
+    const q = p.next;
+    p.next = q.next;
+    q.next = prev.next;
+    prev.next = q;
   }
 
   return dummy.next;
