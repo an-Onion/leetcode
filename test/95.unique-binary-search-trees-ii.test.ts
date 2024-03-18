@@ -3,6 +3,17 @@ import { TreeNode } from '../src/dataStructure/TreeNode';
 
 describe( 'Unique Binary Search Trees II', () => {
 
+  it( '2', () => {
+    const trees = generateTrees( 2 );
+
+    const output = trees.map( ( tree ) => TreeNode.toArray( tree ) ).sort();
+    console.log( output );
+    expect( output ).toStrictEqual(
+      [[1, null, 2], [2, 1]].sort()
+    );
+
+  } );
+
   it( '3', () => {
     const trees = generateTrees( 3 );
 

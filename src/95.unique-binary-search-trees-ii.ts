@@ -22,29 +22,26 @@ import { TreeNode } from './dataStructure/TreeNode';
 
 export function generateTrees( n: number ): Array<TreeNode | null> {
 
-  return DFS( 1,n );
+  function DFS( start: number, end:  number ): Array<TreeNode | null> {
+    
+    if( start > end ) return [null];
 
-  function DFS( low: number, up: number ): Array<TreeNode | null> {
+    const ret: Array<TreeNode | null> = [];
 
-    if( low > up ) return [null];
+    for( let i = start; i <= end; i++ ){
+      const lefts = DFS( start, i - 1 );
+      const rights = DFS( i + 1, end );
 
-    const res = [];
-
-    for( let i = low; i <=up; i++ ) {
-
-      const left = DFS( low, i-1 );
-      const right = DFS( i+1, up );
-
-      for( const l of left ) {
-        for( const r of right ) {
-          const node = new TreeNode( i, l, r );
-          res.push( node );
+      for( const left of lefts ){
+        for( const right of rights ){
+          ret.push( new TreeNode( i, left, right ) );
         }
       }
     }
-    return res;
+    return ret;
   }
 
+  return DFS( 1, n );
 }
 // @lc code=end
 
