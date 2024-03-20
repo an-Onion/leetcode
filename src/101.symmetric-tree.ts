@@ -22,17 +22,16 @@ import { TreeNode } from './dataStructure/TreeNode';
 
 export function isSymmetric( root: TreeNode | null ): boolean {
 
-  return DFS( root.left, root.right );
-
-  function DFS( left: TreeNode | null, right: TreeNode | null ): boolean {
-
-    if( left === right ) return true;
-
-    if( left?.val !== right?.val ) return false;
-
-    return DFS( left.left, right.right ) &&
-           DFS( left.right, right.left );
+  function DFS( left: TreeNode | null, right: TreeNode | null, next: ( prev:boolean ) => boolean ): boolean {
+   
+    if( left === right ) return next( true );
+    if( left?.val !== right?.val ) return next( false );
+    return DFS( left?.left, right?.right, ( outer ) => {
+      return DFS( left?.right, right?.left, ( inner ) => next( outer && inner ) );
+    } );
   }
+
+  return DFS( root?.left, root?.right, ( prev ) => prev );
 }
 // @lc code=end
 

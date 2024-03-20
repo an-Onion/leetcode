@@ -22,19 +22,18 @@ import { TreeNode } from './dataStructure/TreeNode';
 
 export function isValidBST( root: TreeNode | null ): boolean {
 
-  return DFS( root, -Infinity, Infinity );
+  type Props = {node: TreeNode | null, min: number, max: number}
+  type NextFun = ( pre: boolean ) => boolean
 
-  function DFS( node: TreeNode | null, low: number, up: number ): boolean {
-
-    if( !node ) return true;
-
-    const val = node.val;
-
-    if( val <= low || val >= up ) return false;
-
-    return DFS( node.left, low, val ) && DFS( node.right, val, up );
-
+  function DFS( { node, min, max }: Props, next: NextFun ): boolean{
+    if( !node ) return next( true );
+    if( node.val <= min || node.val >= max ) return next( false );
+    return DFS( { node: node.left, min, max: node.val }, ( left ) => {
+      return DFS( { node: node.right, min: node.val, max }, ( right ) => next( left && right ) );
+    } );
   }
+
+  return DFS( { node: root, min: -Infinity, max: Infinity }, ( pre ) => pre );
 }
 // @lc code=end
 
