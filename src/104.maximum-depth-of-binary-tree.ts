@@ -22,16 +22,17 @@ import { TreeNode } from './dataStructure/TreeNode';
 
 export function maxDepth( root: TreeNode | null ): number {
 
-  return DFS( root, ( depth ) => depth );
-
   function DFS( node: TreeNode | null, next: ( depth: number ) => number ): number {
-    if( !node ) return next( 0 );
-    return DFS( node.left, ( leftDepth ) => {
-      return DFS( node.right, ( rightDepth ) => {
-        return next( Math.max( leftDepth, rightDepth ) + 1 );
+    if ( node === null ) return next( 0 );
+    
+    return DFS( node.left, ( left ) => {
+      return DFS( node.right, ( right ) => {
+        return next( Math.max( left, right ) + 1 );
       } );
     } );
   }
+
+  return DFS( root, ( depth ) => depth );
 }
 // @lc code=end
 
