@@ -22,34 +22,28 @@ import { TreeNode } from './dataStructure/TreeNode';
 
 export function zigzagLevelOrder( root: TreeNode | null ): number[][] {
 
-  if( !root ) return [];
+  if(  !root ) return [];
 
-  const queue: ( TreeNode | null )[] = [];
+  const ret: number[][] = [];
 
-  queue.push( root );
-  const ret = [];
-  let count = 1, cur = [], zigzag = true;
+  const Q = [root];
 
-  while( queue.length ) {
+  let tag = true;
 
-    const node = queue.shift();
-    cur.push( node.val );
-
-    node.left && queue.push( node.left );
-    node.right && queue.push( node.right );
-
-    if( --count ) continue;
-
-    zigzag ? ret.push( cur ) : ret.push( cur.reverse() );
-
-    zigzag = !zigzag;
-
-    cur = [];
-    count = queue.length;
+  while( Q.length ){
+    let len = Q.length;
+    const level : number[] = [];
+    while( len-- ){
+      const top = Q.shift();
+      level.push( top.val );
+      if( top.left ) Q.push( top.left );
+      if( top.right ) Q.push( top.right );
+    }
+    ret.push( tag ? level : level.reverse() );
+    tag = !tag;
   }
 
   return ret;
-
 }
 // @lc code=end
 
