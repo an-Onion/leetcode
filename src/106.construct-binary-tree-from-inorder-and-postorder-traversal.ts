@@ -22,15 +22,23 @@ import { TreeNode } from './dataStructure/TreeNode';
 
 export function buildTree( inorder: number[], postorder: number[] ): TreeNode | null {
 
-  if( !inorder?.length ) return null;
+  type NextFunc = ( ret: TreeNode | null ) => TreeNode | null
 
-  const val = postorder.pop();
-  let i = 0;
-  while( inorder[i] !== val ) i++;
+  function DFS( inOrder: number[], postOrder: number[], next: NextFunc ): TreeNode | null{
+    if( !postOrder.length ) return next( null );
+    const val = postOrder.pop();
+    const idx = inOrder.indexOf( val );
+    const postLeft = postOrder.splice( 0, idx );
+    const inLeft = inOrder.splice( 0, idx );
+    inOrder.shift();
+    return DFS( inLeft, postLeft, ( left ) => {
+      return DFS( inOrder, postOrder, ( right ) => {
+        return next( new TreeNode( val, left, right ) );
+      } );
+    } );
+  }
 
-  const left = buildTree( inorder.splice( 0,i ), postorder.splice( 0,i ) );
-  const right = buildTree( inorder.splice( 1 ), postorder );
-  return new TreeNode( val, left, right );
+  return DFS( inorder, postorder, ( ret ) => ret );
 }
 // @lc code=end
 

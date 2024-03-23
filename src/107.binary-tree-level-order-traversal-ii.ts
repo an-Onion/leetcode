@@ -22,27 +22,25 @@ import { TreeNode } from '../src/dataStructure/TreeNode';
 
 export function levelOrderBottom( root: TreeNode | null ): number[][] {
 
-  if( !root ) return [];
-  const queue = [root];
-  let count = 1, cur = [];
-  const res: number[][] = [];
+  if ( !root ) return [];
 
-  while( queue.length ){
+  const ret: number[][] = [];
 
-    const node = queue.shift();
+  const Q = [root];
 
-    cur.push( node.val );
-
-    node.left && queue.push( node.left );
-    node.right && queue.push( node.right );
-
-    if( --count ) continue;
-
-    count = queue.length;
-    res.push( cur );
-    cur = [];
+  while ( Q.length ) {
+    let size = Q.length;
+    const level = [];
+    while( size-- ){
+      const top = Q.shift();
+      level.push( top.val );
+      if ( top.left ) Q.push( top.left );
+      if ( top.right ) Q.push( top.right );
+    }
+    ret.push( level );
   }
-  return res.reverse();
+
+  return ret.reverse();
 }
 // @lc code=end
 

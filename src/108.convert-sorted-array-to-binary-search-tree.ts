@@ -22,15 +22,16 @@ import { TreeNode } from './dataStructure/TreeNode';
 
 export function sortedArrayToBST( nums: number[] ): TreeNode | null {
 
-  if( !nums?.length ) return null;
+  function DFS( arr: number[], next: ( ret: TreeNode | null ) => TreeNode | null ) {
+    if ( arr.length === 0 ) return next( null );
+    const idx = arr.length >> 1;
+    const left = arr.splice( 0, idx );
+    const val = arr.shift();
+    const right = arr;
+    return DFS( left, ( left ) => DFS( right, ( right ) => next( new TreeNode( val, left, right ) ) ) );
+  }
 
-  const pivot = nums.length  >> 1;
-  const left = sortedArrayToBST( nums.splice( 0, pivot ) );
-  const val = nums.shift();
-  const right = sortedArrayToBST( nums );
-
-  return new TreeNode( val, left, right );
-
+  return DFS( nums, ( ret ) => ret );
 }
 // @lc code=end
 

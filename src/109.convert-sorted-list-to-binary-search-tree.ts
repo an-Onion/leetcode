@@ -35,25 +35,28 @@ import { TreeNode } from '../src/dataStructure/TreeNode';
 
 export function sortedListToBST( head: ListNode | null ): TreeNode | null {
 
-  if( !head ) return null;
+  function DFS( head: ListNode | null, next: ( ret: TreeNode | null ) => TreeNode | null ) {
+    if( head === null ) return next( null );
+    const dummy = new ListNode( Infinity, head );
 
-  const dummy = new ListNode( -1, head );
+    let slow = dummy, fast = head;
+    while( fast !== null && fast.next !== null ) {
+      slow = slow.next;
+      fast = fast.next.next;
+    }
 
-  let fast = dummy, slow = dummy;
-
-  while( fast ) {
-    fast = fast?.next?.next;
-    slow = slow.next;
+    const node = slow.next;
+    slow.next = null;
+    
+    return DFS( dummy.next, ( left ) => {
+      return DFS( node.next, ( right ) => {
+        return next( new TreeNode( node.val, left, right ) );
+      } );
+      
+    } );
   }
 
-  let pre = dummy;
-  while( pre.next !== slow ) pre = pre.next;
-  pre.next = null;
-
-  const left = sortedListToBST( dummy.next );
-  const right = sortedListToBST( slow.next );
-
-  return new TreeNode( slow.val, left, right );
+  return DFS( head, ( ret ) => ret );
 }
 // @lc code=end
 
