@@ -25,20 +25,21 @@ export function minDepth( root: TreeNode | null ): number {
 
   if( !root ) return 0;
 
-  return DFS( root, ( depth ) => depth );
+  const Q = [root];
 
-  function DFS( node: TreeNode | null, next: ( depth: number ) => number ): number{
-    if( !node ) return next( Infinity );
-    if( !node.left && !node.right ) return next( 1 );
+  let depth = 1;
 
-    return DFS( node.left, ( left ) => {
-      return DFS( node.right, ( right ) => {
-        const depth = Math.min( left, right ) + 1;
-        return next( depth );
-      } );
-    } );
+  while( Q.length ){
+    let len = Q.length;
+    while( len-- ) {
+      const node = Q.shift();
+      if( !node.left && !node.right ) return depth;
+      if( node.left ) Q.push( node.left );
+      if( node.right ) Q.push( node.right );
+    }
+    depth++;
   }
-
+  return depth;
 }
 // @lc code=end
 

@@ -22,21 +22,23 @@ import { TreeNode } from '../src/dataStructure/TreeNode';
 
 export function hasPathSum( root: TreeNode | null, targetSum: number ): boolean {
 
-  return DFS( root, targetSum, ( ret ) => ret );
-
-  function DFS( node: TreeNode | null, target: number, next: ( val: boolean ) => boolean ): boolean {
-
+  function DFS( node: TreeNode | null, sum: number, next: ( ret: boolean ) => boolean ): boolean {
+    
     if( !node ) return next( false );
-    const delta = target - node.val;
-    if( !node.right && !node.left ) return next( delta === 0 );
 
-    return DFS( node.left, delta, ( left: boolean ) => {
+    sum += node.val;
+
+    if( node.left === node.right ){
+      return next( sum === targetSum );
+    }
+
+    return DFS( node.left, sum, ( left ) => {
       if( left ) return next( true );
-      return DFS( node.right, delta, ( right: boolean ) => {
-        return right ? next( true ) : next( false );
-      } );
+      return DFS( node.right, sum, ( right ) => next( right ) );
     } );
   }
+
+  return DFS( root, 0, ( ret ) => ret );
 }
 // @lc code=end
 

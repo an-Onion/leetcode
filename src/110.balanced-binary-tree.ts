@@ -22,26 +22,26 @@ import { TreeNode } from './dataStructure/TreeNode';
 
 export function isBalanced( root: TreeNode | null ): boolean {
 
-  return DFS( root, ( isValid: boolean ) => isValid );
+  type NextFunc = ( params: { ret: boolean, height?: number } ) => boolean;
 
-  type nextFuc = ( isValid: boolean, depth: number ) => boolean;
+  function DFS( node: TreeNode | null, next: NextFunc ): boolean {
 
-  function DFS( node: TreeNode | null, next: nextFuc ): boolean {
-    if( !node ) return next( true, 0 );
+    if ( !node ) return next( { ret: true, height: 0 } );
 
-    return DFS( node.left, ( isL, lD ) => {
-      if( !isL ) return next( false, 0 );
+    return DFS( node.left, ( left ) => {
+      if ( !left.ret ) return next( { ret: false } );
 
-      return DFS( node.right, ( isR, rD ) => {
-        if( !isR ) return next( false, 0 );
-
-        if( Math.abs( lD-rD ) > 1 ) return next( false, 0 );
-
-        const depth = Math.max( lD, rD ) + 1;
-        return next( true, depth );
+      return DFS( node.right, ( right ) => {
+        if ( !right.ret ) return next( { ret: false } );
+        if ( Math.abs( left.height - right.height ) > 1 ) {
+          return next( { ret: false } );
+        }
+        return next( { ret: true, height: Math.max( left.height, right.height ) + 1 } );
       } );
     } );
+
   }
+  
+  return DFS( root, ( params ) => params.ret );
 }
 // @lc code=end
-

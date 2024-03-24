@@ -3,6 +3,10 @@ import { TreeNode } from '../src/dataStructure/TreeNode';
 
 describe( 'Minimum Depth of Binary Tree', () => {
 
+  it( '[]', () => {
+    expect( minDepth( null ) ).toBe( 0 );
+  } );
+
   it( '[1,2]', () => {
     const input = TreeNode.of( [1,2] );
     expect( minDepth( input ) ).toBe( 2 );

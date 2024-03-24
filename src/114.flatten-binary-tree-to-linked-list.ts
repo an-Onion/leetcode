@@ -25,25 +25,20 @@
 import { TreeNode } from './dataStructure/TreeNode';
 
 export function flatten( root: TreeNode | null ): void {
+  
+  while( root ){
 
-  DFS( root, ( ret ) => ret );
+    if( root.left ){
+      let right = root.left;
+      while( right.right ){
+        right = right.right;
+      }
+      right.right = root.right;
+      root.right = root.left;
+      root.left = null;
+    }
 
-  type nextFunc = ( node: TreeNode | null ) => TreeNode | null;
-
-  function DFS( node: TreeNode | null, next: nextFunc ): TreeNode | null {
-
-    if( !node ) return next( null );
-
-    return DFS( node.right ,( right ) => DFS( node.left,
-      ( left ) => {
-        if( left ){
-          left.right = node.right;
-          node.right = node.left;
-          node.left = null;
-        }
-        return next( right || left || node );
-      } )
-    );
+    root = root.right;
   }
 }
 // @lc code=end
