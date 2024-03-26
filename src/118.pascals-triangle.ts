@@ -6,21 +6,24 @@
 
 // @lc code=start
 export function generate( numRows: number ): number[][] {
+  
+  if ( numRows === 0 ) return [];
 
-  const res: number[][] = [];
+  const ret: number[][] = [[1]];
 
-  for( let i = 0; i < numRows; i++ ) {
-    const pre: number[] = res[i-1] || [];
-    const next: number[] = [1];
+  for ( let i = 1; i < numRows; i++ ) {
 
-    for( let j = 0; j <  i; ++j ){
-      next.push( pre[j] + ( pre[j+1] || 0 ) );
+    const row: number[] = [];
+
+    for ( let j = 0; j <= i; j++ ) {
+      const val = ( ret[i - 1][j - 1] ?? 0 ) + ( ret[i - 1][j] ?? 0 );
+      row.push( val );
     }
-    res.push( next );
+    ret.push( row );
+
   }
 
-  return res;
-
+  return ret;
 }
 // @lc code=end
 
