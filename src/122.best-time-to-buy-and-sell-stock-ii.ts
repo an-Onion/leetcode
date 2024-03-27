@@ -7,14 +7,13 @@
 // @lc code=start
 export function maxProfit( prices: number[] ): number {
 
-  let ret = 0;
-
-  for( let i = 0; i < prices.length; i++ ) {
-    if( prices[i] > prices[i-1] )
-      ret += prices[i] - prices[i-1];
+  let profile = 0;
+  for ( let i = 1; i < prices.length; i++ ) {
+    if ( prices[i] > prices[i - 1] ) {
+      profile += prices[i] - prices[i - 1];
+    }
   }
-
-  return ret;
+  return profile;
 }
 // @lc code=end
 
