@@ -7,13 +7,10 @@
 // @lc code=start
 export function maxProfit( prices: number[] ): number {
 
-  let [sofar, min] = [0, Infinity];
-
-  for( const p of prices ) {
-    if( p - min > sofar ) sofar = p - min;
-    if( p < min ) min = p;
-  }
-  return sofar;
+  return prices.reduce( 
+    ( prev, curr ) => ( { profile: Math.max( prev.profile, curr - prev.min ), min: Math.min( prev.min, curr ) } ), 
+    { min: Infinity, profile: 0 } 
+  ).profile;
 }
 // @lc code=end
 

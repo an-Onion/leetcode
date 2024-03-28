@@ -9,15 +9,10 @@ export function isPalindrome( s: string ): boolean {
 
   const regex = /[^a-z0-9]/ig;
 
-  const parse:string = s.replace( regex, '' ).toLocaleLowerCase();
-
-  const len = parse.length;
-  for( let i = 0; i < len / 2; i++ ) {
-    if( parse[i] !== parse[len-1-i] )
-      return false;
-  }
-
-  return true;
+  const parsed = s.toLocaleLowerCase().replace( regex, '' );
+  
+  const reversed = parsed.split( '' ).reverse().join( '' );
+  return parsed === reversed;
 }
 // @lc code=end
 
