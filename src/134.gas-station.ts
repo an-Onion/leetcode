@@ -8,20 +8,17 @@
 export function canCompleteCircuit( gas: number[], cost: number[] ): number {
 
   const N = gas.length;
+  let [start, end, tank] = [N, 0, 0];
 
-  let start = N, end = 0, tank = 0, cur = 0;
-
-  for( let i = 0; i < N; i++ ) {
-
-    tank += gas[cur] - cost[cur];
-
-    if( tank >= 0 )
-      cur = ++end;
-    else
-      cur = --start;
+  while ( start > end ) {
+    if( tank >= 0 ){
+      tank += gas[end] - cost[end];
+      end++;
+      continue;
+    }
+    start--;
+    tank += gas[start] - cost[start];
   }
-
-
   return tank >= 0 ? ( start % N ) : -1;
 }
 // @lc code=end

@@ -20,16 +20,16 @@
 import { ListNode } from './dataStructure/ListNode';
 
 export function hasCycle( head: ListNode | null ): boolean {
-  const dummy = new ListNode( -1, head );
+  const dummy = new ListNode( 0, head );
+  let slow = dummy, fast = dummy;
 
-  let fast = dummy, slow = dummy;
-
-  while( slow && fast ){
-    fast = fast?.next?.next;
+  while( fast && fast.next ){
     slow = slow.next;
-    if( fast === slow ) return true;
+    fast = fast.next.next;
+    if( slow === fast ){
+      return true;
+    }
   }
-
   return false;
 }
 // @lc code=end
