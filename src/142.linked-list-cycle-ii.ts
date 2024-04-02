@@ -21,30 +21,27 @@ import { ListNode } from './dataStructure/ListNode';
 
 export function detectCycle( head: ListNode | null ): ListNode | null {
 
-  let p = hasCycle();
-  if( !p ) return null;
+  const dummy = new ListNode( 0, head );
+  let rabbit = dummy, tortoise = dummy;
 
-  let q = head;
-
-  while( p !== q ){
-    p = p.next;
-    q = q.next;
-  }
-
-  return p;
-
-  function hasCycle(): ListNode | null{
-
-    let fast = head, slow = head;
-
-    while( slow && fast ){
-      slow = slow.next;
-      fast = fast?.next?.next;
-      if( slow === fast ) return slow;
+  while ( rabbit && rabbit.next ) {
+    rabbit = rabbit.next.next;
+    tortoise = tortoise.next;
+    if ( rabbit === tortoise ) {
+      break;
     }
-
-    return null;
   }
+  if ( !rabbit || !rabbit.next ) return null;
+
+  let ret = dummy;
+
+  while ( ret !== tortoise ) {
+    ret = ret.next;
+    tortoise = tortoise.next;
+  }
+  return ret;
+
 }
+
 // @lc code=end
 

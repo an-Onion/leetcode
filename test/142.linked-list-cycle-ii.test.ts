@@ -25,6 +25,12 @@ describe( 'Linked List Cycle II', () => {
     expect( output ).toBeNull();
   } );
 
+  it( 'head = [], pos = -1', () => {
+    const head = ListNode.of( [] );
+    const output = detectCycle( head );
+    expect( output ).toBeNull();
+  } );
+
 
 } );
 
