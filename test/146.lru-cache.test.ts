@@ -21,8 +21,8 @@ function run( opts: string[], values: number[][] ) {
 describe( 'LRU Cache', () => {
 
   it( 'e.g. 1', () => {
-    const opts = ['LRUCache', 'put', 'put', 'get', 'put', 'get', 'put', 'get', 'get', 'get'];
-    const values = [[2], [1, 1], [2, 2], [1], [3, 3], [2], [4, 4], [1], [3], [4]];
+    const opts = ['LRUCache', 'put', 'put',   'get', 'put',  'get', 'put',  'get', 'get', 'get'];
+    const values = [[2],      [1, 1], [2, 2], [1],   [3, 3], [2],   [4, 4], [1],   [3],   [4]];
     expect( run( opts, values ) ).toStrictEqual( [null, null, null, 1, null, -1, null, -1, 3, 4] );
   } );
 

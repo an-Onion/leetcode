@@ -7,87 +7,103 @@
 // @lc code=start
 export class LRUCache {
 
+  capacity: number;
   length: number;
-  limit: number;
+  map: Map<number, DoubleLink>;
   head: DoubleLink;
   tail: DoubleLink;
-  map: Map<number, DoubleLink>;
-  constructor( k: number ){
-      this.limit = k;
-      this.length = 0;
-      this.head = new DoubleLink( -1, -1 );
-      this.map = new Map();
-  }
 
-  set( key: number, value: number ): void{
-      let node = this._get( key );
-      if( !node ) {
-        node = this.create( key, value );
-      }
-      node.value = value;
-  }
-
-  create( key: number, value: number ): DoubleLink {
-    const node = new DoubleLink( key, value );
-    this.map.set( key, node );
-    this.toTop( node );
-    this.length++;
-    this.checkLength();
-    return node;
-  }
-
-  _get( key: number ): DoubleLink {
-      const node: DoubleLink = this.map.get( key );
-      if( !node ) return null;
-      this.delete( node );
-      this.toTop( node );
-      return node;
-  }
-
-  toTop( node: DoubleLink ): void {
-     node.next = this.head.next;
-     if ( node.next ) node.next.pre = node;
-     this.head.next = node;
-     if( !this.tail ) this.tail = node;
-  }
-  checkLength(): void {
-      if( this.length > this.limit ){
-        const key = this.tail.key;
-        this.map.delete( key );
-        this.delete( this.tail );
-        this.length--;
-      }
-  }
-  delete( node: DoubleLink ): DoubleLink {
-    if( this.tail === node ){
-      this.tail = node.pre;
-    }
-    if( node.pre ) node.pre.next = node.next;
-    else this.head.next = node.next;
-
-    if( node.next ) node.next.pre = node.pre;
-
-    node.pre = null;
-    node.next = null;
-    return node;
+  constructor( capacity: number ) {
+    this.capacity = capacity;
+    this.length = 0;
+    this.map = new Map<number, DoubleLink>();
+    this.head = new DoubleLink( { key: -1, value: -1 } );
+    this.tail = this.head;
   }
 
   get( key: number ): number {
-    return this._get( key )?.value ?? -1;
+
+    if ( !this.map.has( key ) ) {
+      return -1;
+    }
+    
+    return this.#update( key );
+    
+  }
+
+  #update( key: number ): number {
+    const node = this.map.get( key );
+
+    this.#remove( key );
+
+    this.#insert( key, node );
+
+    return node.value;
   }
 
   put( key: number, value: number ): void {
-    this.set( key, value );
+
+    if ( this.map.has( key ) ) {
+      this.map.get( key ).value = value;
+      this.#update( key );
+      return;
+    }
+
+    const node = new DoubleLink( { key, value } );
+    
+    if( this.length === this.capacity ){
+      this.#remove( this.tail.key );
+    }
+
+    this.#insert( key, node );
   }
+
+  #remove( key: number ): void {
+    
+    const node = this.map.get( key );
+    this.length--;
+    this.map.delete( key );
+
+    const prev = node.pre;
+    const next = node.next;
+    prev.next = next;
+
+    if( !next ) {
+      this.tail = prev;
+      return; 
+    }
+    
+    next.pre = prev; 
+  }
+
+  #insert( key: number, node: DoubleLink ): void {    
+
+    this.map.set( key, node );
+    this.length++;
+    const next = this.head.next;
+    node.next = next;
+    node.pre = this.head;
+    this.head.next = node;
+
+    if( this.tail === this.head ) {
+      this.tail = node;
+      return;
+    }
+    next.pre = node;
+
+  }
+
 }
 class DoubleLink {
-  value: number;
   key: number;
+  value: number;
   pre: DoubleLink;
   next: DoubleLink;
-  constructor( key:number, value: number ) {
-      this.value = value;
-      this.key = key;
+  constructor( { key,value }:{key: number, value: number}  ) {
+    this.key = key;
+    this.value = value;
+    this.pre = null;
+    this.next = null;
   }
 }
 /**
