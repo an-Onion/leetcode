@@ -7,38 +7,31 @@
 // @lc code=start
 export function maximumGap( nums: number[] ): number {
 
-  let max = -1, min = Infinity;
+  if( nums.length < 2 ) return 0;
 
+  const min = Math.min( ...nums );
+  const max = Math.max( ...nums );
+  const delta = Math.floor( ( max - min ) / ( nums.length - 1 ) ) || 1;
+  const bucketSize = Math.floor( ( max - min ) / delta ) + 1;
+
+  const buckets = Array.from( { length: bucketSize }, () => [Infinity, -Infinity] );
+  
   for( const num of nums ) {
-    max = Math.max( max, num );
-    min = Math.min( min, num );
+    const idx = Math.floor( ( num - min ) / delta );
+    buckets[idx][0] = Math.min( buckets[idx][0], num );
+    buckets[idx][1] = Math.max( buckets[idx][1], num );
+  }
+  let [gap, prev] = [0, min];
+
+  for( const [min, max] of buckets ) {
+    if( min === Infinity ) continue;
+
+    gap = Math.max( gap, min - prev );
+    prev = max;
   }
 
-  if( max === min ) return 0;
+  return gap;
 
-  const gap = Math.ceil( ( max - min ) / ( nums.length-1 ) );
-  const bucketMax = Array( nums.length-1 ).fill( -1 );
-  const bucketMin = Array( nums.length-1 ).fill( Infinity );
-
-  for( const num of nums ){
-    if( num === max || num === min ) continue;
-    const idx = ( num-min ) / gap | 0;
-    bucketMax[idx] = Math.max( num, bucketMax[idx] );
-    bucketMin[idx] = Math.min( num, bucketMin[idx] );
-  }
-
-  let pre = min, maxGap = 0;
-
-  for( let i = 0; i < nums.length -1; ++i ){
-    if( bucketMax[i] === -1 ) continue;
-
-    maxGap = Math.max( maxGap, bucketMin[i] - pre );
-    pre = bucketMax[i];
-  }
-
-  maxGap = Math.max( maxGap, max - pre );
-
-  return maxGap;
 }
 // @lc code=end
 
