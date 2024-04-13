@@ -1,4 +1,4 @@
-import { myPow } from '../src/50.pow-x-n';
+import { myPow } from '../src/1-100/50.pow-x-n';
 
 describe( 'Pow(x, n)', () => {
   it( '2, 10', () => {

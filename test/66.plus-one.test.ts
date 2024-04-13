@@ -1,4 +1,4 @@
-import { plusOne } from '../src/66.plus-one';
+import { plusOne } from '../src/1-100/66.plus-one';
 
 describe( 'Plus One', () => {
   it( '[1,2,3]', () =>{

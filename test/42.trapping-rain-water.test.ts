@@ -1,4 +1,4 @@
-import { trap } from '../src/42.trapping-rain-water';
+import { trap } from '../src/1-100/42.trapping-rain-water';
 
 describe( 'Trapping Rain Water', () => {
 

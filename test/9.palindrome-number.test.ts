@@ -1,4 +1,4 @@
-import { isPalindrome } from '../src/9.palindrome-number';
+import { isPalindrome } from '../src/1-100/9.palindrome-number';
 
 describe( 'is Palindrome', () => {
   it( 'not negative', () => {

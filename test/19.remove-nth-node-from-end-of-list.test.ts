@@ -1,4 +1,4 @@
-import { removeNthFromEnd } from '../src/19.remove-nth-node-from-end-of-list';
+import { removeNthFromEnd } from '../src/1-100/19.remove-nth-node-from-end-of-list';
 import { ListNode } from '../src/dataStructure/ListNode';
 
 describe( 'Remove Nth Node From End of List', () => {

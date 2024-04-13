@@ -1,4 +1,4 @@
-import { myAtoi } from '../src/8.string-to-integer-atoi';
+import { myAtoi } from '../src/1-100/8.string-to-integer-atoi';
 
 describe( 'String to Integer (atoi)', () => {
   it( '   -42', () => {

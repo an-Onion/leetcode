@@ -1,4 +1,4 @@
-import { grayCode } from '../src/89.gray-code';
+import { grayCode } from '../src/1-100/89.gray-code';
 
 describe( 'gray code', () => {
 

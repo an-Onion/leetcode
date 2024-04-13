@@ -1,4 +1,4 @@
-import { generateParenthesis } from '../src/22.generate-parentheses';
+import { generateParenthesis } from '../src/1-100/22.generate-parentheses';
 
 describe( 'Generate Parentheses', () => {
 

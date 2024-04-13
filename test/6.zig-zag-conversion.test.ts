@@ -1,4 +1,4 @@
-import { convert } from '../src/6.zig-zag-conversion';
+import { convert } from '../src/1-100/6.zig-zag-conversion';
 
 describe( 'ZigZag Conversion', () => {
   it( 'PAYPALISHIRING 3', () => {

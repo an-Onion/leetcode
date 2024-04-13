@@ -1,4 +1,4 @@
-import { subsets } from '../src/78.subsets';
+import { subsets } from '../src/1-100/78.subsets';
 
 describe( 'Subsets', () => {
 

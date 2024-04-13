@@ -17,7 +17,7 @@
  * }
  */
 
-import { ListNode } from './dataStructure/ListNode';
+import { ListNode } from '../dataStructure/ListNode';
 
 export function reverseBetween( head: ListNode | null, left: number, right: number ): ListNode | null {
 

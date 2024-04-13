@@ -1,4 +1,4 @@
-import { longestCommonPrefix } from '../src/14.longest-common-prefix';
+import { longestCommonPrefix } from '../src/1-100/14.longest-common-prefix';
 
 
 describe( 'longest common prefix', () => {

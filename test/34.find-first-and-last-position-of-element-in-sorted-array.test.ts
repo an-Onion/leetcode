@@ -1,4 +1,4 @@
-import { searchRange } from '../src/34.find-first-and-last-position-of-element-in-sorted-array';
+import { searchRange } from '../src/1-100/34.find-first-and-last-position-of-element-in-sorted-array';
 
 describe( 'Find First and Last Position of Element in Sorted Array', () => {
 

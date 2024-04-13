@@ -1,4 +1,4 @@
-import { nextPermutation } from '../src/31.next-permutation';
+import { nextPermutation } from '../src/1-100/31.next-permutation';
 
 describe( 'Next Permutation', () => {
 

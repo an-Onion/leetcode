@@ -1,5 +1,5 @@
 import { ListNode } from '../src/dataStructure/ListNode';
-import { partition } from '../src/86.partition-list';
+import { partition } from '../src/1-100/86.partition-list';
 
 describe( 'Partition List', () => {
   it( '[1,4,3,2,5,2], 3', () => {

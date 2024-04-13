@@ -1,4 +1,4 @@
-import { inorderTraversal } from '../src/94.binary-tree-inorder-traversal';
+import { inorderTraversal } from '../src/1-100/94.binary-tree-inorder-traversal';
 import { TreeNode } from '../src/dataStructure/TreeNode';
 
 describe( 'Binary Tree inorder Traversal', () => {

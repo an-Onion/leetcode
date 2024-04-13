@@ -16,7 +16,7 @@
  *     }
  * }
  */
-import { ListNode } from '../src/dataStructure/ListNode';
+import { ListNode } from '../dataStructure/ListNode';
 
 export function rotateRight( head: ListNode | null, k: number ): ListNode | null {
 

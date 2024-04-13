@@ -1,4 +1,4 @@
-import { letterCombinations } from '../src/17.letter-combinations-of-a-phone-number';
+import { letterCombinations } from '../src/1-100/17.letter-combinations-of-a-phone-number';
 
 
 describe( 'Letter Combinations of a Phone Number', () => {

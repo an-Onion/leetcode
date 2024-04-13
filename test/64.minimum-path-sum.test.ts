@@ -1,4 +1,4 @@
-import { minPathSum } from '../src/64.minimum-path-sum';
+import { minPathSum } from '../src/1-100/64.minimum-path-sum';
 
 describe( 'Minimum Path Sum', () => {
 

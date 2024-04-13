@@ -17,7 +17,7 @@
  * }
  */
 
-import { ListNode } from './dataStructure/ListNode';
+import { ListNode } from '../dataStructure/ListNode';
 
 export function deleteDuplicates( head: ListNode | null ): ListNode | null {
 

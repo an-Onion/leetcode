@@ -1,4 +1,4 @@
-import { maxArea } from '../src/11.container-with-most-water';
+import { maxArea } from '../src/1-100/11.container-with-most-water';
 
 describe( 'Container With Most Water', () => {
 

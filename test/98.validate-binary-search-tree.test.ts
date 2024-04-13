@@ -1,4 +1,4 @@
-import { isValidBST } from '../src/98.validate-binary-search-tree';
+import { isValidBST } from '../src/1-100/98.validate-binary-search-tree';
 import { TreeNode } from '../src/dataStructure/TreeNode';
 
 describe( 'Validate Binary Search Tree', () => {

@@ -1,4 +1,4 @@
-import { insert } from '../src/57.insert-interval';
+import { insert } from '../src/1-100/57.insert-interval';
 
 describe( 'Insert Interval', () => {
 

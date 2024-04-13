@@ -1,4 +1,4 @@
-import { addBinary } from '../src/67.add-binary';
+import { addBinary } from '../src/1-100/67.add-binary';
 
 describe( 'Add Binary', () => {
   it( '11 + 1', () => {

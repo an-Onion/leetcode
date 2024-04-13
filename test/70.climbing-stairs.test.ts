@@ -1,4 +1,4 @@
-import { climbStairs } from '../src/70.climbing-stairs';
+import { climbStairs } from '../src/1-100/70.climbing-stairs';
 
 describe( 'Climbing Stairs', () => {
 

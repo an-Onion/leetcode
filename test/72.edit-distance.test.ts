@@ -1,4 +1,4 @@
-import { minDistance } from '../src/72.edit-distance';
+import { minDistance } from '../src/1-100/72.edit-distance';
 
 describe( 'Edit Distance', () => {
 

@@ -1,4 +1,4 @@
-import { merge } from '../src/88.merge-sorted-array';
+import { merge } from '../src/1-100/88.merge-sorted-array';
 
 describe( 'Merge Sorted Array', () => {
 

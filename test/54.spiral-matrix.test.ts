@@ -1,4 +1,4 @@
-import { spiralOrder } from '../src/54.spiral-matrix';
+import { spiralOrder } from '../src/1-100/54.spiral-matrix';
 
 describe( 'Spiral Matrix', () => {
 

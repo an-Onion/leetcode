@@ -1,4 +1,4 @@
-import { mySqrt } from '../src/69.sqrt-x';
+import { mySqrt } from '../src/1-100/69.sqrt-x';
 
 describe( 'Sqrt(x)', () => {
 

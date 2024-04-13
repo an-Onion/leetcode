@@ -1,4 +1,4 @@
-import { subsetsWithDup } from '../src/90.subsets-ii';
+import { subsetsWithDup } from '../src/1-100/90.subsets-ii';
 
 describe( 'Subsets II', () => {
 

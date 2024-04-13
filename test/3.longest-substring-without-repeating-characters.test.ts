@@ -1,4 +1,4 @@
-import { lengthOfLongestSubstring } from '../src/3.longest-substring-without-repeating-characters';
+import { lengthOfLongestSubstring } from '../src/1-100/3.longest-substring-without-repeating-characters';
 
 describe( 'Longest Substring Without Repeating Characters', () => {
   it( 'abcabcbb', () => {

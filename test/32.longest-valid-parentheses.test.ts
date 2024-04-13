@@ -1,4 +1,4 @@
-import { longestValidParentheses } from '../src/32.longest-valid-parentheses';
+import { longestValidParentheses } from '../src/1-100/32.longest-valid-parentheses';
 
 describe( 'Longest Valid Parentheses', () => {
 

@@ -1,4 +1,4 @@
-import { swapPairs } from '../src/24.swap-nodes-in-pairs';
+import { swapPairs } from '../src/1-100/24.swap-nodes-in-pairs';
 import { ListNode } from '../src/dataStructure/ListNode';
 
 describe( 'Swap Nodes in Pairs', () => {

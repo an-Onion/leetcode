@@ -18,7 +18,7 @@
  *     }
  * }
  */
-import { TreeNode } from './dataStructure/TreeNode';
+import { TreeNode } from '../dataStructure/TreeNode';
 
 export function isValidBST( root: TreeNode | null ): boolean {
 

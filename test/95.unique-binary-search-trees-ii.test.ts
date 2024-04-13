@@ -1,4 +1,4 @@
-import { generateTrees } from '../src/95.unique-binary-search-trees-ii';
+import { generateTrees } from '../src/1-100/95.unique-binary-search-trees-ii';
 import { TreeNode } from '../src/dataStructure/TreeNode';
 
 describe( 'Unique Binary Search Trees II', () => {

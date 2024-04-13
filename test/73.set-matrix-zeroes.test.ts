@@ -1,4 +1,4 @@
-import { setZeroes } from '../src/73.set-matrix-zeroes';
+import { setZeroes } from '../src/1-100/73.set-matrix-zeroes';
 
 describe( 'Set Matrix Zeroes', () => {
 

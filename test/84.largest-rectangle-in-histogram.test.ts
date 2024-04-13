@@ -1,4 +1,4 @@
-import { largestRectangleArea } from '../src/84.largest-rectangle-in-histogram';
+import { largestRectangleArea } from '../src/1-100/84.largest-rectangle-in-histogram';
 
 describe( 'Largest Rectangle in Histogram', () => {
 

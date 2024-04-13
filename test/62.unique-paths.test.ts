@@ -1,4 +1,4 @@
-import { uniquePaths } from '../src/62.unique-paths';
+import { uniquePaths } from '../src/1-100/62.unique-paths';
 
 describe( 'Unique Paths', () => {
 

@@ -1,4 +1,4 @@
-import { firstMissingPositive } from '../src/41.first-missing-positive';
+import { firstMissingPositive } from '../src/1-100/41.first-missing-positive';
 
 describe( 'First Missing Positive', () => {
 

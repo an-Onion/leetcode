@@ -1,4 +1,4 @@
-import { reverseBetween } from '../src/92.reverse-linked-list-ii';
+import { reverseBetween } from '../src/1-100/92.reverse-linked-list-ii';
 import { ListNode } from '../src/dataStructure/ListNode';
 
 describe( 'Reverse Linked list II', () => {

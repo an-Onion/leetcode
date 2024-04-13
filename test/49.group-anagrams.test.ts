@@ -1,4 +1,4 @@
-import { groupAnagrams } from '../src/49.group-anagrams';
+import { groupAnagrams } from '../src/1-100/49.group-anagrams';
 
 describe( 'Group Anagrams', () => {
 

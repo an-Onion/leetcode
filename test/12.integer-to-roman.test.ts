@@ -1,4 +1,4 @@
-import { intToRoman } from '../src/12.integer-to-roman';
+import { intToRoman } from '../src/1-100/12.integer-to-roman';
 
 describe( 'Integer to Roman', () => {
   it( '3', () => {

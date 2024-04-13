@@ -1,4 +1,4 @@
-import { search } from '../src/33.search-in-rotated-sorted-array';
+import { search } from '../src/1-100/33.search-in-rotated-sorted-array';
 
 describe( 'Search in Rotated Sorted Array', () => {
 

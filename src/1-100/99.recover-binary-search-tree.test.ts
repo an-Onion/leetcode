@@ -1,4 +1,4 @@
-import { TreeNode } from './dataStructure/TreeNode';
+import { TreeNode } from '../dataStructure/TreeNode';
 
 function recoverTree( root: TreeNode | null ): void {
 

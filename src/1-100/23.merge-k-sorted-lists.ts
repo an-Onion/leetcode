@@ -16,7 +16,7 @@
  *     }
  * }
  */
-import { ListNode } from './dataStructure/ListNode';
+import { ListNode } from '../dataStructure/ListNode';
 
 export function mergeKLists( lists: Array<ListNode | null> ): ListNode | null {
 

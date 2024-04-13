@@ -1,4 +1,4 @@
-import { searchMatrix } from '../src/74.search-a-2-d-matrix';
+import { searchMatrix } from '../src/1-100/74.search-a-2-d-matrix';
 
 describe( 'Search a 2D Matrix', () => {
 

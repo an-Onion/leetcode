@@ -16,7 +16,7 @@
  *     }
  * }
  */
-import { ListNode } from './dataStructure/ListNode';
+import { ListNode } from '../dataStructure/ListNode';
 
 export function reverseKGroup( head: ListNode | null, k: number ): ListNode | null {
 

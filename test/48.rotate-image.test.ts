@@ -1,4 +1,4 @@
-import { rotate } from '../src/48.rotate-image';
+import { rotate } from '../src/1-100/48.rotate-image';
 
 describe( 'Rotate Image', () => {
 

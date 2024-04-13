@@ -1,4 +1,4 @@
-import { sortColors } from '../src/75.sort-colors';
+import { sortColors } from '../src/1-100/75.sort-colors';
 
 describe( 'Sort Colors', () => {
 

@@ -18,7 +18,7 @@
  *     }
  * }
  */
-import { TreeNode } from './dataStructure/TreeNode';
+import { TreeNode } from '../dataStructure/TreeNode';
 
 export function generateTrees( n: number ): Array<TreeNode | null> {
 

@@ -17,7 +17,7 @@
  * }
  */
 
-import { ListNode } from './dataStructure/ListNode';
+import { ListNode } from '../dataStructure/ListNode';
 
 export function partition( head: ListNode | null, x: number ): ListNode | null {
 

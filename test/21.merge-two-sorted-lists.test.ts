@@ -1,4 +1,4 @@
-import { mergeTwoLists } from '../src/21.merge-two-sorted-lists';
+import { mergeTwoLists } from '../src/1-100/21.merge-two-sorted-lists';
 import { ListNode } from '../src/dataStructure/ListNode';
 
 describe( 'erge-two-sorted-lists', () => {

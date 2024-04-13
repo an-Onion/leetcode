@@ -1,4 +1,4 @@
-import { rotateRight } from '../src/61.rotate-list';
+import { rotateRight } from '../src/1-100/61.rotate-list';
 import { ListNode } from '../src/dataStructure/ListNode';
 
 describe( 'Rotate List', () => {

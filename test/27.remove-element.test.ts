@@ -1,4 +1,4 @@
-import { removeElement } from '../src/27.remove-element';
+import { removeElement } from '../src/1-100/27.remove-element';
 
 describe( 'Remove Element', () => {
   it( '[3,2,2,3], 3 => 2', () => {

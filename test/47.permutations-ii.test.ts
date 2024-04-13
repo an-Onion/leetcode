@@ -1,4 +1,4 @@
-import { permuteUnique } from '../src/47.permutations-ii';
+import { permuteUnique } from '../src/1-100/47.permutations-ii';
 
 describe( 'Permutations II', () => {
 

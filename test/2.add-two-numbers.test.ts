@@ -1,4 +1,4 @@
-import { addTwoNumbers } from '../src/2.add-two-numbers';
+import { addTwoNumbers } from '../src/1-100/2.add-two-numbers';
 import { ListNode } from '../src/dataStructure/ListNode';
 
 describe( 'Add Two Numbers', () => {

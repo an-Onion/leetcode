@@ -1,5 +1,5 @@
 import { TreeNode } from '../src/dataStructure/TreeNode';
-import { isSameTree } from '../src/100.same-tree';
+import { isSameTree } from '../src/1-100/100.same-tree';
 
 describe( 'Same Tree', () => {
 

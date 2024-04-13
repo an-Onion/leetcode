@@ -1,4 +1,4 @@
-import { canJump } from '../src/55.jump-game';
+import { canJump } from '../src/1-100/55.jump-game';
 
 describe( 'Jump Game', () => {
 

@@ -1,4 +1,4 @@
-import { generateMatrix } from '../src/59.spiral-matrix-ii';
+import { generateMatrix } from '../src/1-100/59.spiral-matrix-ii';
 
 describe( 'Spiral Matrix II', () => {
 

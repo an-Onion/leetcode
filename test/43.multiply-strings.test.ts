@@ -1,4 +1,4 @@
-import { multiply } from '../src/43.multiply-strings';
+import { multiply } from '../src/1-100/43.multiply-strings';
 
 describe( 'Multiply Strings', () => {
 

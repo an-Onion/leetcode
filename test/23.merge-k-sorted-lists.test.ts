@@ -1,4 +1,4 @@
-import { mergeKLists } from '../src/23.merge-k-sorted-lists';
+import { mergeKLists } from '../src/1-100/23.merge-k-sorted-lists';
 import { ListNode } from '../src/dataStructure/ListNode';
 
 describe( 'Merge k Sorted Lists', () => {

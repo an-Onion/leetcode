@@ -1,4 +1,4 @@
-import { combine } from '../src/77.combinations';
+import { combine } from '../src/1-100/77.combinations';
 
 describe( 'Combinations',() => {
 

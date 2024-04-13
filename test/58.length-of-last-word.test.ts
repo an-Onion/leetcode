@@ -1,4 +1,4 @@
-import { lengthOfLastWord } from '../src/58.length-of-last-word';
+import { lengthOfLastWord } from '../src/1-100/58.length-of-last-word';
 
 describe( 'Length of Last Word', () => {
   it( 'Hello World', ()=>{

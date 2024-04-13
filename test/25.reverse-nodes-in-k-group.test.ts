@@ -1,4 +1,4 @@
-import { reverseKGroup } from '../src/25.reverse-nodes-in-k-group';
+import { reverseKGroup } from '../src/1-100/25.reverse-nodes-in-k-group';
 import { ListNode } from '../src/dataStructure/ListNode';
 
 describe( 'Reverse Nodes in k-Group', () => {

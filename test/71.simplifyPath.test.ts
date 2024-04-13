@@ -1,4 +1,4 @@
-import { simplifyPath } from '../src/71.simplify-path';
+import { simplifyPath } from '../src/1-100/71.simplify-path';
 
 describe( 'Simplify Path', () => {
 

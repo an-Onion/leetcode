@@ -1,4 +1,4 @@
-import { threeSumClosest } from '../src/16.3-sum-closest';
+import { threeSumClosest } from '../src/1-100/16.3-sum-closest';
 
 describe( '3Sum Closest', () => {
 

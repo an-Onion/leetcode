@@ -17,7 +17,7 @@
  * }
  */
 
-import { ListNode } from './dataStructure/ListNode';
+import { ListNode } from '../dataStructure/ListNode';
 
 export function mergeTwoLists( l1: ListNode | null, l2: ListNode | null ): ListNode | null {
 

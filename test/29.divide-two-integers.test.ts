@@ -1,4 +1,4 @@
-import { divide } from '../src/29.divide-two-integers';
+import { divide } from '../src/1-100/29.divide-two-integers';
 
 describe( 'Divide Two Integers', () => {
 

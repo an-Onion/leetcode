@@ -1,4 +1,4 @@
-import { combinationSum } from '../src/39.combination-sum';
+import { combinationSum } from '../src/1-100/39.combination-sum';
 
 describe( 'Combination Sum', () => {
 

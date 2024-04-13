@@ -1,4 +1,4 @@
-import { searchInsert } from '../src/35.search-insert-position';
+import { searchInsert } from '../src/1-100/35.search-insert-position';
 
 describe( 'Search Insert Position', () => {
   it( '[1,3,5,6], 5 => 2', () => {

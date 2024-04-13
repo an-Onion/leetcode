@@ -1,4 +1,4 @@
-import { merge } from '../src/56.merge-intervals';
+import { merge } from '../src/1-100/56.merge-intervals';
 
 describe( 'Merge Intervals', () => {
   it( '[[1,3],[2,6],[8,10],[15,18]]', () => {

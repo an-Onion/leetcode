@@ -1,4 +1,4 @@
-import { fourSum } from '../src/18.4-sum';
+import { fourSum } from '../src/1-100/18.4-sum';
 
 describe( '4Sum', () => {
   it( '[1,0,-1,0,-2,2], 0', () => {

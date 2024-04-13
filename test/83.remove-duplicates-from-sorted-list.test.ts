@@ -1,4 +1,4 @@
-import { deleteDuplicates } from '../src/83.remove-duplicates-from-sorted-list';
+import { deleteDuplicates } from '../src/1-100/83.remove-duplicates-from-sorted-list';
 import { ListNode } from '../src/dataStructure/ListNode';
 
 describe( 'Remove Duplicates from Sorted List', () => {

@@ -1,4 +1,4 @@
-import { numTrees } from '../src/96.unique-binary-search-trees';
+import { numTrees } from '../src/1-100/96.unique-binary-search-trees';
 
 describe( 'Unique Binary Search Trees', () => {
 

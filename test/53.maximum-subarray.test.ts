@@ -1,4 +1,4 @@
-import { maxSubArray } from '../src/53.maximum-subarray';
+import { maxSubArray } from '../src/1-100/53.maximum-subarray';
 
 describe( 'Maximum Subarray', () => {
   it( '[-2,1,-3,4,-1,2,1,-5,4]', () => {

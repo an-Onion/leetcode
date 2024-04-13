@@ -18,7 +18,7 @@
  *     }
  * }
  */
-import { TreeNode } from './dataStructure/TreeNode';
+import { TreeNode } from '../dataStructure/TreeNode';
 
 export function isSameTree( p: TreeNode | null, q: TreeNode | null ): boolean {
 

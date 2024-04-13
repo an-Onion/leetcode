@@ -1,4 +1,4 @@
-import { longestPalindrome } from '../src/5.longest-palindromic-substring';
+import { longestPalindrome } from '../src/1-100/5.longest-palindromic-substring';
 
 describe( 'Longest Palindromic Substring', () => {
   it( 'babad', () => {
