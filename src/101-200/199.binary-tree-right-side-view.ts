@@ -18,7 +18,7 @@
  *     }
  * }
  */
-import { TreeNode } from './dataStructure/TreeNode';
+import { TreeNode } from '../dataStructure/TreeNode';
 export function rightSideView( root: TreeNode | null ): number[] {
 
   if( !root ) return [];

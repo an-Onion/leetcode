@@ -17,7 +17,7 @@
  * }
  */
 
-import { ListNode } from './dataStructure/ListNode';
+import { ListNode } from '../dataStructure/ListNode';
 
 export function hasCycle( head: ListNode | null ): boolean {
   const dummy = new ListNode( 0, head );

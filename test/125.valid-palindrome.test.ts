@@ -1,4 +1,4 @@
-import { isPalindrome } from '../src/125.valid-palindrome';
+import { isPalindrome } from '../src/101-200/125.valid-palindrome';
 
 describe( 'Valid Palindrome', () => {
   it( 'A man, a plan, a canal: Panama', () => {

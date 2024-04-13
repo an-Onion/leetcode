@@ -1,4 +1,4 @@
-import { calculateMinimumHP } from '../src/174.dungeon-game';
+import { calculateMinimumHP } from '../src/101-200/174.dungeon-game';
 
 describe( 'Dungeon Game', () => {
 

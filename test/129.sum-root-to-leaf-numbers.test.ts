@@ -1,4 +1,4 @@
-import { sumNumbers } from '../src/129.sum-root-to-leaf-numbers';
+import { sumNumbers } from '../src/101-200/129.sum-root-to-leaf-numbers';
 import { TreeNode } from '../src/dataStructure/TreeNode';
 
 describe( 'Sum Root to Leaf Numbers', () => {

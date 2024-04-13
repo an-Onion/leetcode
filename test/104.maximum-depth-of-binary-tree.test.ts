@@ -1,4 +1,4 @@
-import { maxDepth } from '../src/104.maximum-depth-of-binary-tree';
+import { maxDepth } from '../src/101-200/104.maximum-depth-of-binary-tree';
 import { TreeNode } from '../src/dataStructure/TreeNode';
 
 describe( 'Maximum Depth of Binary Tree', () => {

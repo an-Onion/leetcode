@@ -1,4 +1,4 @@
-import { getRow } from '../src/119.pascals-triangle-ii';
+import { getRow } from '../src/101-200/119.pascals-triangle-ii';
 
 describe( 'Pascal’s Triangle II', () => {
 

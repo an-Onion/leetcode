@@ -1,4 +1,4 @@
-import { ListNode } from './dataStructure/ListNode';
+import { ListNode } from '../dataStructure/ListNode';
 
 function sortList( head: ListNode | null ): ListNode | null {
 

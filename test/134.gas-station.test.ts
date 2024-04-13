@@ -1,4 +1,4 @@
-import { canCompleteCircuit } from '../src/134.gas-station';
+import { canCompleteCircuit } from '../src/101-200/134.gas-station';
 
 describe( 'Gas Station', () => {
 

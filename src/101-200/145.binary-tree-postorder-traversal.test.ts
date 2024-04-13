@@ -1,4 +1,4 @@
-import { TreeNode } from './dataStructure/TreeNode';
+import { TreeNode } from '../dataStructure/TreeNode';
 
 function postorderTraversal( root: TreeNode | null ): number[] {
     function DFS( node: TreeNode | null, next: ( params: number[] ) => number[] ) {

@@ -1,4 +1,4 @@
-import { buildTree } from '../src/106.construct-binary-tree-from-inorder-and-postorder-traversal';
+import { buildTree } from '../src/101-200/106.construct-binary-tree-from-inorder-and-postorder-traversal';
 import { TreeNode } from '../src/dataStructure/TreeNode';
 
 describe( 'Construct Binary Tree from Inorder and Postorder Traversal', () => {

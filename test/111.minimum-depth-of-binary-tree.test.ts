@@ -1,4 +1,4 @@
-import { minDepth } from '../src/111.minimum-depth-of-binary-tree';
+import { minDepth } from '../src/101-200/111.minimum-depth-of-binary-tree';
 import { TreeNode } from '../src/dataStructure/TreeNode';
 
 describe( 'Minimum Depth of Binary Tree', () => {

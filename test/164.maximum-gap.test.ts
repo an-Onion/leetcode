@@ -1,4 +1,4 @@
-import { maximumGap } from '../src/164.maximum-gap';
+import { maximumGap } from '../src/101-200/164.maximum-gap';
 
 describe( 'Maximum Gap', () => {
 

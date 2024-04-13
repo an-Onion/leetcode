@@ -1,5 +1,5 @@
 import { TreeNode } from '../src/dataStructure/TreeNode';
-import { isBalanced } from '../src/110.balanced-binary-tree';
+import { isBalanced } from '../src/101-200/110.balanced-binary-tree';
 
 describe( 'Balanced Binary Tree', () => {
 

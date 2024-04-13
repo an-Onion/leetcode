@@ -1,4 +1,4 @@
-import { LRUCache } from '../src/146.lru-cache';
+import { LRUCache } from '../src/101-200/146.lru-cache';
 
 function run( opts: string[], values: number[][] ) {
   const limit = values[0][0];

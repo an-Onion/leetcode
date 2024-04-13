@@ -1,4 +1,4 @@
-import { hasCycle } from '../src/141.linked-list-cycle';
+import { hasCycle } from '../src/101-200/141.linked-list-cycle';
 import { ListNode } from '../src/dataStructure/ListNode';
 
 describe( 'Linked List Cycle', () => {

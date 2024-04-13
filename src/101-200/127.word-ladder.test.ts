@@ -1,5 +1,5 @@
-import * as test3 from './largeData/127.3.json';
-import * as test4 from './largeData/127.4.json';
+import * as test3 from '../largeData/127.3.json';
+import * as test4 from '../largeData/127.4.json';
 
 function ladderLength( beginWord: string, endWord: string, wordList: string[] ): number {
 

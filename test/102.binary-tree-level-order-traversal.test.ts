@@ -1,4 +1,4 @@
-import { levelOrder } from '../src/102.binary-tree-level-order-traversal';
+import { levelOrder } from '../src/101-200/102.binary-tree-level-order-traversal';
 import { TreeNode } from '../src/dataStructure/TreeNode';
 
 describe( 'Binary Tree Level Order Traversal', () => {

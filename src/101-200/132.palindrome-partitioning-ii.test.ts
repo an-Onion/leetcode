@@ -1,4 +1,4 @@
-import * as testCase from './largeData/132.json';
+import * as testCase from '../largeData/132.json';
 
 function minCut( s: string ) {
     const N = s.length;

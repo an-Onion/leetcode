@@ -1,4 +1,4 @@
-import { sortedArrayToBST } from '../src/108.convert-sorted-array-to-binary-search-tree';
+import { sortedArrayToBST } from '../src/101-200/108.convert-sorted-array-to-binary-search-tree';
 import { TreeNode } from '../src/dataStructure/TreeNode';
 
 describe( 'Convert Sorted Array to Binary Search Tree', () => {

@@ -1,5 +1,5 @@
 import { TreeNode } from '../src/dataStructure/TreeNode';
-import { hasPathSum } from '../src/112.path-sum';
+import { hasPathSum } from '../src/101-200/112.path-sum';
 
 describe( 'Path Sum', () => {
 

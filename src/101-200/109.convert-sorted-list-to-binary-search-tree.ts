@@ -30,8 +30,8 @@
  *     }
  * }
  */
-import { ListNode } from '../src/dataStructure/ListNode';
-import { TreeNode } from '../src/dataStructure/TreeNode';
+import { ListNode } from '../dataStructure/ListNode';
+import { TreeNode } from '../dataStructure/TreeNode';
 
 export function sortedListToBST( head: ListNode | null ): TreeNode | null {
 

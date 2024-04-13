@@ -22,7 +22,7 @@
 /**
  Do not return anything, modify root in-place instead.
  */
-import { TreeNode } from './dataStructure/TreeNode';
+import { TreeNode } from '../dataStructure/TreeNode';
 
 export function flatten( root: TreeNode | null ): void {
   

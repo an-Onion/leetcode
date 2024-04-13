@@ -1,4 +1,4 @@
-import { detectCycle } from '../src/142.linked-list-cycle-ii';
+import { detectCycle } from '../src/101-200/142.linked-list-cycle-ii';
 import { ListNode } from '../src/dataStructure/ListNode';
 
 describe( 'Linked List Cycle II', () => {

@@ -18,7 +18,7 @@
  *     }
  * }
  */
-import { TreeNode } from '../src/dataStructure/TreeNode';
+import { TreeNode } from '../dataStructure/TreeNode';
 
 export function levelOrderBottom( root: TreeNode | null ): number[][] {
 

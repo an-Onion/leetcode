@@ -1,4 +1,4 @@
-import { isSymmetric } from '../src/101.symmetric-tree';
+import { isSymmetric } from '../src/101-200/101.symmetric-tree';
 import { TreeNode } from '../src/dataStructure/TreeNode';
 
 describe( 'Symmetric Tree', () => {

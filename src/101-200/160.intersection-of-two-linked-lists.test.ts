@@ -1,4 +1,4 @@
-import { ListNode } from './dataStructure/ListNode';
+import { ListNode } from '../dataStructure/ListNode';
 
 function getIntersectionNode( headA: ListNode | null, headB: ListNode | null ): ListNode | null {
 

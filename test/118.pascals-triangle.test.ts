@@ -1,4 +1,4 @@
-import { generate } from '../src/118.pascals-triangle';
+import { generate } from '../src/101-200/118.pascals-triangle';
 
 describe( 'Pascal’s Triangle', () => {
 

@@ -1,5 +1,5 @@
 import { TreeNode } from '../src/dataStructure/TreeNode';
-import { rightSideView } from '../src/199.binary-tree-right-side-view';
+import { rightSideView } from '../src/101-200/199.binary-tree-right-side-view';
 
 describe( 'Binary Tree Right Side View', () => {
 

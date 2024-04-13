@@ -1,4 +1,4 @@
-import { sortedListToBST } from '../src/109.convert-sorted-list-to-binary-search-tree';
+import { sortedListToBST } from '../src/101-200/109.convert-sorted-list-to-binary-search-tree';
 import { TreeNode } from '../src/dataStructure/TreeNode';
 import { ListNode } from '../src/dataStructure/ListNode';
 

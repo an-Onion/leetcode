@@ -18,7 +18,7 @@
  *     }
  * }
  */
-import { TreeNode } from '../src/dataStructure/TreeNode';
+import { TreeNode } from '../dataStructure/TreeNode';
 
 export function hasPathSum( root: TreeNode | null, targetSum: number ): boolean {
 

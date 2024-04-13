@@ -1,4 +1,4 @@
-import { maxProfit } from '../src/121.best-time-to-buy-and-sell-stock';
+import { maxProfit } from '../src/101-200/121.best-time-to-buy-and-sell-stock';
 
 describe( 'Best Time to Buy and Sell Stock', () => {
 

@@ -1,4 +1,4 @@
-import { singleNumber } from '../src/136.single-number';
+import { singleNumber } from '../src/101-200/136.single-number';
 
 describe( 'Single Number', () => {
 

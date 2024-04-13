@@ -1,4 +1,4 @@
-import { zigzagLevelOrder } from '../src/103.binary-tree-zigzag-level-order-traversal';
+import { zigzagLevelOrder } from '../src/101-200/103.binary-tree-zigzag-level-order-traversal';
 import { TreeNode } from '../src/dataStructure/TreeNode';
 
 describe( 'Binary Tree Zigzag Level Order Traversal', () => {

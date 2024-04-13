@@ -1,5 +1,5 @@
 import { TreeNode } from '../src/dataStructure/TreeNode';
-import { flatten } from '../src/114.flatten-binary-tree-to-linked-list';
+import { flatten } from '../src/101-200/114.flatten-binary-tree-to-linked-list';
 
 describe( 'Flatten Binary Tree to Linked List', () => {
 

@@ -1,4 +1,4 @@
-import { TreeNode } from './dataStructure/TreeNode';
+import { TreeNode } from '../dataStructure/TreeNode';
 
 class BSTIterator {
 

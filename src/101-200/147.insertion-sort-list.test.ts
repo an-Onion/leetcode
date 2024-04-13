@@ -1,4 +1,4 @@
-import { ListNode } from './dataStructure/ListNode';
+import { ListNode } from '../dataStructure/ListNode';
 
 function insertionSortList( head: ListNode | null ): ListNode | null {
     const dummy = new ListNode( 0 );
