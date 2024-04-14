@@ -23,20 +23,21 @@ export function rightSideView( root: TreeNode | null ): number[] {
 
   if( !root ) return [];
 
-  const queue = [root];
-  let count = 1;
+  const Q = [root];
   const ret = [];
-  while( queue.length ) {
 
-    const node = queue.shift();
+  while( Q.length ){
+    
+    let size = Q.length;
 
-    node.left && queue.push( node.left );
-    node.right && queue.push( node.right );
-
-    if( --count ) continue;
-
-    count = queue.length;
-    ret.push( node.val );
+    while( size-- ){
+      const node = Q.shift();
+      if( size === 0 ){
+        ret.push( node.val );
+      }
+      if( node.left ) Q.push( node.left );
+      if( node.right ) Q.push( node.right );
+    }
   }
   return ret;
 }
