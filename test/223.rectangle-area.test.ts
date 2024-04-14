@@ -1,4 +1,4 @@
-import { computeArea } from '../src/223.rectangle-area';
+import { computeArea } from '../src/201-300/223.rectangle-area';
 
 describe( 'Rectangle Area', () => {
 

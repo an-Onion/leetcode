@@ -18,7 +18,7 @@
  *     }
  * }
  */
-import { TreeNode } from './dataStructure/TreeNode';
+import { TreeNode } from '../dataStructure/TreeNode';
 
 export function lowestCommonAncestor( root: TreeNode | null, p: TreeNode | null, q: TreeNode | null ): TreeNode | null {
 

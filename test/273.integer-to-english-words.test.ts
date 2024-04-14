@@ -1,4 +1,4 @@
-import { numberToWords } from '../src/273.integer-to-english-words';
+import { numberToWords } from '../src/201-300/273.integer-to-english-words';
 
 describe( 'Integer to English Words', () => {
   it( '0', () => {

@@ -1,4 +1,4 @@
-import { lowestCommonAncestor } from '../src/236.lowest-common-ancestor-of-a-binary-tree';
+import { lowestCommonAncestor } from '../src/201-300/236.lowest-common-ancestor-of-a-binary-tree';
 import { TreeNode } from '../src/dataStructure/TreeNode';
 
 describe( 'Lowest Common Ancestor of a Binary Tree', () => {

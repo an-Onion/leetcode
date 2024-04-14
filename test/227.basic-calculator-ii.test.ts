@@ -1,4 +1,4 @@
-import { calculate } from '../src/227.basic-calculator-ii';
+import { calculate } from '../src/201-300/227.basic-calculator-ii';
 
 describe( 'Basic Calculator II', () => {
 

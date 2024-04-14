@@ -1,4 +1,4 @@
-import { maximalSquare } from '../src/221.maximal-square';
+import { maximalSquare } from '../src/201-300/221.maximal-square';
 
 describe( 'Maximal Square', () => {
 
