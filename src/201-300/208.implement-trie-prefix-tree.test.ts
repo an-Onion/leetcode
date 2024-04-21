@@ -1,3 +1,5 @@
+import case6 from '../largeData/212.json';
+
 class Trie {
     children: Record<string, Trie>;
     isLeaf: boolean;
