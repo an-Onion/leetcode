@@ -10,32 +10,37 @@ export function strStr( haystack: string, needle: string ): number {
   if( needle === '' ) return 0;
 
   function getNext( p: string ): number[] {
-    const next: number[] = [-1];
-    let i = 0, j = -1;
+    const next = Array( p.length ).fill( 0 );
+    let i = 1, j = 0;
 
-    while( i < p.length ){
-      if( j === -1 || p[i] === p[j] ){
+    while( i < p.length ) {
+      if( p[i] === p[j] ){
         i++, j++;
-        next.push( j );
-      } else
-        j = next[j];
+        continue;
+      }
+      if( j === 0 ){
+        i++; continue;
+      }
+      j = next[j - 1];
     }
+
     return next;
   }
 
-  function KMP( t: string, p: string ){
-    const next: number[] = getNext( p );
+  function KMP( s: string, p: string ): number {
+    const next = getNext( p );
+    let i = 0, j = 0;
 
-    let i = 0 , j = 0;
-
-    while( i < t.length && j < p.length ){
-
-      if( j === -1 || t[i] === p[j] )
+    while( i < s.length && j < p.length ) {
+      if( s[i] === p[j] ){
         i++, j++;
-      else
-         j = next[j];
+        continue;
+      }
+      if( j === 0 ){
+        i++; continue;
+      }
+      j = next[j - 1];
     }
-
     return j === p.length ? i - j : -1;
   }
 
