@@ -15,7 +15,7 @@ export function strStr( haystack: string, needle: string ): number {
 
     while( i < p.length ) {
       if( p[i] === p[j] ){
-        i++, j++;
+        next[i++] = ++j;
         continue;
       }
       if( j === 0 ){
