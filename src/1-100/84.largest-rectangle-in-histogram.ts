@@ -8,7 +8,7 @@
 export function largestRectangleArea( heights: number[] ): number {
 
   const mono: number[] = [-1];
-    
+
   heights.push( 0 );
   let maxArea = 0;
   for( let i = 0; i < heights.length; i++ ){
@@ -19,7 +19,7 @@ export function largestRectangleArea( heights: number[] ): number {
       }
       mono.push( i );
   }
-  
+
   return maxArea;
 }
 // @lc code=end

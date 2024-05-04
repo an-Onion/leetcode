@@ -4,20 +4,20 @@ function solve( board: string[][] ): void {
 
     // run BFS only on the 'O's that are on the boundary
     const BFS = ( row: number, col: number ): void => {
-        
+
         const dirs: [number, number][] = [
             [0, 1], [1, 0], [-1, 0], [0, -1],
         ];
-        
+
         const Q: [number, number][] = [[row, col]];
 
         while( Q.length ) {
-            
+
             const [r, c] = Q.shift()!;
-            
+
             if ( visited[r][c] ) continue;
             visited[r][c] = true;
-            
+
             for( const [dr, dc] of dirs ) {
                 const nr = r + dr;
                 const nc = c + dc;
@@ -37,7 +37,7 @@ function solve( board: string[][] ): void {
         if( board[0][j] === 'O' ) BFS( 0, j );
         if( board[board.length - 1][j] === 'O' ) BFS( board.length - 1, j );
     }
-    
+
     for( let i = 0; i < board.length; i++ ){
         for( let j = 0; j < board[0].length; j++ ){
             if( board[i][j] === 'O' && !visited[i][j] ) board[i][j] = 'X';
@@ -49,13 +49,13 @@ describe( '130. Surrounded Regions', () => {
     it( 'Example 1', () => {
         // prettier-ignore
         const board = [
-            ['X','X','X','X'],  
+            ['X','X','X','X'],
             ['X','O','O','X'],
             ['X','X','O','X'],
             ['X','O','X','X'],
         ];
         solve( board );
-        expect( board ).toStrictEqual( 
+        expect( board ).toStrictEqual(
         [
             ['X','X','X','X'],
             ['X','X','X','X'],

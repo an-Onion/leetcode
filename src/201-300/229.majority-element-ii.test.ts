@@ -28,7 +28,7 @@ function majorityElement( nums: number[] ): number[] {
     for( const num of nums ) {
         if( num === votes[0][0] ) {
             votes[0][1]++; continue;
-        } 
+        }
         if ( num === votes[1][0] ) {
             votes[1][1]++;
         }

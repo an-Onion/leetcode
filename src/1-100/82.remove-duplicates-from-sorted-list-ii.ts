@@ -28,7 +28,7 @@ export function deleteDuplicates( head: ListNode | null ): ListNode | null {
 
   let tag = false;
   while( slow ) {
-    
+
     if( fast?.val === slow.val ){
       tag = true;
       fast = fast.next;
@@ -38,7 +38,7 @@ export function deleteDuplicates( head: ListNode | null ): ListNode | null {
 
     fast = fast?.next;
     slow = slow.next;
-    
+
     if( tag ){
       prev.next = slow;
       tag = false;

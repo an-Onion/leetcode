@@ -41,7 +41,7 @@ export function isBalanced( root: TreeNode | null ): boolean {
     } );
 
   }
-  
+
   return DFS( root, ( params ) => params.ret );
 }
 // @lc code=end

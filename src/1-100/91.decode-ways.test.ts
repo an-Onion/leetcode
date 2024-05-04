@@ -19,7 +19,7 @@ function numDecodings( s: string ): number {
 
 describe( '91. Decode ways', () => {
     it( '12', () => {
-        expect( numDecodings( '12' ) ).toEqual( 2 );    
+        expect( numDecodings( '12' ) ).toEqual( 2 );
     } );
 
     it( '226', () => {

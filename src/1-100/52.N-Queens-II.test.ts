@@ -32,7 +32,7 @@ function totalNQueens( n: number ): number {
 }
 
 describe( '52. N-Queens II', () => {
-    
+
     it( '1', () => {
         expect( totalNQueens( 1 ) ).toStrictEqual( 1 );
     } );

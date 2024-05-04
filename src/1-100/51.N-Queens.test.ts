@@ -27,7 +27,7 @@ function solveNQueens( n: number ): string[][] {
     };
 
     const result: string[][] = [ ];
-    
+
     function DFS( row: number = 0 ) {
         if( row === n ) {
             result.push( toBoard( ) );

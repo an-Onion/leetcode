@@ -6,7 +6,7 @@ function deleteNode( node: ListNode | null ): void {
 }
 
 describe( '237. delete-node-in-a-linked-list', () => {
-    
+
     it( 'head = [4,5,1,9], node = 5', () => {
         const head = ListNode.of( [4,5,1,9] );
         const node = head.next.next;

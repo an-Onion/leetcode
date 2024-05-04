@@ -34,7 +34,7 @@ export function buildTree( preorder: number[], inorder: number[] ): TreeNode | n
     const preLeft = preOrder.splice( 0, idx );
     const inLeft = inOrder.splice( 0, idx );
     inOrder.shift();
-    
+
     return DFS( preLeft, inLeft, ( left ) => {
       return DFS( preOrder, inOrder, ( right ) => {
         return next( new TreeNode( val, left, right ) );

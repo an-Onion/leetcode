@@ -46,7 +46,7 @@ describe( '138.copy-list-with-random-pointer', () => {
 
     it( '[]', () => {
         const copy = copyRandomList( null );
-        expect( copy ).toBe( null );    
+        expect( copy ).toBe( null );
     } );
 
     it( '[[7,null],[13,0]', () => {

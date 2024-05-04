@@ -1,5 +1,5 @@
 function isMatch( s: string, p: string ): boolean {
-    
+
     const dp: boolean[][] = Array.from( Array( p.length + 1 ), () => Array( s.length + 1 ).fill( false ) );
 
     dp[0][0] = true;
@@ -39,7 +39,7 @@ describe( '45. wildcard matching', () => {
     } );
 
     it( 'aa, a', () => {
-        expect( isMatch( 'aa', 'a' ) ).toBe( false );   
+        expect( isMatch( 'aa', 'a' ) ).toBe( false );
     } );
 
     it( 'aa, a*', () => {

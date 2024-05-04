@@ -25,7 +25,7 @@
 import { TreeNode } from '../dataStructure/TreeNode';
 
 export function flatten( root: TreeNode | null ): void {
-  
+
   while( root ){
 
     if( root.left ){

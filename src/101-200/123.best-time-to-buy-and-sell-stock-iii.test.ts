@@ -22,7 +22,7 @@ function maxProfit( prices: number[] ): number {
 }
 
 describe( '123. best-time-to-buy-and-sell-stock-iii', () => {
-    
+
     it( 'example 1', () => {
         const prices = [3,3,5,0,0,3,1,4];
         expect( maxProfit( prices ) ).toBe( 6 );

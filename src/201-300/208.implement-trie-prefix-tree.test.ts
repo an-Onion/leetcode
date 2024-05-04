@@ -1,5 +1,3 @@
-import case6 from '../largeData/212.json';
-
 class Trie {
     children: Record<string, Trie>;
     isLeaf: boolean;
@@ -9,7 +7,7 @@ class Trie {
     }
 
     insert( word: string ): void {
-        
+
         if( !word ) {
             this.isLeaf = true;
             return;

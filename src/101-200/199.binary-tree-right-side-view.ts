@@ -27,7 +27,7 @@ export function rightSideView( root: TreeNode | null ): number[] {
   const ret = [];
 
   while( Q.length ){
-    
+
     let size = Q.length;
 
     while( size-- ){

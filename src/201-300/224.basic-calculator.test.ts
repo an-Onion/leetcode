@@ -17,7 +17,7 @@ function calculate( s: string ): number {
             num = num * 10 + Number( s[i] );
             continue;
         }
-        
+
         if( ['+', '-'].includes( s[i] ) ){
             res = method[op]( res, num );
             op = s[i];

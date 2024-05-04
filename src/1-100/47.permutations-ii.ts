@@ -17,9 +17,9 @@ export function permuteUnique( nums: number[] ): number[][] {
     const ret: number[][] = [];
 
     for( let i = 0; i < nums.length; i++ ){
-      
+
       if( visited[i] ) continue;
-      
+
       if( nums[i] === nums[i-1] && !visited[i-1] ) continue;
 
       visited[i] = true;

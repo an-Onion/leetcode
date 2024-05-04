@@ -20,5 +20,5 @@ describe( 'Remove Duplicates from Sorted List II', () => {
     const output = ListNode.toArray( deleteDuplicates( input ) );
     expect( output ).toStrictEqual( [2,3] );
   } );
-  
+
 } );

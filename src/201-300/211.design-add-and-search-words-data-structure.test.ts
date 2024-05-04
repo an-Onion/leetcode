@@ -1,5 +1,5 @@
 class WordDictionary {
-    
+
     val: string;
     children: Map<string, WordDictionary>;
     isEndOfWord: boolean;
@@ -16,9 +16,9 @@ class WordDictionary {
             this.isEndOfWord = true;
             return;
         }
-        
+
         const c = word[0];
-        
+
         if( !this.children.has( c ) ){
             this.children.set( c, new WordDictionary( c ) );
         }
@@ -32,7 +32,7 @@ class WordDictionary {
             return this.isEndOfWord;
         }
         const c = word[0];
-        
+
         if( c !== '.' ) {
             const next = this.children.get( c );
             return  next?.search( word.slice( 1 ) ) ?? false;
@@ -44,7 +44,7 @@ class WordDictionary {
             }
         }
         return false;
-       
+
     }
 }
 

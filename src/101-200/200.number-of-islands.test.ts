@@ -1,7 +1,7 @@
 function numIslands( grid: string[][] ): number {
 
     const visited = Array.from( Array( grid.length ), () => new Array( grid[0].length ) );
-    
+
     const DFS = ( i: number, j:number ) => {
 
         if( i < 0 || j < 0 || i >= grid.length || j >= grid[0].length || visited[i][j] || grid[i][j] === '0' ) return;
@@ -28,9 +28,9 @@ function numIslands( grid: string[][] ): number {
 describe( '200. number-of-islands', () => {
     it( 'grid = [["1","1","1","1","0"],["1","1","0","1","0"],["1","1","0","0","0"],["0","0","0","0","0"]]', () => {
         expect( numIslands( [
-            ['1', '1', '1', '1', '0'], 
-            ['1', '1', '0', '1', '0'], 
-            ['1', '1', '0', '0', '0'], 
+            ['1', '1', '1', '1', '0'],
+            ['1', '1', '0', '1', '0'],
+            ['1', '1', '0', '0', '0'],
             ['0', '0', '0', '0', '0'],
         ] ) ).toEqual( 1 );
     } );

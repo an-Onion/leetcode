@@ -6,7 +6,7 @@
 
 // @lc code=start
 export function uniquePathsWithObstacles( obstacleGrid: number[][] ): number {
-  
+
   const dp = Array( obstacleGrid[0].length ).fill( 0 );
   dp[0] = 1;
 

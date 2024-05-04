@@ -26,9 +26,9 @@ export class LRUCache {
     if ( !this.map.has( key ) ) {
       return -1;
     }
-    
+
     return this.#update( key );
-    
+
   }
 
   #update( key: number ): number {
@@ -50,7 +50,7 @@ export class LRUCache {
     }
 
     const node = new DoubleLink( { key, value } );
-    
+
     if( this.length === this.capacity ){
       this.#remove( this.tail.key );
     }
@@ -59,7 +59,7 @@ export class LRUCache {
   }
 
   #remove( key: number ): void {
-    
+
     const node = this.map.get( key );
     this.length--;
     this.map.delete( key );
@@ -70,13 +70,13 @@ export class LRUCache {
 
     if( !next ) {
       this.tail = prev;
-      return; 
+      return;
     }
-    
-    next.pre = prev; 
+
+    next.pre = prev;
   }
 
-  #insert( key: number, node: DoubleLink ): void {    
+  #insert( key: number, node: DoubleLink ): void {
 
     this.map.set( key, node );
     this.length++;

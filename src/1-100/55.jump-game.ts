@@ -17,7 +17,7 @@ export function canJump( nums: number[] ): boolean {
   }
 
   return sofar > nums.length - 1;
-  
+
 }
 // @lc code=end
 

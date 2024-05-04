@@ -23,7 +23,7 @@ class BSTIterator {
         if( node.right ){
             this.current = this.init( node.right );
             return node.val;
-        } 
+        }
         this.current = this.stack.pop();
 
         return node.val;

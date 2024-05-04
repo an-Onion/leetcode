@@ -1,7 +1,7 @@
 import { TreeNode } from '../dataStructure/TreeNode';
 
 function countNodes( root: TreeNode | null ): number {
-    
+
     function height( node: TreeNode | null ): number {
         if( !node ) return 0;
         return 1 + height( node.left );

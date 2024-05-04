@@ -19,7 +19,7 @@ function restoreIpAddresses( s: string ): string[] {
             }
 
             const digit = parseInt( s.substring( start, i + 1 ) );
-            
+
             if( digit > 255 ) continue;
 
             DFS( i + 1, [...path, digit] );

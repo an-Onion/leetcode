@@ -1,5 +1,5 @@
 function findRepeatedDnaSequences( s: string ): string[] {
-    
+
     const map = new Map<string, number>();
     const L = 10;
 

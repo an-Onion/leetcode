@@ -70,7 +70,7 @@ describe( '127. word ladder', () => {
     it( 'example 3', () => {
         const beginWord = 'sand', endWord = 'acne', wordList = test3;
         expect( ladderLength( beginWord, endWord, wordList ) ).toBe( 11 );
-        
+
     } );
 
     it( 'example 4', () =>{

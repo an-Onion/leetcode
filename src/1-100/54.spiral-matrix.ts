@@ -14,7 +14,7 @@ export function spiralOrder( matrix: number[][] ): number[] {
   let [top, bottom, left, right] = [0, M - 1, 0, N - 1];
   let [i, j] = [0, 0];
   while( result.length < M * N ) {
-    
+
     for( j = left; j <= right; j++ ) {
       result.push( matrix[i][j] );
     }

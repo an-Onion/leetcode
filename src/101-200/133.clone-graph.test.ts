@@ -12,7 +12,7 @@ function cloneGraph( node: Node | null ): Node | null {
     const visited = new Map<Node, Node>();
 
     function DFS( node: Node ): Node {
-        
+
         if( !node ) return null;
         if( visited.has( node ) ) return visited.get( node )!;
 
@@ -29,7 +29,7 @@ function cloneGraph( node: Node | null ): Node | null {
 }
 
 describe( '133. clone graph', () => {
-    
+
     it( 'should work', () => {
         const node = new Node( 1 );
         node.neighbors = [ new Node( 2 ), new Node( 3 ), new Node( 4 ) ];

@@ -24,7 +24,7 @@ import { TreeNode } from '../dataStructure/TreeNode';
 export function inorderTraversal( root: TreeNode | null ): number[] {
 
   function DFS( node: TreeNode | null, cb: ( params: number[] ) => number[] ): number[] {
-  
+
     if( !node ) return cb( [] );
 
     return DFS( node.left, ( left ) =>{
@@ -32,7 +32,7 @@ export function inorderTraversal( root: TreeNode | null ): number[] {
         return cb( [...left, node.val, ...right] );
       } );
     } );
-    
+
   }
 
   return DFS( root, ( ret ) => ( ret ) );

@@ -27,6 +27,6 @@ describe( '226. invert-binary-tree', () => {
         const root = TreeNode.of( [] );
         const output = invertTree( root );
         expect( TreeNode.toArray( output ) ).toStrictEqual( [] );
-        
+
     } );
 } );

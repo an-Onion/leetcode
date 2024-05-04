@@ -26,7 +26,7 @@ export function sumNumbers( root: TreeNode | null ): number {
   type nextFunc = ( val: number[] ) => number;
 
   function DFS( node: TreeNode | null, prev: number, next: nextFunc ): number {
-    
+
     if( !node ) return next( [] );
 
     prev = prev*10 + node.val;

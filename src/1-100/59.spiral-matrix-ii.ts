@@ -6,7 +6,7 @@
 
 // @lc code=start
 export function generateMatrix( n: number ): number[][] {
-    
+
     const matrix: number[][] = Array.from( { length: n }, () => Array( n ).fill( 0 ) );
 
     let [top, bottom, left, right] = [0, n - 1, 0, n - 1];
@@ -14,7 +14,7 @@ export function generateMatrix( n: number ): number[][] {
     let count = 1;
 
     while( count <= n * n ) {
-        
+
         for( let i = left; i <= right; i++ ) {
             matrix[top][i] = count++;
         }

@@ -1,10 +1,10 @@
 function maxPoints( points: number[][] ): number {
 
     let ret = 1;
-    
+
     for( const [xA, yA] of points ){
         const slope = new Map<number, number>();
-        
+
         for( const [xB, yB] of points ){
 
             if( xA === xB && yA === yB ) continue;

@@ -9,12 +9,12 @@ export function jump( nums: number[] ): number {
   let jumps = 0, covered = 0, next = nums[0];
 
   for( let i = 0; i < nums.length; i++ ){
-    
+
     if( i > covered ){
       covered = next;
       jumps++;
     }
-    
+
     if( i+ nums[i] > next ) {
       next = i + nums[i];
     }

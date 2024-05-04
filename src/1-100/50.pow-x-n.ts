@@ -9,7 +9,7 @@ export function myPow( x: number, n: number ): number {
 
   let ans = 1;
   const min = -2147483648; // - 2**31
-  
+
   if( n === min ) {
     ans = x, n = min+1;
   }

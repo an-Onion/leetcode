@@ -10,7 +10,7 @@ function isIsomorphic( s: string, t: string ): boolean {
         }
         if( mapS.get( x ) === y && mapT.get( y ) === x ) {
             continue;
-        } 
+        }
         return false;
     }
     return true;

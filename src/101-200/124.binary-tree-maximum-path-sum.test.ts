@@ -5,7 +5,7 @@ function maxPathSum( root: TreeNode | null ): number {
     const sub = new Map<TreeNode | null, number>();
 
     function DFS( node: TreeNode | null , next: ( ret: number ) => void ): void {
-        
+
         if( !node ) return next( 0 );
 
         return DFS( node.left, ( left ) => {

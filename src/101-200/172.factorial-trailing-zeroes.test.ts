@@ -1,5 +1,5 @@
 function trailingZeroes( n: number ): number {
-  
+
     let five = 5, ret = 0;
 
     while( n / five >= 1 ){

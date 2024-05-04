@@ -6,7 +6,7 @@
 
 // @lc code=start
 export function maxSubArray( nums: number[] ): number {
-  
+
   let [sofar, ending] = [nums[0], 0];
 
   for( const num of nums ) {

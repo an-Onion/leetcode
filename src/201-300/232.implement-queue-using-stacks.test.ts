@@ -1,5 +1,5 @@
 class MyQueue {
-    
+
     inStack: number[];
     outStack: number[];
 

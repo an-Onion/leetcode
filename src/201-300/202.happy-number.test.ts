@@ -1,7 +1,7 @@
 function isHappy( n: number ): boolean {
-    
+
     const set = new Set<number>();
-    
+
     while( n !== 1 && !set.has( n ) ){
         set.add( n );
         n = getNext( n );

@@ -1,5 +1,5 @@
 function minSubArrayLen( target: number, nums: number[] ): number {
-    
+
     let [sofar, ret, ending, left] = [0, Infinity, 0, 0];
 
     for( let i = 0; i < nums.length; i++ ){
@@ -11,7 +11,7 @@ function minSubArrayLen( target: number, nums: number[] ): number {
             ending -= nums[left++];
             sofar--;
         }
-        
+
     }
     return ret === Infinity ? 0 : ret;
 }

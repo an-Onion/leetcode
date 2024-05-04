@@ -17,16 +17,16 @@ function fullJustify( words: string[], maxWidth: number ): string[] {
         return rows.map( ( row, i ) => justify( row, i === rows.length - 1 ) );
 
         function justify( row: string[], end: boolean ): string {
-            
+
             if( end || row.length === 1 ){
                 return row.join( ' ' ).padEnd( maxWidth, ' ' );
             }
 
             const total = row.reduce( ( a, b ) => a + b.length, 0 );
             let gap = maxWidth - total;
-            
+
             const ret: string[] = [row.pop()];
-            
+
             while( row.length > 0 ){
                 const space = Math.floor( gap / row.length );
                 gap -= space;
@@ -39,9 +39,9 @@ function fullJustify( words: string[], maxWidth: number ): string[] {
 describe( '68. Text Justification', () => {
     it( 'Example 1', () => {
         expect( fullJustify( ['This', 'is', 'an', 'example', 'of', 'text', 'justification.'], 16 ) )
-        .toStrictEqual( 
-            ['This    is    an', 
-             'example  of text', 
+        .toStrictEqual(
+            ['This    is    an',
+             'example  of text',
              'justification.  ',
             ] );
     } );

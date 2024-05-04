@@ -1,5 +1,5 @@
 function isNumber( s: string ): boolean {
-    
+
     s = s.toLocaleLowerCase();
 
     if( !s.includes( 'e' ) )
@@ -16,21 +16,21 @@ function isNumber( s: string ): boolean {
     return isDecimal( decimal );
 
     function isInteger( s: string ): boolean {
-        
+
         if( ['-','+'].includes( s[0] ) ){
             s = s.slice( 1 );
         }
 
         if( s === '' ) return false;
         for( let i = 0; i < s.length; i++ ){
-            if( s.charCodeAt( i ) < 48 || s.charCodeAt( i ) > 57 ) 
+            if( s.charCodeAt( i ) < 48 || s.charCodeAt( i ) > 57 )
                 return false;
         }
         return true;
     }
 
     function isDecimal( s: string ): boolean {
-        
+
         if( !s.includes( '.' ) ) {
             return isInteger( s );
         }
@@ -41,14 +41,14 @@ function isNumber( s: string ): boolean {
 
         const [ integer, decimal ] = divisions;
 
-        
+
         if( !isInteger( integer ) && !['+', '-', ''].includes( integer ) ) {
             return false;
         }
 
 
         if( ['-','+'].includes( decimal[0] ) ) return false;
-        
+
         if( !isInteger( decimal ) && decimal !== '' ) {
             return false;
         }

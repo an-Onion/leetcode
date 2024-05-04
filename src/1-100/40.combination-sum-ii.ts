@@ -11,7 +11,7 @@ export function combinationSum2( candidates: number[], target: number ): number[
   candidates.sort( ( a, b ) => a - b );
 
   function DFS( start: number, remaining: number ): number[][] {
-    
+
     if( remaining < 0 ) return [];
     if( remaining === 0 ) return [[]];
 
@@ -27,7 +27,7 @@ export function combinationSum2( candidates: number[], target: number ): number[
   }
 
   return DFS( 0, target );
-  
+
 }
 // @lc code=end
 

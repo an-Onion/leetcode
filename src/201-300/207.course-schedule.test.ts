@@ -1,5 +1,5 @@
 function canFinish( numCourses: number, prerequisites: number[][] ): boolean {
-    
+
     const inDegree = Array( numCourses ).fill( 0 );
     const graph = Array.from( { length: numCourses }, () => [] );
 
@@ -19,7 +19,7 @@ function canFinish( numCourses: number, prerequisites: number[][] ): boolean {
     while( Q.length ){
         const top = Q.shift()!;
         numCourses--;
-        
+
         for( const next of graph[top] ){
             if( --inDegree[next] === 0 ){
                 Q.push( next );

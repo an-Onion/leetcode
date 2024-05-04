@@ -1,5 +1,5 @@
 function getPermutation( n: number, k: number ): string {
-    
+
     const nums: number[] = Array.from( { length: n }, ( _, i ) => i + 1 );
 
     const factorials = [1];

@@ -2,14 +2,14 @@ function majorityElement( nums: number[] ): number {
 
     return nums.reduce( ( [majority, count], curr ) => {
 
-        if( count === 0 ) 
+        if( count === 0 )
             return [curr, 1];
-        if( curr === majority ) 
+        if( curr === majority )
             return [majority, count + 1];
         return [majority, count - 1];
 
     }, [Infinity, 0] )[0];
-    
+
 }
 
 describe( '169. majority-element', () => {

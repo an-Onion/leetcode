@@ -1,7 +1,7 @@
 function exist( board: string[][], word: string ): boolean {
-    
+
     const visited: boolean[][] = Array.from( { length: board.length }, () => Array( board[0].length ).fill( false ) );
-    
+
     function DFS( i: number, j: number, pos: number ): boolean {
         if( i < 0 || i >= board.length || j < 0 || j >= board[0].length || visited[i][j] || board[i][j] !== word[pos] ) return false;
         if( pos === word.length - 1 ) return true;

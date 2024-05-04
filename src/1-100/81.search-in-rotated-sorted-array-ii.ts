@@ -11,7 +11,7 @@ export function search( nums: number[], target: number ): boolean {
 
   while( l <= u ) {
     if( l !== u && nums[l] === nums[u] ){
-      l++; 
+      l++;
       continue;
     }
     const m = l+u >> 1;
@@ -21,7 +21,7 @@ export function search( nums: number[], target: number ): boolean {
       if( target > nums[m] && target <= nums[u] ) l = m + 1;
       else u = m - 1;
       continue;
-    } 
+    }
     if( target < nums[m] && target >= nums[l] ) u = m -1;
     else l = m + 1;
   }

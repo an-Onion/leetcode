@@ -23,7 +23,7 @@ export function simplifyPath( path: string ): string {
   }
 
   return '/' + ret.join( '/' );
- 
+
 }
 // @lc code=end
 

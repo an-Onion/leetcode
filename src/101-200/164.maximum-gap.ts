@@ -15,7 +15,7 @@ export function maximumGap( nums: number[] ): number {
   const bucketSize = Math.floor( ( max - min ) / delta ) + 1;
 
   const buckets = Array.from( { length: bucketSize }, () => [Infinity, -Infinity] );
-  
+
   for( const num of nums ) {
     const idx = Math.floor( ( num - min ) / delta );
     buckets[idx][0] = Math.min( buckets[idx][0], num );

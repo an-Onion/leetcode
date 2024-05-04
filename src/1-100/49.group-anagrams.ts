@@ -6,7 +6,7 @@
 
 // @lc code=start
 export function groupAnagrams( strs: string[] ): string[][] {
-  
+
 
   const map = new Map<string, string[]>();
 

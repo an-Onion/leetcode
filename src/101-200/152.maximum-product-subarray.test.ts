@@ -2,7 +2,7 @@ function maxProduct( nums: number[] ): number {
     let [ret, maxEnd, minEnd] = [nums[0], 1, 1];
 
     for( const num of nums ){
-        [maxEnd, minEnd] = 
+        [maxEnd, minEnd] =
             [
                 Math.max( maxEnd*num, minEnd*num ,num ),
                 Math.min( maxEnd*num, minEnd*num ,num ),
@@ -34,5 +34,5 @@ describe( '152. maxProduct', () => {
         const num = [-4,-3,-2];
         expect( maxProduct( num ) ).toStrictEqual( 12 );
     } );
-    
+
 } );

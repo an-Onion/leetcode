@@ -2,7 +2,7 @@ function wordBreak( s: string, wordDict: string[] ): boolean {
     const dp: boolean[] = Array( s.length + 1 ).fill( false );
 
     dp[0] = true;
-    
+
     const dict = new Set( wordDict );
 
     for( let end = 1; end <= s.length; ++end ){
@@ -13,10 +13,10 @@ function wordBreak( s: string, wordDict: string[] ): boolean {
                 break;
             }
         }
-        
+
     }
     return dp[s.length];
-}   
+}
 
 describe( '139. word break', () => {
     it( '"leetcode"', () =>{

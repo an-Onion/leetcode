@@ -3,7 +3,7 @@ import { ListNode } from '../dataStructure/ListNode';
 function sortList( head: ListNode | null ): ListNode | null {
 
     return mergeSort( head );
-    
+
     function mergeSort( head: ListNode | null ): ListNode | null {
 
         if( !head || !head.next ) return head;
@@ -18,7 +18,7 @@ function sortList( head: ListNode | null ): ListNode | null {
 
         const next = slow.next;
         slow.next = null;
-        
+
        const left = mergeSort( head );
        const right = mergeSort( next );
        return merge( left,right );

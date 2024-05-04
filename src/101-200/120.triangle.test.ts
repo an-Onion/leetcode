@@ -14,7 +14,7 @@ function minimumTotal( triangle: number[][] ): number {
 }
 
 describe( '120. minimum total', () => {
-    
+
     it( '[[2],[3,4],[6,5,7],[4,1,8,3]]', () => {
         expect( minimumTotal( [[2],[3,4],[6,5,7],[4,1,8,3]] ) ).toEqual( 11 );
     } );

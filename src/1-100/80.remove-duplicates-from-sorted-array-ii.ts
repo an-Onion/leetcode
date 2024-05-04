@@ -6,7 +6,7 @@
 
 // @lc code=start
 export function removeDuplicates( nums: number[] ): number {
-   
+
   function swap( i: number, j: number ): void {
     [nums[i], nums[j]] = [nums[j], nums[i]];
   }
@@ -26,7 +26,7 @@ export function removeDuplicates( nums: number[] ): number {
       swap( k++, i );
     }
   }
-  
+
   return k;
 }
 // @lc code=end

@@ -12,7 +12,7 @@ function combinationSum3( k: number, n: number ): number[][] {
     const sum = ( x: number[] ) => {
         return x.reduce( ( a, b ) => a + b, 0 );
     };
-    
+
     // [0b000000011, 0b111111111]
 
     const ret = [];

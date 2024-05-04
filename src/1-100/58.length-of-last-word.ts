@@ -13,7 +13,7 @@ export function lengthOfLastWord( s: string ): number {
     if( s[i] !== ' ' ) {
       ret++;
       continue;
-    } 
+    }
 
     if( ret !== 0 ) break;
   }

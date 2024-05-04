@@ -10,7 +10,7 @@ export function combine( n: number, k: number ): number[][] {
   const result: number[][] = [];
 
   function DFS( start: number, path: number[] = [] ): void {
-    
+
     if( path.length == k ) {
       result.push( [...path] );
       return;

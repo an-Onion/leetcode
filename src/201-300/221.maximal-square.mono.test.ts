@@ -28,7 +28,7 @@ function maximalSquare( matrix: string[][] ): number {
 }
 
 describe( '221. maximal-square', () => {
-    
+
     it( 'case 1', () => {
         const matrix = [
             ['1','0','1','0','0'],

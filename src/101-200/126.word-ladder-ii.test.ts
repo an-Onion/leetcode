@@ -31,7 +31,7 @@ function findLadders( beginWord: string, endWord: string, wordList: string[] ): 
     }
 
     function BFS(): boolean {
-        
+
         const queue: string[] = [beginWord];
 
         while ( queue.length ) {
@@ -43,7 +43,7 @@ function findLadders( beginWord: string, endWord: string, wordList: string[] ): 
                 const top = queue.shift();
 
                 if ( visited.has( top ) ) continue; // already visited
-                
+
                 visited.add( top );
 
                 if ( top === endWord ) {
@@ -72,15 +72,15 @@ function findLadders( beginWord: string, endWord: string, wordList: string[] ): 
 }
 
 describe( '126. Word Ladder II', () => {
-    
+
     it( 'Example 1', () => {
         const beginWord = 'hit', endWord = 'cog', wordList = ['hot','dot','dog','lot','log','cog'];
         const result = findLadders( beginWord, endWord, wordList );
-        expect( result.sort() ).toEqual( 
+        expect( result.sort() ).toEqual(
             [
                 ['hit','hot','dot','dog','cog'],
                 ['hit','hot','lot','log','cog'],
-            ] 
+            ]
             .sort()
         );
     } );

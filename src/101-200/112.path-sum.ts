@@ -23,7 +23,7 @@ import { TreeNode } from '../dataStructure/TreeNode';
 export function hasPathSum( root: TreeNode | null, targetSum: number ): boolean {
 
   function DFS( node: TreeNode | null, sum: number, next: ( ret: boolean ) => boolean ): boolean {
-    
+
     if( !node ) return next( false );
 
     sum += node.val;

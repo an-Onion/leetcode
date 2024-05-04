@@ -14,7 +14,7 @@ class MinStack {
 
     pop(): void {
         const top = this.stack.pop();
-        if( top === this.mono.at( -1 ) ) 
+        if( top === this.mono.at( -1 ) )
             this.mono.pop();
     }
 

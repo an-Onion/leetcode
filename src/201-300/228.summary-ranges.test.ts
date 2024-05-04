@@ -11,11 +11,11 @@ function summaryRanges( nums: number[] ): string[] {
     }
 
     return ret.map( ( [start, end] ) => start === end ? `${start}` : `${start}->${end}` );
-    
+
 }
 
 describe( '228. summary-ranges', () => {
-    
+
     it( '[0,2,3,4,6,8,9]', () => {
         expect( summaryRanges( [0,2,3,4,6,8,9] ) ).toStrictEqual( ['0','2->4','6','8->9'] );
     } );

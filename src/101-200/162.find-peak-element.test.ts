@@ -1,5 +1,5 @@
 function findPeakElement( nums: number[] ): number {
-    
+
     let [l, u] = [0, nums.length - 1];
 
     while( l <= u ){

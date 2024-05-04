@@ -6,7 +6,7 @@
 
 // @lc code=start
 export function mySqrt( x: number ): number {
-  
+
   if( x === 0 ) return 0;
 
   let [l, u] = [0, x];

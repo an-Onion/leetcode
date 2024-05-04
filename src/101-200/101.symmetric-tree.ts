@@ -23,7 +23,7 @@ import { TreeNode } from '../dataStructure/TreeNode';
 export function isSymmetric( root: TreeNode | null ): boolean {
 
   function DFS( left: TreeNode | null, right: TreeNode | null, next: ( prev:boolean ) => boolean ): boolean {
-   
+
     if( left === right ) return next( true );
     if( left?.val !== right?.val ) return next( false );
     return DFS( left?.left, right?.right, ( outer ) => {

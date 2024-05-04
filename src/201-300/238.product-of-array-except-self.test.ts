@@ -20,5 +20,5 @@ describe( '238. product-of-array-except-self', () => {
     it( '[-1,1,0,-3,3]', () => {
         expect( productExceptSelf( [-1,1,0,-3,3] ) ).toStrictEqual( [0,0,9,0,0] );
     } );
-        
+
 } );

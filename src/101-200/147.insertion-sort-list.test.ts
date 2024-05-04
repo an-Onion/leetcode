@@ -18,7 +18,7 @@ function insertionSortList( head: ListNode | null ): ListNode | null {
 }
 
 describe( '147. insertion sort list', () => {
-    
+
     it( '[4,2,1,3]', () =>{
         const head = ListNode.of( [4,2,1,3] );
         const output = insertionSortList( head );

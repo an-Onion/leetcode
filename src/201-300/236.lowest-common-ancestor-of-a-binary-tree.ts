@@ -32,7 +32,7 @@ export function lowestCommonAncestor( root: TreeNode | null, p: TreeNode | null,
         return cb( left || right );
       } );
     } );
-    
+
   }
   return DFS( root, ( node ) => node );
 }

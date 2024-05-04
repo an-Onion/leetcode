@@ -47,12 +47,12 @@ export function sortedListToBST( head: ListNode | null ): TreeNode | null {
 
     const node = slow.next;
     slow.next = null;
-    
+
     return DFS( dummy.next, ( left ) => {
       return DFS( node.next, ( right ) => {
         return next( new TreeNode( node.val, left, right ) );
       } );
-      
+
     } );
   }
 

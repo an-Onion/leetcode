@@ -59,6 +59,6 @@ describe( '234.palindrome-linked-list', () => {
         const list = ListNode.of( [1,2] );
         expect( isPalindrome( list ) ).toBeFalsy();
     } );
-   
+
 } );
 

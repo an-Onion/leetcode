@@ -1,5 +1,5 @@
 function containsNearbyAlmostDuplicate( nums: number[], indexDiff: number, valueDiff: number ): boolean {
-    
+
     const offset = 1_000_000_000; // 1e9
 
     function getId( idx: number ): number {

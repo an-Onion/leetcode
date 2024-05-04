@@ -37,7 +37,7 @@ export function partition( head: ListNode | null, x: number ): ListNode | null {
     }
     head = head.next;
   }
-  
+
   greater.next = null;
   less.next = dummyGreater.next;
   return dummyLess.next;

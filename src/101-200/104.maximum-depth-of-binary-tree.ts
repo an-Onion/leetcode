@@ -24,7 +24,7 @@ export function maxDepth( root: TreeNode | null ): number {
 
   function DFS( node: TreeNode | null, next: ( depth: number ) => number ): number {
     if ( node === null ) return next( 0 );
-    
+
     return DFS( node.left, ( left ) => {
       return DFS( node.right, ( right ) => {
         return next( Math.max( left, right ) + 1 );

@@ -29,7 +29,7 @@ export function pathSum( root: TreeNode | null, targetSum: number ): number[][] 
     if( !node ) return cb( [] );
 
     sum += node.val;
-    
+
     if( node.left === node.right ) {
       if( sum === targetSum ) {
         return cb( [ [ ...path, node.val ] ] );

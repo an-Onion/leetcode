@@ -6,7 +6,7 @@
 
 // @lc code=start
 export function generate( numRows: number ): number[][] {
-  
+
   if ( numRows === 0 ) return [];
 
   const ret: number[][] = [[1]];

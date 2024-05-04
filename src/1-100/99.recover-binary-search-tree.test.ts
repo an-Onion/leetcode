@@ -10,7 +10,7 @@ function recoverTree( root: TreeNode | null ): void {
         if( !node ) return;
 
         DFS( node.left );
-        
+
         if( pre?.val > node.val ){
             if( !s1 ) s1 = pre;
             s2 = node;

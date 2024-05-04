@@ -26,7 +26,7 @@ function shortestPalindrome( s: string ): string {
                 if ( p[ i ] === p[ j ] ) {
                     next[ i++ ] = ++j;
                     continue;
-                } 
+                }
                 if ( j === 0 ) {
                     i++; continue;
                 }
@@ -45,7 +45,7 @@ function shortestPalindrome( s: string ): string {
 }
 
 describe( '214. shortest-palindrome', () => {
-    
+
     it( 'aacecaaa', () => {
         expect( shortestPalindrome( 'aacecaaa' ) ).toEqual( 'aaacecaaa' );
     } );

@@ -11,8 +11,8 @@ export function subsets( nums: number[] ): number[][] {
     if( start === 0 ){
       return [[]];
     }
-   return DFS( start-1 ).reduce(  
-    ( acc, curr ) => ( [...acc, curr, [...curr, nums[start-1]]] ), 
+   return DFS( start-1 ).reduce(
+    ( acc, curr ) => ( [...acc, curr, [...curr, nums[start-1]]] ),
     [] );
    }
   return DFS( nums.length );

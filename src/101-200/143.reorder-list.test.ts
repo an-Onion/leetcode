@@ -53,13 +53,13 @@ describe( '143. reorder list', () => {
         reorderList( head );
         expect( ListNode.toArray( head ) ).toStrictEqual( [ 1, 3, 2 ] );
     } );
-    
+
     it( '[1,2,3,4]', () => {
         const head = ListNode.of( [1, 2, 3, 4] );
         reorderList( head );
         expect( ListNode.toArray( head ) ).toStrictEqual( [ 1, 4, 2, 3 ] );
     } );
-    
+
     it( '[1,2,3,4,5]', () => {
         const head = ListNode.of( [1, 2, 3, 4, 5] );
         reorderList( head );

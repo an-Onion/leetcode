@@ -23,7 +23,7 @@ import { TreeNode } from '../dataStructure/TreeNode';
 export function generateTrees( n: number ): Array<TreeNode | null> {
 
   function DFS( start: number, end:  number ): Array<TreeNode | null> {
-    
+
     if( start > end ) return [null];
 
     const ret: Array<TreeNode | null> = [];

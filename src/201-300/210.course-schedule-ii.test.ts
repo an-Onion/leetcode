@@ -1,16 +1,16 @@
 function findOrder( numCourses: number, prerequisites: number[][] ): number[] {
-    
+
     const inDegree = Array( numCourses ).fill( 0 );
     const graph = Array.from( { length: numCourses }, () => [] );
-    
+
     for( const [a,b] of prerequisites ){
         inDegree[a]++;
         graph[b].push( a );
     }
-    
+
     const queue = [];
     for( let i = 0; i < inDegree.length; i++ ){
-        if( inDegree[i] === 0 ) 
+        if( inDegree[i] === 0 )
             queue.push( i );
     }
 
@@ -22,12 +22,12 @@ function findOrder( numCourses: number, prerequisites: number[][] ): number[] {
         numCourses--;
 
         for( const neighbor of graph[course] ){
-            if( --inDegree[neighbor] ) 
+            if( --inDegree[neighbor] )
                 continue;
             queue.push( neighbor );
         }
     }
-        
+
     return numCourses ? [] : orders;
 }
 

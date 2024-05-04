@@ -18,7 +18,7 @@ function minWindow( s: string, t: string ): string {
         if( target[c] >= window[c] ) length++;
 
         if ( length < t.length ) continue;
-            
+
         for( let j = start; j <= i; j++ ) {
             const b = s.charCodeAt( j );
             if( window[b] <= target[b] ) break;

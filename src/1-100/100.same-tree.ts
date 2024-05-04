@@ -26,8 +26,8 @@ export function isSameTree( p: TreeNode | null, q: TreeNode | null ): boolean {
 
     if ( p === q ) return cb( true );
     if ( p?.val !== q?.val ) return cb( false );
-    return DFS( p?.left, q?.left, 
-      ( left ) => DFS( p?.right, q?.right, 
+    return DFS( p?.left, q?.left,
+      ( left ) => DFS( p?.right, q?.right,
         ( right ) =>  cb( left && right ) ) );
   }
 
