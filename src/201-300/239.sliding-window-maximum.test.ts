@@ -20,7 +20,6 @@ function maxSlidingWindow( nums: number[], k: number ): number[] {
     }
 
     return ret;
-
 }
 
 describe( '239. sliding-window-maximum', () => {
