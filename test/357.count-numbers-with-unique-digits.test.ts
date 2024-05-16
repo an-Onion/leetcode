@@ -1,4 +1,4 @@
-import { countNumbersWithUniqueDigits } from '../src/357.count-numbers-with-unique-digits';
+import { countNumbersWithUniqueDigits } from '../src/301-400/357.count-numbers-with-unique-digits';
 
 describe( 'Count Numbers with Unique Digits', () => {
 

@@ -1,4 +1,4 @@
-import { calcEquation } from '../src/399.evaluate-division';
+import { calcEquation } from '../src/301-400/399.evaluate-division';
 
 describe( 'Evaluate Division', () => {
 

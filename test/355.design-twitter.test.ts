@@ -1,4 +1,4 @@
-import { Twitter } from '../src/355.design-twitter';
+import { Twitter } from '../src/301-400/355.design-twitter';
 
 function initTwitter( commands: string[], values: number[][] ): ( number[] | null )[]{
 
