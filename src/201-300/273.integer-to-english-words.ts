@@ -13,27 +13,24 @@ export function numberToWords( num: number ): string {
   const TENS = ['', 'Ten', 'Twenty', 'Thirty', 'Forty', 'Fifty', 'Sixty', 'Seventy', 'Eighty', 'Ninety'];
   const THOUSANDS = ['', 'Thousand', 'Million', 'Billion'];
 
-  function parse( n: number ): string {
-    if( !n )
-      return '';
-
-    if( n < 20 )
-      return LESS_THAN_20[n];
-
-      if( n < 100 )
-      return `${TENS[n / 10 | 0]} ${parse( n % 10 )}`;
-
-    return `${LESS_THAN_20[n / 100 | 0]} Hundred ${parse( n % 100 )}`;
+  // n < 1000
+  function parseLessThan1000( n: number ): string[] {
+    if( n < 20 ) return [LESS_THAN_20[n]];
+    if( n < 100 ) return [...parseLessThan1000( n % 10 ), TENS[n / 10 | 0] ];
+    return [...parseLessThan1000( n % 100 ), 'Hundred', LESS_THAN_20[n / 100 | 0]];
   }
 
-  let res ='';
-  for( let i = 0; num !== 0; ++i ){
-    if( num % 1000 !== 0 )
-      res = `${parse( num % 1000 ).trim()} ${THOUSANDS[i]} `+res;
+  const ret = [];
+
+  for( let i = 0; num > 0; i++ ){
+    const part = num % 1000;
+    if( part > 0 ){
+      ret.push( THOUSANDS[i], ...parseLessThan1000( part ) );
+    }
+
     num = num / 1000 | 0;
   }
-
-  return res.trim();
+  return ret.filter( s => s !== '' ).reverse().join( ' ' );
 }
 // @lc code=end
 
