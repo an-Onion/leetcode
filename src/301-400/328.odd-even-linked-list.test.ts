@@ -19,7 +19,6 @@ function oddEvenList( head: ListNode | null ): ListNode | null {
     evenHead.next = null;
     oddHead.next = even.next;
     return odd.next;
-
 }
 
 describe( '328. odd-even-linked-list', () => {
