@@ -1,4 +1,4 @@
-import { findMaxLength } from '../src/525.contiguous-array';
+import { findMaxLength } from '../src/501-600/525.contiguous-array';
 
 describe( 'Contiguous Array', () => {
 

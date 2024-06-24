@@ -1,4 +1,4 @@
-import { canPartition } from '../src/416.partition-equal-subset-sum';
+import { canPartition } from '../src/401-500/416.partition-equal-subset-sum';
 
 describe( 'Partition Equal Subset Sum',()=>{
   it( '[1,5,11,5]', () => {

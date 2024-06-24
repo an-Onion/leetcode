@@ -1,4 +1,4 @@
-import { canCross } from '../src/403.frog-jump';
+import { canCross } from '../src/401-500/403.frog-jump';
 
 describe( 'Frog Jump', () => {
 

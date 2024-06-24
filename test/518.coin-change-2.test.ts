@@ -1,4 +1,4 @@
-import { change } from '../src/518.coin-change-2';
+import { change } from '../src/501-600/518.coin-change-2';
 
 describe( 'Coin Change 2', () => {
 

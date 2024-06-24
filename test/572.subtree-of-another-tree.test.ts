@@ -1,4 +1,4 @@
-import { isSubtree } from '../src/572.subtree-of-another-tree';
+import { isSubtree } from '../src/501-600/572.subtree-of-another-tree';
 import { TreeNode } from '../src/dataStructure/TreeNode';
 
 describe( 'Subtree of Another Tree', () => {

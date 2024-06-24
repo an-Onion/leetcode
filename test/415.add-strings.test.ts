@@ -1,4 +1,4 @@
-import { addStrings } from '../src/415.add-strings';
+import { addStrings } from '../src/401-500/415.add-strings';
 
 describe( 'Add Strings', () => {
 

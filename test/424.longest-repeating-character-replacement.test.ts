@@ -1,4 +1,4 @@
-import { characterReplacement } from '../src/424.longest-repeating-character-replacement';
+import { characterReplacement } from '../src/401-500/424.longest-repeating-character-replacement';
 
 describe( 'Longest Repeating Character Replacement', () => {
 

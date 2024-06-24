@@ -16,7 +16,7 @@
  *     }
  * }
  */
-import { ListNode } from './dataStructure/ListNode';
+import { ListNode } from '../dataStructure/ListNode';
 
 export function addTwoNumbers( l1: ListNode | null, l2: ListNode | null ): ListNode | null {
 

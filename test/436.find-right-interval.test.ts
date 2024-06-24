@@ -1,4 +1,4 @@
-import { findRightInterval } from '../src/436.find-right-interval';
+import { findRightInterval } from '../src/401-500/436.find-right-interval';
 
 describe( 'Find Right Interval', () => {
 

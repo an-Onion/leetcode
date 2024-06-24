@@ -1,4 +1,4 @@
-import { removeKdigits } from '../src/402.remove-k-digits';
+import { removeKdigits } from '../src/401-500/402.remove-k-digits';
 
 describe( 'Remove K Digits', () => {
 

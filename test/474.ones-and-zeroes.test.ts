@@ -1,4 +1,4 @@
-import { findMaxForm } from '../src/474.ones-and-zeroes';
+import { findMaxForm } from '../src/401-500/474.ones-and-zeroes';
 
 describe( 'Ones and Zeroes', () => {
 

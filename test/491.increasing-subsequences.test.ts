@@ -1,4 +1,4 @@
-import { findSubsequences } from '../src/491.increasing-subsequences';
+import { findSubsequences } from '../src/401-500/491.increasing-subsequences';
 
 describe( 'Increasing Subsequences', () => {
 

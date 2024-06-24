@@ -1,4 +1,4 @@
-import { checkSubarraySum } from '../src/523.continuous-subarray-sum';
+import { checkSubarraySum } from '../src/501-600/523.continuous-subarray-sum';
 
 describe( 'Continuous Subarray Sum', () => {
 

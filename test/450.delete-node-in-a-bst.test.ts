@@ -1,4 +1,4 @@
-import { deleteNode } from '../src/450.delete-node-in-a-bst';
+import { deleteNode } from '../src/401-500/450.delete-node-in-a-bst';
 import { TreeNode } from '../src/dataStructure/TreeNode';
 
 describe( 'Delete Node in a BST', () => {

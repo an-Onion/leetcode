@@ -1,4 +1,4 @@
-import { splitArray } from '../src/410.split-array-largest-sum';
+import { splitArray } from '../src/401-500/410.split-array-largest-sum';
 
 describe( 'Split Array Largest Sum', () => {
   it( 'nums = [7,2,5,10,8], m = 2', () => {

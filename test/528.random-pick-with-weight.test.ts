@@ -1,4 +1,4 @@
-import { Solution } from '../src/528.random-pick-with-weight';
+import { Solution } from '../src/501-600/528.random-pick-with-weight';
 
 describe( 'Random Pick with Weight', () => {
 

@@ -1,4 +1,4 @@
-import { eraseOverlapIntervals } from '../src/435.non-overlapping-intervals';
+import { eraseOverlapIntervals } from '../src/401-500/435.non-overlapping-intervals';
 
 describe( 'Non Overlapping Intervals', () => {
 

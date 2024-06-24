@@ -1,4 +1,4 @@
-import { totalHammingDistance } from '../src/477.total-hamming-distance';
+import { totalHammingDistance } from '../src/401-500/477.total-hamming-distance';
 
 describe( 'Total Hamming Distance', () => {
 

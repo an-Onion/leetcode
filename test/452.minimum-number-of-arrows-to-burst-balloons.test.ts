@@ -1,4 +1,4 @@
-import { findMinArrowShots } from '../src/452.minimum-number-of-arrows-to-burst-balloons';
+import { findMinArrowShots } from '../src/401-500/452.minimum-number-of-arrows-to-burst-balloons';
 
 describe( 'Minimum Number of Arrows to Burst Balloons', () => {
 
