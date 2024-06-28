@@ -1,4 +1,4 @@
-import { findCheapestPrice } from '../src/787.cheapest-flights-within-k-stops';
+import { findCheapestPrice } from '../src/701-800/787.cheapest-flights-within-k-stops';
 
 describe( '', () => {
   it( 'e.g. 1', () => {

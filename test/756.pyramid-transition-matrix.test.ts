@@ -1,4 +1,4 @@
-import { pyramidTransition } from '../src/756.pyramid-transition-matrix';
+import { pyramidTransition } from '../src/701-800/756.pyramid-transition-matrix';
 
 describe( 'Pyramid Transition Matrix', () => {
 

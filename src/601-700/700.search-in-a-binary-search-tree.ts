@@ -18,7 +18,7 @@
  *     }
  * }
  */
-import { TreeNode } from './dataStructure/TreeNode';
+import { TreeNode } from '../dataStructure/TreeNode';
 
 export function searchBST( root: TreeNode | null, val: number ): TreeNode | null {
 

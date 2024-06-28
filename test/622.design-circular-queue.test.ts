@@ -1,4 +1,4 @@
-import { MyCircularQueue } from '../src/622.design-circular-queue';
+import { MyCircularQueue } from '../src/601-700/622.design-circular-queue';
 
 function runTestCase( commands: string[], values: number[][] ){
 

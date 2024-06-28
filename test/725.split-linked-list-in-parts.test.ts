@@ -1,4 +1,4 @@
-import { splitListToParts } from '../src/725.split-linked-list-in-parts';
+import { splitListToParts } from '../src/701-800/725.split-linked-list-in-parts';
 import { ListNode } from '../src/dataStructure/ListNode';
 
 describe( 'Split Linked List in Parts', () => {

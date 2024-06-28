@@ -1,4 +1,4 @@
-import { numSubarrayProductLessThanK } from '../src/713.subarray-product-less-than-k';
+import { numSubarrayProductLessThanK } from '../src/701-800/713.subarray-product-less-than-k';
 
 describe( 'Subarray Product Less Than K', () => {
   it( 'nums = [10, 5, 2, 6], k = 100', () => {

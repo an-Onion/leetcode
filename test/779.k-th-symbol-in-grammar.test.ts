@@ -1,4 +1,4 @@
-import { kthGrammar } from '../src/779.k-th-symbol-in-grammar';
+import { kthGrammar } from '../src/701-800/779.k-th-symbol-in-grammar';
 
 describe( 'K-th Symbol in Grammar', () => {
 

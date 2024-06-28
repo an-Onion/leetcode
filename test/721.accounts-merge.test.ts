@@ -1,4 +1,4 @@
-import { accountsMerge } from '../src/721.accounts-merge';
+import { accountsMerge } from '../src/701-800/721.accounts-merge';
 
 describe( 'Accounts Merge', () => {
 

@@ -1,4 +1,4 @@
-import { orderOfLargestPlusSign } from '../src/764.largest-plus-sign';
+import { orderOfLargestPlusSign } from '../src/701-800/764.largest-plus-sign';
 
 describe( 'Largest Plus Sign', () => {
 

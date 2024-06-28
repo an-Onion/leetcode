@@ -1,4 +1,4 @@
-import { MyCircularDeque } from '../src/641.design-circular-deque';
+import { MyCircularDeque } from '../src/601-700/641.design-circular-deque';
 
 function runTestCase( commands: string[], values: number[][] ){
 

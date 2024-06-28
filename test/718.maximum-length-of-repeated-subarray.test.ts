@@ -1,4 +1,4 @@
-import { findLength } from '../src/718.maximum-length-of-repeated-subarray';
+import { findLength } from '../src/701-800/718.maximum-length-of-repeated-subarray';
 
 describe( 'Maximum Length of Repeated Subarray', () => {
 

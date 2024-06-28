@@ -1,4 +1,4 @@
-import { removeComments } from '../src/722.remove-comments';
+import { removeComments } from '../src/701-800/722.remove-comments';
 
 describe( 'Remove Comments', () => {
 

@@ -1,4 +1,4 @@
-import { openLock } from '../src/752.open-the-lock';
+import { openLock } from '../src/701-800/752.open-the-lock';
 
 describe( 'Open the Lock', () => {
 

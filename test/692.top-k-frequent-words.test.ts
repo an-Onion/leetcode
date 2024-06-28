@@ -1,4 +1,4 @@
-import { topKFrequent } from '../src/692.top-k-frequent-words';
+import { topKFrequent } from '../src/601-700/692.top-k-frequent-words';
 
 describe( 'Top K Frequent Words', () => {
   it( 'e.g. 1', () => {

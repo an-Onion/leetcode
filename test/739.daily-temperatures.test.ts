@@ -1,4 +1,4 @@
-import { dailyTemperatures } from '../src/739.daily-temperatures';
+import { dailyTemperatures } from '../src/701-800/739.daily-temperatures';
 
 describe( 'Daily Temperatures', () => {
 

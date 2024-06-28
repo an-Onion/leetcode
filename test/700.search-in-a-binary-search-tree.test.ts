@@ -1,4 +1,4 @@
-import { searchBST } from '../src/700.search-in-a-binary-search-tree';
+import { searchBST } from '../src/601-700/700.search-in-a-binary-search-tree';
 import { TreeNode } from '../src/dataStructure/TreeNode';
 
 describe( 'Search in a Binary Search Tree', () => {

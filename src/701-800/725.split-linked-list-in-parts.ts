@@ -4,7 +4,7 @@
  * [725] Split Linked List in Parts
  */
 
-import { ListNode } from './dataStructure/ListNode';
+import { ListNode } from '../dataStructure/ListNode';
 
 // @lc code=start
 /**

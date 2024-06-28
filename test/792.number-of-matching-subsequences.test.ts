@@ -1,4 +1,4 @@
-import { numMatchingSubseq } from '../src/792.number-of-matching-subsequences';
+import { numMatchingSubseq } from '../src/701-800/792.number-of-matching-subsequences';
 
 describe( 'Number of Matching Subsequences', () => {
 

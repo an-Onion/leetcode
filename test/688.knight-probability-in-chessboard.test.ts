@@ -1,4 +1,4 @@
-import { knightProbability } from '../src/688.knight-probability-in-chessboard';
+import { knightProbability } from '../src/601-700/688.knight-probability-in-chessboard';
 
 describe( 'Knight Probability in Chessboard', () => {
 

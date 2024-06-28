@@ -1,4 +1,4 @@
-import { monotoneIncreasingDigits } from '../src/738.monotone-increasing-digits';
+import { monotoneIncreasingDigits } from '../src/701-800/738.monotone-increasing-digits';
 
 describe( 'Monotone Increasing Digits', () => {
 

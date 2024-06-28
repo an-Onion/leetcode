@@ -1,4 +1,4 @@
-import { canTransform } from '../src/777.swap-adjacent-in-lr-string';
+import { canTransform } from '../src/701-800/777.swap-adjacent-in-lr-string';
 
 describe( 'Swap Adjacent in LR String', () => {
 

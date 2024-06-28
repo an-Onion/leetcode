@@ -1,4 +1,4 @@
-import { findRedundantConnection } from '../src/684.redundant-connection';
+import { findRedundantConnection } from '../src/601-700/684.redundant-connection';
 
 describe( 'Redundant Connection', () => {
 

@@ -1,4 +1,4 @@
-import { isIdealPermutation } from '../src/775.global-and-local-inversions';
+import { isIdealPermutation } from '../src/701-800/775.global-and-local-inversions';
 
 describe( 'Global and Local Inversions', () => {
   it( 'e.g. 1', () => {

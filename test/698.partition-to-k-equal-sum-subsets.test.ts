@@ -1,4 +1,4 @@
-import { canPartitionKSubsets } from '../src/698.partition-to-k-equal-sum-subsets';
+import { canPartitionKSubsets } from '../src/601-700/698.partition-to-k-equal-sum-subsets';
 
 describe( 'Partition to K Equal Sum Subsets', () => {
   it( 'e.g. 1', () => {

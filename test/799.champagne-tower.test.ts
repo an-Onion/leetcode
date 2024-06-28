@@ -1,4 +1,4 @@
-import { champagneTower } from '../src/799.champagne-tower';
+import { champagneTower } from '../src/701-800/799.champagne-tower';
 
 describe( 'Champagne Tower', () => {
 

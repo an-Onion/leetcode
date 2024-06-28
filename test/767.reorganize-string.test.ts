@@ -1,4 +1,4 @@
-import { reorganizeString } from '../src/767.reorganize-string';
+import { reorganizeString } from '../src/701-800/767.reorganize-string';
 
 describe( 'Reorganize String', () => {
 

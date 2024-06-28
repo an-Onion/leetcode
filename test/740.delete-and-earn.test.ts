@@ -1,4 +1,4 @@
-import { deleteAndEarn } from '../src/740.delete-and-earn';
+import { deleteAndEarn } from '../src/701-800/740.delete-and-earn';
 
 describe( 'Delete and Earn', () => {
 

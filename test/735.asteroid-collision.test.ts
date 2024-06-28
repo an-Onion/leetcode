@@ -1,4 +1,4 @@
-import { asteroidCollision } from '../src/735.asteroid-collision';
+import { asteroidCollision } from '../src/701-800/735.asteroid-collision';
 
 describe( 'Asteroid Collision', () => {
 
