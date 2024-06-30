@@ -18,7 +18,7 @@
  *     }
  * }
  */
-import { TreeNode } from './dataStructure/TreeNode';
+import { TreeNode } from '../dataStructure/TreeNode';
 
 export function leafSimilar( root1: TreeNode | null, root2: TreeNode | null ): boolean {
 

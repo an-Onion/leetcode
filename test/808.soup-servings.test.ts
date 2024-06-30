@@ -1,4 +1,4 @@
-import { soupServings } from '../src/808.soup-servings';
+import { soupServings } from '../src/801-900/808.soup-servings';
 
 describe( 'Soup Servings', () => {
 

@@ -1,4 +1,4 @@
-import { splitIntoFibonacci } from '../src/842.split-array-into-fibonacci-sequence';
+import { splitIntoFibonacci } from '../src/801-900/842.split-array-into-fibonacci-sequence';
 
 describe( 'Split Array into Fibonacci Sequence', () => {
 

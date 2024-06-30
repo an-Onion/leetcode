@@ -19,7 +19,7 @@
  * }
  */
 
-import { TreeNode } from './dataStructure/TreeNode';
+import { TreeNode } from '../dataStructure/TreeNode';
 
 export function distanceK( root: TreeNode | null, target: TreeNode | null, k: number ): number[] {
 

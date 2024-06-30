@@ -1,4 +1,4 @@
-import { numRescueBoats } from '../src/881.boats-to-save-people';
+import { numRescueBoats } from '../src/801-900/881.boats-to-save-people';
 
 describe( 'Boats to Save People', () => {
 

@@ -1,4 +1,4 @@
-import { mirrorReflection } from '../src/858.mirror-reflection';
+import { mirrorReflection } from '../src/801-900/858.mirror-reflection';
 
 describe( 'Mirror Reflection', () => {
 

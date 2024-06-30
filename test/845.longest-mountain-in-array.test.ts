@@ -1,4 +1,4 @@
-import { longestMountain } from '../src/845.longest-mountain-in-array';
+import { longestMountain } from '../src/801-900/845.longest-mountain-in-array';
 
 describe( 'Longest Mountain in Array', () => {
 

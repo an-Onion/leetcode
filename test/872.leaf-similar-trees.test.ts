@@ -1,4 +1,4 @@
-import { leafSimilar } from '../src/872.leaf-similar-trees';
+import { leafSimilar } from '../src/801-900/872.leaf-similar-trees';
 import { TreeNode } from '../src/dataStructure/TreeNode';
 
 describe( 'Leaf-Similar Trees', () => {

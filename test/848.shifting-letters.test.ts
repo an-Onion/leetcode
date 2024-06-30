@@ -1,4 +1,4 @@
-import { shiftingLetters } from '../src/848.shifting-letters';
+import { shiftingLetters } from '../src/801-900/848.shifting-letters';
 
 describe( 'Shifting Letters', () => {
 

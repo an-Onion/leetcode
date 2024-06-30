@@ -1,4 +1,4 @@
-import { expressiveWords } from '../src/809.expressive-words';
+import { expressiveWords } from '../src/801-900/809.expressive-words';
 
 describe( 'Expressive Words', () => {
 

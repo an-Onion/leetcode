@@ -1,4 +1,4 @@
-import { largestSumOfAverages } from '../src/813.largest-sum-of-averages';
+import { largestSumOfAverages } from '../src/801-900/813.largest-sum-of-averages';
 
 describe( 'Largest Sum of Averages', () => {
 

@@ -1,4 +1,4 @@
-import { binaryGap } from '../src/868.binary-gap';
+import { binaryGap } from '../src/801-900/868.binary-gap';
 
 describe( 'Binary Gap', () => {
 

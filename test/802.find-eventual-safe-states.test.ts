@@ -1,4 +1,4 @@
-import { eventualSafeNodes } from '../src/802.find-eventual-safe-states';
+import { eventualSafeNodes } from '../src/801-900/802.find-eventual-safe-states';
 
 describe( 'Find Eventual Safe States', () => {
 

@@ -1,4 +1,4 @@
-import { isNStraightHand } from '../src/846.hand-of-straights';
+import { isNStraightHand } from '../src/801-900/846.hand-of-straights';
 
 describe( 'Hand of Straights', () => {
 

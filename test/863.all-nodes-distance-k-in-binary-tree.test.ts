@@ -1,4 +1,4 @@
-import { distanceK } from '../src/863.all-nodes-distance-k-in-binary-tree';
+import { distanceK } from '../src/801-900/863.all-nodes-distance-k-in-binary-tree';
 import { TreeNode } from '../src/dataStructure/TreeNode';
 
 describe( 'All Nodes Distance K in Binary Tree', () => {

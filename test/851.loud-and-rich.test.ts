@@ -1,4 +1,4 @@
-import { loudAndRich } from '../src/851.loud-and-rich';
+import { loudAndRich } from '../src/801-900/851.loud-and-rich';
 
 describe( 'Loud and Rich', () => {
 

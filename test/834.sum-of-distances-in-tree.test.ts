@@ -1,4 +1,4 @@
-import { sumOfDistancesInTree } from '../src/834.sum-of-distances-in-tree';
+import { sumOfDistancesInTree } from '../src/801-900/834.sum-of-distances-in-tree';
 
 describe( 'Sum of Distances in Tree', () => {
 
