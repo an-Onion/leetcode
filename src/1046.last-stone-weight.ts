@@ -6,22 +6,24 @@
 
 // @lc code=start
 
-import { PriorityQueue } from 'typescript-collections';
+import { MaxPriorityQueue } from '@datastructures-js/priority-queue';
 
 export function lastStoneWeight( stones: number[] ): number {
-  const Q = new PriorityQueue<number>();
+  const Q = new MaxPriorityQueue<number>( {
+    priority: ( stone ) => stone,
+  } );
 
   stones.forEach( ( stone ) => Q.enqueue( stone ) );
 
   while( Q.size() > 1 ){
-    const first = Q.dequeue();
-    const second = Q.dequeue();
+    const first = Q.dequeue().element;
+    const second = Q.dequeue().element;
     if( first === second ) continue;
 
-    Q.enqueue( first -second );
+    Q.enqueue( first - second );
   }
 
-  const res = Q.dequeue();
+  const res = Q.dequeue()?.element;
 
   return res || 0;
 }
