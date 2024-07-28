@@ -1,4 +1,4 @@
-import { sortedSquares } from '../src/977.squares-of-a-sorted-array';
+import { sortedSquares } from '../src/901-999/977.squares-of-a-sorted-array';
 
 describe( 'Squares of a Sorted Array', () => {
 

@@ -1,4 +1,4 @@
-import { minFlipsMonoIncr } from '../src/926.flip-string-to-monotone-increasing';
+import { minFlipsMonoIncr } from '../src/901-999/926.flip-string-to-monotone-increasing';
 
 describe( 'Flip String to Monotone Increasing', () => {
 

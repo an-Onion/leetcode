@@ -1,4 +1,4 @@
-import { destCity } from '../src/1436.destination-city';
+import { destCity } from '../src/1000/1436.destination-city';
 
 describe( 'Destination City', () => {
 

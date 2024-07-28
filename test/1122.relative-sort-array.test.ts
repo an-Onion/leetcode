@@ -1,4 +1,4 @@
-import { relativeSortArray } from '../src/1122.relative-sort-array';
+import { relativeSortArray } from '../src/1000/1122.relative-sort-array';
 
 describe( 'Relative Sort Array', () => {
 

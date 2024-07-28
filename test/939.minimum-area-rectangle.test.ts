@@ -1,4 +1,4 @@
-import { minAreaRect } from '../src/939.minimum-area-rectangle';
+import { minAreaRect } from '../src/901-999/939.minimum-area-rectangle';
 
 describe( 'Minimum Area Rectangle' ,() => {
 

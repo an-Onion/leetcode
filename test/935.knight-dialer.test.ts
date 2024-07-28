@@ -1,4 +1,4 @@
-import { knightDialer } from '../src/935.knight-dialer';
+import { knightDialer } from '../src/901-999/935.knight-dialer';
 
 describe( 'Knight Dialer', () => {
 

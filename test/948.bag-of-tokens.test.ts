@@ -1,4 +1,4 @@
-import { bagOfTokensScore } from '../src/948.bag-of-tokens';
+import { bagOfTokensScore } from '../src/901-999/948.bag-of-tokens';
 
 describe( 'Bag of Tokens', () => {
 

@@ -1,4 +1,4 @@
-import { minIncrementForUnique } from '../src/945.minimum-increment-to-make-array-unique';
+import { minIncrementForUnique } from '../src/901-999/945.minimum-increment-to-make-array-unique';
 
 describe( 'Minimum Increment to Make Array Unique', () => {
 

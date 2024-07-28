@@ -1,4 +1,4 @@
-import { buildArray } from '../src/1441.build-an-array-with-stack-operations';
+import { buildArray } from '../src/1000/1441.build-an-array-with-stack-operations';
 
 describe( 'Build an Array With Stack Operations', () => {
 

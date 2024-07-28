@@ -1,4 +1,4 @@
-import { subarraysDivByK } from '../src/974.subarray-sums-divisible-by-k';
+import { subarraysDivByK } from '../src/901-999/974.subarray-sums-divisible-by-k';
 
 describe( 'Subarray Sums Divisible by K', () => {
 

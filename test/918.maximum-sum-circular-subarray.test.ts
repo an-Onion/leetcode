@@ -1,4 +1,4 @@
-import { maxSubarraySumCircular } from '../src/918.maximum-sum-circular-subarray';
+import { maxSubarraySumCircular } from '../src/901-999/918.maximum-sum-circular-subarray';
 
 describe( 'Maximum Sum Circular Subarray', () => {
 

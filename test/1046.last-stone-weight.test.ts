@@ -1,4 +1,4 @@
-import { lastStoneWeight } from '../src/1046.last-stone-weight';
+import { lastStoneWeight } from '../src/1000/1046.last-stone-weight';
 
 describe( 'Last Stone Weight', () => {
 

@@ -1,4 +1,4 @@
-import { flipMatchVoyage } from '../src/971.flip-binary-tree-to-match-preorder-traversal';
+import { flipMatchVoyage } from '../src/901-999/971.flip-binary-tree-to-match-preorder-traversal';
 import { TreeNode } from '../src/dataStructure/TreeNode';
 
 describe( 'Flip Binary tree To match Preorder Traversal', () => {

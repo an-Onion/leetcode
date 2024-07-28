@@ -1,4 +1,4 @@
-import { maxProductDifference } from '../src/1913.maximum-product-difference-between-two-pairs';
+import { maxProductDifference } from '../src/1000/1913.maximum-product-difference-between-two-pairs';
 
 describe( 'Maximum Product Difference Between Two Pairs', () => {
 

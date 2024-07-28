@@ -1,4 +1,4 @@
-import { TimeMap } from '../src/981.time-based-key-value-store';
+import { TimeMap } from '../src/901-999/981.time-based-key-value-store';
 
 function runCommands( commands: string[], values: ( string | number )[][] ){
   const timeMap = new TimeMap();

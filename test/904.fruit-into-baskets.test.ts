@@ -1,4 +1,4 @@
-import { totalFruit } from '../src/904.fruit-into-baskets';
+import { totalFruit } from '../src/901-999/904.fruit-into-baskets';
 
 describe( 'Fruit Into Baskets', () => {
 

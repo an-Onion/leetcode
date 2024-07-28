@@ -1,4 +1,4 @@
-import { sumRootToLeaf } from '../src/1022.sum-of-root-to-leaf-binary-numbers';
+import { sumRootToLeaf } from '../src/1000/1022.sum-of-root-to-leaf-binary-numbers';
 import { TreeNode } from '../src/dataStructure/TreeNode';
 
 describe( 'Sum Of root To leaf Binary Numbers', () => {

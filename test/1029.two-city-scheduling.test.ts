@@ -1,4 +1,4 @@
-import { twoCitySchedCost } from '../src/1029.two-city-scheduling';
+import { twoCitySchedCost } from '../src/1000/1029.two-city-scheduling';
 
 describe( 'Two City Scheduling', () => {
 

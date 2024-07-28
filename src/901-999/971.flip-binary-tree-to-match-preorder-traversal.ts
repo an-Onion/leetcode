@@ -19,7 +19,7 @@
  * }
  */
 
-import { TreeNode } from './dataStructure/TreeNode';
+import { TreeNode } from '../dataStructure/TreeNode';
 
 export function flipMatchVoyage( root: TreeNode | null, voyage: number[] ): number[] {
 

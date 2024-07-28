@@ -1,4 +1,4 @@
-import { carPooling } from '../src/1094.car-pooling';
+import { carPooling } from '../src/1000/1094.car-pooling';
 
 describe( 'Car Pooling', () => {
 

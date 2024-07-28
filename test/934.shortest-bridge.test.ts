@@ -1,4 +1,4 @@
-import { shortestBridge } from '../src/934.shortest-bridge';
+import { shortestBridge } from '../src/901-999/934.shortest-bridge';
 
 describe( 'Shortest Bridge', () => {
 

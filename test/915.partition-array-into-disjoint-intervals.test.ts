@@ -1,4 +1,4 @@
-import { partitionDisjoint } from '../src/915.partition-array-into-disjoint-intervals';
+import { partitionDisjoint } from '../src/901-999/915.partition-array-into-disjoint-intervals';
 
 describe( 'Partition Array into Disjoint Intervals', () => {
 

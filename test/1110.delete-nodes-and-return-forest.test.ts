@@ -1,4 +1,4 @@
-import { delNodes } from '../src/1110.delete-nodes-and-return-forest';
+import { delNodes } from '../src/1000/1110.delete-nodes-and-return-forest';
 import { TreeNode } from '../src/dataStructure/TreeNode';
 
 describe( 'Delete Nodes And Return Forest', () => {

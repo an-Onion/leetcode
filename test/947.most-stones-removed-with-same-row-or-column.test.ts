@@ -1,4 +1,4 @@
-import { removeStones } from '../src/947.most-stones-removed-with-same-row-or-column';
+import { removeStones } from '../src/901-999/947.most-stones-removed-with-same-row-or-column';
 
 describe( 'Most Stones Removed with Same Row or Column', () => {
 

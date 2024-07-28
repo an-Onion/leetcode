@@ -1,4 +1,4 @@
-import { longestArithSeqLength } from '../src/1027.longest-arithmetic-subsequence';
+import { longestArithSeqLength } from '../src/1000/1027.longest-arithmetic-subsequence';
 
 describe( 'Longest Arithmetic Subsequence', () => {
 

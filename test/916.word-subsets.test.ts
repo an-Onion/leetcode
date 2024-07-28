@@ -1,4 +1,4 @@
-import { wordSubsets } from '../src/916.word-subsets';
+import { wordSubsets } from '../src/901-999/916.word-subsets';
 
 describe( 'Word Subsets', () => {
 

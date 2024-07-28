@@ -1,4 +1,4 @@
-import { numSubarraysWithSum } from '../src/930.binary-subarrays-with-sum';
+import { numSubarraysWithSum } from '../src/901-999/930.binary-subarrays-with-sum';
 
 describe( 'Binary Subarrays With Sum', () => {
 

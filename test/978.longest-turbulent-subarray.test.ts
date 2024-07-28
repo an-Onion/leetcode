@@ -1,4 +1,4 @@
-import { maxTurbulenceSize } from '../src/978.longest-turbulent-subarray';
+import { maxTurbulenceSize } from '../src/901-999/978.longest-turbulent-subarray';
 
 describe( 'Longest Turbulent Subarray', () => {
 

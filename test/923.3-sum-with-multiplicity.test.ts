@@ -1,4 +1,4 @@
-import { threeSumMulti } from '../src/923.3-sum-with-multiplicity';
+import { threeSumMulti } from '../src/901-999/923.3-sum-with-multiplicity';
 
 describe( '3Sum With Multiplicity' ,() => {
 
