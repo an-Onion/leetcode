@@ -1,5 +1,5 @@
 
-class Solution {
+export class Solution {
     original: number[];
     constructor( nums: number[] ) {
       this.original = nums;
