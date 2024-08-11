@@ -6,24 +6,21 @@
 
 // @lc code=start
 export function simplifyPath( path: string ): string {
+    const paths = path.split( '/' );
 
-  const paths = path.split( '/' );
+    const ret: string[] = [];
 
-  const ret: string[] = [];
-
-  for( const p of paths ){
-    if( p=='' || p==='.' ){
-      continue;
+    for ( const p of paths ) {
+        if ( p === '' || p === '.' ) {
+            continue;
+        }
+        if ( p === '..' ) {
+            ret.pop();
+            continue;
+        }
+        ret.push( p );
     }
-    if( p==='..' ){
-      ret.pop();
-      continue;
-    }
-    ret.push( p );
-  }
 
-  return '/' + ret.join( '/' );
-
+    return '/' + ret.join( '/' );
 }
 // @lc code=end
-

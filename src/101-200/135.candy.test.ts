@@ -1,13 +1,11 @@
 function candy( ratings: number[] ): number {
-
     if ( ratings.length === 0 ) return 0;
 
     let [pre, ret, inc, dec] = [1, 1, 1, 1];
 
     for ( let i = 1; i < ratings.length; i++ ) {
-
         if ( ratings[i] === ratings[i - 1] ) {
-            [pre, ret, inc, dec ] = [1, ret + 1, 1, 1];
+            [pre, ret, inc, dec] = [1, ret + 1, 1, 1];
             continue;
         }
 
@@ -17,7 +15,7 @@ function candy( ratings: number[] ): number {
             inc = pre;
             continue;
         }
-        if ( dec == inc ) {
+        if ( dec === inc ) {
             dec++;
         }
         ret += dec++;
@@ -27,7 +25,6 @@ function candy( ratings: number[] ): number {
 }
 
 describe( '135. candy', () => {
-
     it( '1,0,2', () => {
         expect( candy( [1, 0, 2] ) ).toEqual( 5 );
     } );
@@ -43,5 +40,4 @@ describe( '135. candy', () => {
     it( '1,3,2,2,1', () => {
         expect( candy( [1, 3, 2, 2, 1] ) ).toEqual( 7 );
     } );
-
 } );

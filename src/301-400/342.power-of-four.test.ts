@@ -1,6 +1,5 @@
 function isPowerOfFour( x: number ): boolean {
-
-    return x > 0 && ( x & x-1 ) == 0 && ( x&( 0x55555555 ) ) != 0;
+    return x > 0 && ( x & ( x - 1 ) ) === 0 && ( x & 0x55555555 ) !== 0;
 }
 
 describe( '342. power of four', () => {

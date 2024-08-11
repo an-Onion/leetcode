@@ -6,26 +6,23 @@
 
 // @lc code=start
 export function combine( n: number, k: number ): number[][] {
+    const result: number[][] = [];
 
-  const result: number[][] = [];
+    function DFS( start: number, path: number[] = [] ): void {
+        if ( path.length === k ) {
+            result.push( [...path] );
+            return;
+        }
 
-  function DFS( start: number, path: number[] = [] ): void {
+        if ( start > n ) return;
 
-    if( path.length == k ) {
-      result.push( [...path] );
-      return;
+        DFS( start + 1, [...path, start] );
+
+        DFS( start + 1, [...path] );
     }
 
-    if( start > n ) return;
+    DFS( 1 );
 
-    DFS( start+1, [...path, start] );
-
-    DFS( start+1, [...path] );
-  }
-
-  DFS( 1 );
-
-  return result;
+    return result;
 }
 // @lc code=end
-

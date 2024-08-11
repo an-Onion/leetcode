@@ -2,10 +2,18 @@
  Do not return anything, modify board in-place instead.
  */
 function gameOfLife( board: number[][] ): void {
-
     const m = board.length;
     const n = board[0].length;
-    const dirs = [[-1, -1], [-1, 0], [-1, 1], [0, -1], [0, 1], [1, -1], [1, 0], [1, 1]];
+    const dirs = [
+        [-1, -1],
+        [-1, 0],
+        [-1, 1],
+        [0, -1],
+        [0, 1],
+        [1, -1],
+        [1, 0],
+        [1, 1],
+    ];
 
     for ( let i = 0; i < m; i++ ) {
         for ( let j = 0; j < n; j++ ) {
@@ -16,7 +24,7 @@ function gameOfLife( board: number[][] ): void {
                 if ( board[x][y] & 1 ) lives++;
             }
 
-            if ( lives + board[i][j] == 3 || lives == 3 ) {
+            if ( lives + board[i][j] === 3 || lives === 3 ) {
                 board[i][j] |= 2;
             }
         }
@@ -30,7 +38,6 @@ function gameOfLife( board: number[][] ): void {
 }
 
 describe( '289. game of life', () => {
-
     it( 'example 1', () => {
         const board = [
             [0, 1, 0],

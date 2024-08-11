@@ -1,5 +1,4 @@
 function longestConsecutive( nums: number[] ): number {
-
     const map = new Map<number, number>();
 
     for ( const num of nums ) {
@@ -13,7 +12,7 @@ function longestConsecutive( nums: number[] ): number {
         let acc = 0;
 
         for ( let i = num; map.has( i ); i++ ) {
-            if ( map.get( i ) == 0 ) {
+            if ( map.get( i ) === 0 ) {
                 map.set( i, ++acc );
                 continue;
             }

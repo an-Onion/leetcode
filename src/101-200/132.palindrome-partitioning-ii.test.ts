@@ -6,7 +6,7 @@ function minCut( s: string ) {
 
     for ( let i = N - 1; i >= 0; --i ) {
         for ( let j = i + 1; j < N; ++j ) {
-            dp[i][j] = s[i] == s[j] && dp[i + 1][j - 1];
+            dp[i][j] = s[i] === s[j] && dp[i + 1][j - 1];
         }
     }
 
@@ -26,9 +26,7 @@ function minCut( s: string ) {
     return ret[N - 1];
 }
 
-
 describe( '132. palindrome-partitioning-ii', () => {
-
     it( 'aab', () => {
         expect( minCut( 'aab' ) ).toBe( 1 );
     } );

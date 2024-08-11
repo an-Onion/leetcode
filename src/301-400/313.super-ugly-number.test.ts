@@ -1,5 +1,4 @@
 function nthSuperUglyNumber( n: number, primes: number[] ): number {
-
     const dp = Array( n + 1 ).fill( Infinity );
     const M = primes.length;
     const pointers = Array( M ).fill( 0 );
@@ -11,7 +10,7 @@ function nthSuperUglyNumber( n: number, primes: number[] ): number {
             dp[i] = Math.min( dp[i], nums[j] );
         }
         for ( let j = 0; j < M; j++ ) {
-            if ( nums[j] == dp[i] ) {
+            if ( nums[j] === dp[i] ) {
                 pointers[j]++;
                 nums[j] = dp[pointers[j]] * primes[j];
             }
@@ -21,12 +20,11 @@ function nthSuperUglyNumber( n: number, primes: number[] ): number {
 }
 
 describe( '313, super ugly number', () => {
-
     it( 'case 1', () => {
-        expect( nthSuperUglyNumber( 12, [2,7,13,19] ) ).toBe( 32 );
+        expect( nthSuperUglyNumber( 12, [2, 7, 13, 19] ) ).toBe( 32 );
     } );
 
     it( 'case 2', () => {
-        expect( nthSuperUglyNumber( 1, [2,3,5] ) ).toBe( 1 );
+        expect( nthSuperUglyNumber( 1, [2, 3, 5] ) ).toBe( 1 );
     } );
 } );
