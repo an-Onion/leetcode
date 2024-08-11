@@ -26,7 +26,7 @@
         "typescript": "^5.5.0"
     },
     "lint-staged": {
-        "*.{ts}": [
+        "*.{ts,js}": [
             "eslint --quiet --fix"
         ],
         "*.{json,js,ts,jsx,tsx,md}": [
