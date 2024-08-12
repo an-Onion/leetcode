@@ -4,9 +4,9 @@ useTabs: false
 tabWidth: 4
 printWidth: 80
 semi: true
-singleQuote: false
+singleQuote: true
 quoteProps: consistent
-jsxSingleQuote: false
+jsxSingleQuote: true
 trailingComma: all
 bracketSpacing: true
 bracketSameLine: true
