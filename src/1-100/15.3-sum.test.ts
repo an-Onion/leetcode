@@ -1,5 +1,40 @@
-import { threeSum } from '../src/1-100/15.3-sum';
+/*
+ * @lc app=leetcode id=15 lang=typescript
+ *
+ * [15] 3Sum
+ */
 
+// @lc code=start
+function threeSum( nums: number[] ): number[][] {
+    nums.sort( ( a, b ) => a - b );
+    const ans = [];
+    for ( let i = 0; i < nums.length; ++i ) {
+        if ( nums[i - 1] === nums[i] ) continue;
+        let [low, up] = [i + 1, nums.length - 1];
+
+        while ( low < up ) {
+            [low, up] = twoSum( -nums[i], low, up );
+            if ( low === null ) break;
+            ans.push( [nums[i], nums[low], nums[up]] );
+            low++, up--;
+            while ( nums[low] === nums[low - 1] ) low++;
+            while ( nums[up] === nums[up + 1] ) up--;
+        }
+    }
+    return ans;
+
+    function twoSum( target: number, low: number, up: number ) {
+        while ( low < up ) {
+            const sum = nums[low] + nums[up];
+            if ( sum === target ) {
+                return [low, up];
+            }
+            if ( sum < target ) low++;
+            else up--;
+        }
+        return [null, null];
+    }
+}
 describe( '3Sum', () => {
     it( '[-1,0,1,2,-1,-4]', () => {
         expect( threeSum( [-1, 0, 1, 2, -1, -4] ) ).toStrictEqual( [
