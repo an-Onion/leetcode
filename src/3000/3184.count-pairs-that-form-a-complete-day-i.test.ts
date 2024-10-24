@@ -1,4 +1,4 @@
-function countCompleteDayPairs( hours: number[] ): number {
+export function countCompleteDayPairs( hours: number[] ): number {
     const map = new Map<number, number>();
     let ret = 0;
     for ( const hour of hours ) {
