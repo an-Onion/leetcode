@@ -1,4 +1,4 @@
-class _Node {
+export class _Node {
     val: boolean;
     isLeaf: boolean;
     topLeft: _Node | null;
