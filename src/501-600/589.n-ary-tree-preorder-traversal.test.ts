@@ -1,38 +1,31 @@
 import { _Node } from './NTreeNode';
 
-function maxDepth( root: _Node | null ): number {
-    if ( !root ) return 0;
-
+function preorder( root: _Node | null ): number[] {
+    if ( !root ) return [];
     const Q = [root];
-    let depth = 0;
-
+    const ret: number[] = [];
     while ( Q.length ) {
-        let size = Q.length;
-        while ( size-- ) {
-            const node = Q.shift()!;
-            for ( const child of node.children ) {
-                if ( !child ) continue;
-                Q.push( child );
-            }
+        const node = Q.pop();
+        ret.push( node!.val );
+        for ( let i = node!.children.length - 1; i >= 0; i-- ) {
+            Q.push( node!.children[i] );
         }
-        depth++;
     }
-    return depth;
+
+    return ret;
 }
 
-describe( '559.maximum-depth-of-n-ary-tree', () => {
+describe( '589.n-ary-tree-preorder-traversal', () => {
     it( 'case 1', () => {
-        // root = [1,null,3,2,4,null,5,6]
         const root = new _Node( 1, [
             new _Node( 3, [new _Node( 5 ), new _Node( 6 )] ),
             new _Node( 2 ),
             new _Node( 4 ),
         ] );
-        expect( maxDepth( root ) ).toBe( 3 );
+        expect( preorder( root ) ).toEqual( [1, 3, 5, 6, 2, 4] );
     } );
 
     it( 'case 2', () => {
-        // root = [1,null,2,3,4,5,null,null,6,7,null,8,null,9,10,null,null,11,null,12,null,13,null,null,14]
         const root = new _Node( 1, [
             new _Node( 2 ),
             new _Node( 3, [
@@ -42,6 +35,8 @@ describe( '559.maximum-depth-of-n-ary-tree', () => {
             new _Node( 4, [new _Node( 8, [new _Node( 12 )] )] ),
             new _Node( 5, [new _Node( 9, [new _Node( 13 )] ), new _Node( 10 )] ),
         ] );
-        expect( maxDepth( root ) ).toBe( 5 );
+        expect( preorder( root ) ).toEqual( [
+            1, 2, 3, 6, 7, 11, 14, 4, 8, 12, 5, 9, 13, 10,
+        ] );
     } );
 } );
