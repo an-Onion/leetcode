@@ -5,15 +5,16 @@ function findWinningPlayer( skills: number[], k: number ): number {
         max = 0;
 
     while ( i < N ) {
-        max = i;
         let j = i + 1;
+        max = i;
 
         while ( skills[i] > skills[j] ) {
             j++, cnt++;
         }
-        if ( cnt >= k ) i;
+        if ( cnt >= k ) return i;
+        cnt = 1;
 
-        ( cnt = 1 ), ( i = j );
+        i = j;
     }
     return max;
 }
