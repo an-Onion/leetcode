@@ -5,3 +5,5 @@ type JSONValue =
     | string
     | JSONValue[]
     | { [key: string]: JSONValue };
+
+type Obj = Record<string, JSONValue> | Array<JSONValue>;

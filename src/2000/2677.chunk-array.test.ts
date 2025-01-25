@@ -1,4 +1,4 @@
-type Obj = Record<string, JSONValue> | Array<JSONValue> | PropertyKey;
+export type Obj = Record<string, JSONValue> | Array<JSONValue> | PropertyKey;
 
 function chunk( arr: Obj[], size: number ): Obj[][] {
     const ret: Obj[][] = [];
