@@ -18,7 +18,7 @@ function combinationSum2( candidates: number[], target: number ): number[][] {
     }
 }
 
-describe( 'Combination Sum II', () => {
+describe( '40. Combination Sum II', () => {
     it( 'candidates = [10,1,2,7,6,1,5], target = 8', () => {
         expect( combinationSum2( [10, 1, 2, 7, 6, 1, 5], 8 ).sort() ).toStrictEqual(
             [
