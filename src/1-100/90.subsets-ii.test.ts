@@ -18,7 +18,7 @@ function subsetsWithDup( nums: number[] ): number[][] {
     }
 }
 
-describe( 'Subsets II', () => {
+describe( '90. Subsets II', () => {
     it( '[1,2,2]', () => {
         const output = subsetsWithDup( [1, 2, 2] ).sort();
         expect( output ).toStrictEqual(
