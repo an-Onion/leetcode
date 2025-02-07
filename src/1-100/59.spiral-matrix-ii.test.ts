@@ -32,7 +32,7 @@ function generateMatrix( n: number ): number[][] {
     return matrix;
 }
 
-describe( 'Spiral Matrix II', () => {
+describe( '59. Spiral Matrix II', () => {
     it( '1', () => {
         expect( generateMatrix( 1 ) ).toStrictEqual( [[1]] );
     } );
