@@ -11,7 +11,7 @@ function removeDuplicates( nums: number[] ): number {
     }
     return slow;
 }
-describe( 'Remove Duplicates from Sorted Array II', () => {
+describe( '80. Remove Duplicates from Sorted Array II', () => {
     it( '[1,1,1,2,2,3]', () => {
         const input = [1, 1, 1, 2, 2, 3];
         const k = removeDuplicates( input );
