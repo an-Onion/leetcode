@@ -6,7 +6,6 @@ describe( 'Unique Binary Search Trees II', () => {
         const trees = generateTrees( 2 );
 
         const output = trees.map( ( tree ) => TreeNode.toArray( tree ) ).sort();
-        console.log( output );
         expect( output ).toStrictEqual(
             [
                 [1, null, 2],

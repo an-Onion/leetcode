@@ -10,8 +10,6 @@ function calcEquation(
         ds.join( x, y, values[i] );
     }
 
-    console.log( ds.parent );
-
     const ret: number[] = [];
 
     for ( const [x, y] of queries ) {
