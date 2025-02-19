@@ -1,10 +1,9 @@
 function maxDistance( arrays: number[][] ): number {
-    let min = arrays[0].at( 0 ),
-        max = arrays[0].at( -1 ),
-        ret = 0;
+    let ret = 0,
+        min = arrays[0].at( -1 ),
+        max = arrays[0].at( 0 );
 
-    for ( let i = 1; i < arrays.length; ++i ) {
-        const arr = arrays[i];
+    for ( const arr of arrays ) {
         ret = Math.max(
             ret,
             Math.abs( arr.at( -1 ) - min ),
@@ -13,7 +12,6 @@ function maxDistance( arrays: number[][] ): number {
         min = Math.min( min, arr.at( 0 ) );
         max = Math.max( max, arr.at( -1 ) );
     }
-
     return ret;
 }
 
