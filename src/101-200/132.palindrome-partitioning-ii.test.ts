@@ -2,7 +2,7 @@ import * as testCase from '../largeData/132.json';
 
 function minCut( s: string ) {
     const N = s.length;
-    const dp = Array.from( { length: N }, () => new Array( N ).fill( true ) );
+    const dp = Array.from( { length: N }, () => Array( N ).fill( true ) );
 
     for ( let i = N - 1; i >= 0; --i ) {
         for ( let j = i + 1; j < N; ++j ) {
@@ -10,7 +10,7 @@ function minCut( s: string ) {
         }
     }
 
-    const ret = new Array( N ).fill( Infinity );
+    const ret = Array( N ).fill( Infinity );
 
     for ( let i = 0; i < N; ++i ) {
         if ( dp[0][i] ) {
