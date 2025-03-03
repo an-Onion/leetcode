@@ -1,5 +1,3 @@
-export type Fn = ( n: number, i: number ) => unknown;
-
 function filter( arr: number[], fn: Fn ): number[] {
     let size = 0;
     for ( let i = 0; i < arr.length; i++ ) {

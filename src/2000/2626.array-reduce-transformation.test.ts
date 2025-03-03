@@ -1,5 +1,3 @@
-type Fn = ( accum: number, curr: number ) => number;
-
 function reduce( nums: number[], fn: Fn, init: number ): number {
     let acc = init;
     for ( const num of nums ) {
@@ -10,12 +8,18 @@ function reduce( nums: number[], fn: Fn, init: number ): number {
 
 describe( '2626.array-reduce-transformation', () => {
     it( 'case 1', () => {
-        expect( reduce( [1, 2, 3, 4], ( acc, curr ) => acc + curr, 0 ) ).toBe( 10 );
+        expect(
+            reduce( [1, 2, 3, 4], ( acc: number, curr: number ) => acc + curr, 0 ),
+        ).toBe( 10 );
     } );
 
     it( 'case 2', () => {
         expect(
-            reduce( [1, 2, 3, 4], ( acc, curr ) => acc + curr * curr, 100 ),
+            reduce(
+                [1, 2, 3, 4],
+                ( acc: number, curr: number ) => acc + curr * curr,
+                100,
+            ),
         ).toBe( 130 );
     } );
 

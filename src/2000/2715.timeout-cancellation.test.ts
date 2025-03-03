@@ -1,5 +1,3 @@
-export type Fn = ( ...args: JSONValue[] ) => void;
-
 function cancellable( fn: Fn, args: JSONValue[], t: number ): () => void {
     const timeId = setTimeout( () => {
         fn.call( null, ...args );

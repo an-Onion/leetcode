@@ -1,5 +1,3 @@
-export type Fn = ( value: JSONValue ) => number;
-
 function sortBy( arr: JSONValue[], fn: Fn ): JSONValue[] {
     return arr.sort( ( a, b ) => fn( a ) - fn( b ) );
 }
