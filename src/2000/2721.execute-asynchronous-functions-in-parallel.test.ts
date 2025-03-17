@@ -24,7 +24,7 @@ function promiseAll<T>( functions: Fn<T>[] ): Promise<T[]> {
  * promise.then(console.log); // [42]
  */
 
-describe( 'Execute Asynchronous Functions in Parallel', () => {
+describe( '2721. Execute Asynchronous Functions in Parallel', () => {
     it( 'case 1', async () => {
         const ret = await promiseAll( [
             () => new Promise( ( resolve ) => setTimeout( () => resolve( 5 ), 200 ) ),
