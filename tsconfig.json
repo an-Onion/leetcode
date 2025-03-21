@@ -1,17 +1,14 @@
 {
-  "compilerOptions": {
-    "outDir": "./dist",
-    "module": "commonjs",
-    "target": "es2019",
-    "experimentalDecorators": true,
-    "allowJs": true,
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "sourceMap": true,
-    "resolveJsonModule": true
-  },
-  "include": [
-    "src/**/*",
-    "test/**/*",
-  ]
+    "compilerOptions": {
+        "outDir": "./dist",
+        "module": "commonjs",
+        "target": "ESNext",
+        "experimentalDecorators": true,
+        "allowJs": true,
+        "allowSyntheticDefaultImports": true,
+        "forceConsistentCasingInFileNames": true,
+        "sourceMap": true,
+        "resolveJsonModule": true
+    },
+    "include": ["src/**/*", "test/**/*"]
 }
