@@ -11,7 +11,7 @@ export function maximumTripletValue( nums: number[] ): number {
     return ret;
 }
 
-describe( '2784. maximumTripletValue', () => {
+describe( '2874. maximumTripletValue', () => {
     it( 'case 1', () => {
         expect( maximumTripletValue( [12, 6, 1, 2, 7] ) ).toBe( 77 );
     } );
