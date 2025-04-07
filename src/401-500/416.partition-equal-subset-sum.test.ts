@@ -7,9 +7,10 @@ function canPartition( nums: number[] ): boolean {
     const dp = Array( target + 1 ).fill( false );
     dp[0] = true;
 
+    // dp[i][j] = dp[i-1][j] || dp[i-1][j - nums[i]]
     for ( let i = 0; i < nums.length; i++ ) {
         for ( let j = target; j >= nums[i]; j-- ) {
-            dp[j] ||= dp[j - nums[i]] ?? false;
+            dp[j] ||= dp[j - nums[i]];
         }
     }
     return dp[target];
