@@ -9,7 +9,7 @@ function numTilings( n: number ): number {
     return dp[n];
 }
 
-describe( 'Domino and Tromino Tiling', () => {
+describe( '790. Domino and Tromino Tiling', () => {
     it( '3', () => {
         expect( numTilings( 3 ) ).toBe( 5 );
     } );
