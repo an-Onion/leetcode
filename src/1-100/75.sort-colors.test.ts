@@ -10,7 +10,7 @@ function sortColors( nums: number[] ): void {
     }
 }
 
-describe( 'Sort Colors', () => {
+describe( '75. Sort Colors', () => {
     it( '[1,2,0]', () => {
         const nums = [1, 2, 0];
         sortColors( nums );
