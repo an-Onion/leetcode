@@ -7,7 +7,7 @@ Leetcode daily training by Typescript + Jest
 -   lodash.js library is included by default.
 
 -   For Priority Queue / Queue data structures, you may use
-    -   5.4.0 version of datastructures-js/priority-queue
+    -   6.3.2 version of datastructures-js/priority-queue
     -   4.2.3 version of datastructures-js/queue.
     -   1.0.4 version of datastructures-js/deque.
 

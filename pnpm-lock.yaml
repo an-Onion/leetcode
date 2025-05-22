@@ -12,8 +12,8 @@ importers:
         specifier: 1.0.4
         version: 1.0.4
       '@datastructures-js/priority-queue':
-        specifier: '5.4.0 '
-        version: 5.4.0
+        specifier: 6.3.2
+        version: 6.3.2
       '@datastructures-js/queue':
         specifier: 4.2.3
         version: 4.2.3
@@ -239,11 +239,11 @@ packages:
   '@datastructures-js/deque@1.0.4':
     resolution: {integrity: sha512-zlgVSsxqiAd+scLUILvx8E887o+6kYds9/d4DCM/mFOuUITUlPG/r3u5iPZjzW3o6XPPi+p66p3Kf1+wFxYvLQ==}
 
-  '@datastructures-js/heap@3.2.0':
-    resolution: {integrity: sha512-FcU5ZAyb+VIOZz1HABsJUsbJi2ZyUDO7aoe97hq4d3tK3z8nMgwdxf5bO0gafR0ExFi18YTspntqHLzt4XOgnA==}
+  '@datastructures-js/heap@4.3.3':
+    resolution: {integrity: sha512-UcUu/DLh/aM4W3C8zZfwxxm6/6FIZUlm3mcAXuNOCa6Aj4iizNvNXQyb8DjZQH2jKSQbMRyNlngP6TPimuGjpQ==}
 
-  '@datastructures-js/priority-queue@5.4.0':
-    resolution: {integrity: sha512-x+EkL8tjbwBMCUyVIwsOiKnWiOvMiFAIrnWQihcO42sUZ8uc4sRsJgHAS164wnibM2kVgQUJcfvhIdssBOzxRg==}
+  '@datastructures-js/priority-queue@6.3.2':
+    resolution: {integrity: sha512-hPmWlbmYRegOkZsWJuOzZw+BYcrOJ9B5xwy8Sz/QtEtLUPHtJbX9OpPpCB+KQPgOVb1QonqFqiddVDud/i5afw==}
 
   '@datastructures-js/queue@4.2.3':
     resolution: {integrity: sha512-GWVMorC/xi2V2ta+Z/CPgPGHL2ZJozcj48g7y2nIX5GIGZGRrbShSHgvMViJwHJurUzJYOdIdRZnWDRrROFwJA==}
@@ -2030,11 +2030,11 @@ snapshots:
 
   '@datastructures-js/deque@1.0.4': {}
 
-  '@datastructures-js/heap@3.2.0': {}
+  '@datastructures-js/heap@4.3.3': {}
 
-  '@datastructures-js/priority-queue@5.4.0':
+  '@datastructures-js/priority-queue@6.3.2':
     dependencies:
-      '@datastructures-js/heap': 3.2.0
+      '@datastructures-js/heap': 4.3.3
 
   '@datastructures-js/queue@4.2.3': {}
 

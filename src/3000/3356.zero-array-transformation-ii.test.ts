@@ -21,7 +21,7 @@ function minZeroArray( nums: number[], queries: number[][] ): number {
     return k;
 }
 
-describe( '3356. minZeroArray', () => {
+describe( '3356. zero-array-transformation-ii', () => {
     it( 'case 1', () => {
         const nums = [2, 0, 2],
             queries = [
