@@ -10,15 +10,14 @@ function maxRemoval( nums: number[], queries: number[][] ): number {
     for ( let i = 0; i < nums.length; i++ ) {
         sum += delta[i];
 
-        while ( queries[j]?.[0] === i ) {
-            heap.enqueue( queries[j][1] );
+        while ( j < queries.length && queries[j][0] === i ) {
+            heap.push( queries[j][1] );
             j++;
         }
 
-        while ( sum < nums[i] && heap.front() >= i ) {
+        while ( sum < nums[i] && !heap.isEmpty() && heap.front() >= i ) {
             sum += 1;
-            const top = heap.pop();
-            delta[top + 1] -= 1;
+            delta[heap.pop() + 1] -= 1;
         }
 
         if ( sum < nums[i] ) {
@@ -55,6 +54,15 @@ describe( '3362. zero-array-transformation-iii', () => {
     it( 'case 3', () => {
         const nums = [1, 2, 3, 4],
             queries = [[0, 3]];
+        expect( maxRemoval( nums, queries ) ).toEqual( -1 );
+    } );
+
+    it( 'case 4', () => {
+        const nums = [3, 1],
+            queries = [
+                [0, 0],
+                [0, 1],
+            ];
         expect( maxRemoval( nums, queries ) ).toEqual( -1 );
     } );
 } );
