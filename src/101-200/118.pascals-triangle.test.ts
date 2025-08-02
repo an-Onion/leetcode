@@ -9,7 +9,7 @@ function generate( numRows: number ): number[][] {
     return ret;
 }
 
-describe( 'Pascal\'s Triangle', () => {
+describe( '118. Pascal\'s Triangle', () => {
     it( 'case 1', () => {
         expect( generate( 5 ) ).toStrictEqual( [
             [1],
