@@ -1,9 +1,10 @@
 function findClosest( x: number, y: number, z: number ): number {
-    if ( Math.abs( x - z ) === Math.abs( y - z ) ) {
+    const a = Math.abs( x - z ),
+        b = Math.abs( y - z );
+    if ( a === b ) {
         return 0;
     }
-
-    return Math.abs( x - z ) > Math.abs( y - z ) ? 2 : 1;
+    return a > b ? 2 : 1;
 }
 
 describe( '3516. find-closest-person', () => {
