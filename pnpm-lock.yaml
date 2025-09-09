@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@datastructures-js/deque':
-        specifier: 1.0.4
-        version: 1.0.4
+        specifier: 1.0.8
+        version: 1.0.8
       '@datastructures-js/priority-queue':
         specifier: 6.3.2
         version: 6.3.2
@@ -236,8 +236,8 @@ packages:
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
     engines: {node: '>=12'}
 
-  '@datastructures-js/deque@1.0.4':
-    resolution: {integrity: sha512-zlgVSsxqiAd+scLUILvx8E887o+6kYds9/d4DCM/mFOuUITUlPG/r3u5iPZjzW3o6XPPi+p66p3Kf1+wFxYvLQ==}
+  '@datastructures-js/deque@1.0.8':
+    resolution: {integrity: sha512-PSBhJ2/SmeRPRHuBv7i/fHWIdSC3JTyq56qb+Rq0wjOagi0/fdV5/B/3Md5zFZus/W6OkSPMaxMKKMNMrSmubg==}
 
   '@datastructures-js/heap@4.3.3':
     resolution: {integrity: sha512-UcUu/DLh/aM4W3C8zZfwxxm6/6FIZUlm3mcAXuNOCa6Aj4iizNvNXQyb8DjZQH2jKSQbMRyNlngP6TPimuGjpQ==}
@@ -2028,7 +2028,7 @@ snapshots:
     dependencies:
       '@jridgewell/trace-mapping': 0.3.9
 
-  '@datastructures-js/deque@1.0.4': {}
+  '@datastructures-js/deque@1.0.8': {}
 
   '@datastructures-js/heap@4.3.3': {}
 

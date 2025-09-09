@@ -19,7 +19,7 @@
         "typescript-eslint": "8.5.0"
     },
     "dependencies": {
-        "@datastructures-js/deque": "1.0.4",
+        "@datastructures-js/deque": "1.0.8",
         "@datastructures-js/priority-queue": "6.3.2",
         "@datastructures-js/queue": "4.2.3",
         "lodash": "^4.17.21",
