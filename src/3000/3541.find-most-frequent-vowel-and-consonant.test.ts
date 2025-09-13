@@ -1,17 +1,16 @@
 function maxFreqSum( s: string ): number {
-    const map = Array.from( { length: 26 }, () => 0 );
-    const vowel = [0, 4, 8, 14, 20];
-    for ( let i = 0; i < s.length; i++ ) {
-        const code = s.charCodeAt( i ) - 97;
-        map[code]++;
-    }
+    const map = new Map();
+    const vowel = ['a', 'e', 'i', 'o', 'u'];
+    s.split( '' ).forEach( ( c ) => {
+        map.set( c, ( map.get( c ) || 0 ) + 1 );
+    } );
     let maxV = 0,
         maxC = 0;
-    for ( let i = 0; i < 26; i++ ) {
-        if ( vowel.includes( i ) ) {
-            maxV = Math.max( maxV, map[i] );
+    for ( const [c, freq] of map ) {
+        if ( vowel.includes( c ) ) {
+            maxV = Math.max( maxV, freq );
         } else {
-            maxC = Math.max( maxC, map[i] );
+            maxC = Math.max( maxC, freq );
         }
     }
     return maxV + maxC;
