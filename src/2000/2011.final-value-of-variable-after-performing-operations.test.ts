@@ -1,9 +1,8 @@
 function finalValueAfterOperations( operations: string[] ): number {
-    let x = 0;
-    for ( const op of operations ) {
-        op.includes( '++' ) ? x++ : x--;
-    }
-    return x;
+    return operations.reduce(
+        ( acc, cur ) => ( cur.includes( '++' ) ? ++acc : --acc ),
+        0,
+    );
 }
 
 describe( '2011. final-value-of-variable-after-performing-operations', () => {
