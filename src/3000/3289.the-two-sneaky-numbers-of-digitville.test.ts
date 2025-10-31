@@ -1,24 +1,17 @@
 function getSneakyNumbers( nums: number[] ): number[] {
-    const map = new Map<number, number>();
-
-    for ( const num of nums ) {
-        map.set( num, ( map.get( num ) || 0 ) + 1 );
-    }
-
-    const res: number[] = [];
-
-    for ( const [num, count] of map ) {
-        if ( count > 1 ) {
-            res.push( num );
+    const n = nums.length;
+    for ( let i = 0; i < nums.length; i++ ) {
+        while ( nums[i] !== i && nums[i] !== nums[nums[i]] ) {
+            const j = nums[i];
+            [nums[i], nums[j]] = [nums[j], nums[i]];
         }
     }
-
-    return res;
+    return [nums[n - 2], nums[n - 1]];
 }
 
 describe( '3289. the-two-sneaky-numbers-of-digitville', () => {
     it( 'case 1', () => {
-        expect( getSneakyNumbers( [0, 1, 1, 0] ) ).toEqual( [0, 1] );
+        expect( getSneakyNumbers( [0, 1, 1, 0] ) ).toEqual( [1, 0] );
     } );
 
     it( 'case 2', () => {
