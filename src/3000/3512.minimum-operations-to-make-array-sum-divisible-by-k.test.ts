@@ -1,5 +1,5 @@
 function minOperations( nums: number[], k: number ): number {
-    return nums.reduce( ( a, b ) => a + b, 0 ) % k;
+    return nums.reduce( ( acc, cur ) => ( acc + cur ) % k, 0 );
 }
 
 describe( '3512.minimum-operations-to-make-array-sum-divisible-by-k', () => {
