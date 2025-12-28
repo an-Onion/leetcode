@@ -6,7 +6,7 @@ function maximumHappinessSum( happiness: number[], k: number ): number {
         .reduce( ( acc, cur ) => acc + cur, 0 );
 }
 
-describe( '33075.maximize-happiness-of-selected-children', () => {
+describe( '3075.maximize-happiness-of-selected-children', () => {
     it( 'case 1', () => {
         expect( maximumHappinessSum( [1, 2, 3], 2 ) ).toBe( 4 );
     } );
