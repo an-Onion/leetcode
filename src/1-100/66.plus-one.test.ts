@@ -17,7 +17,7 @@ function plusOne( digits: number[] ): number[] {
         .reverse();
 }
 
-describe( 'Plus One', () => {
+describe( '66. Plus One', () => {
     it( '[1,2,3]', () => {
         expect( plusOne( [1, 2, 3] ) ).toStrictEqual( [1, 2, 4] );
     } );
