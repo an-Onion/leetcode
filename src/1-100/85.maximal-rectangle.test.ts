@@ -28,7 +28,7 @@ function maximalRectangle( matrix: string[][] ): number {
 }
 
 describe( '85. Maximal rectangle', () => {
-    it( 'Example 1', () => {
+    it( 'case 1', () => {
         const matrix = [
             ['1', '0', '1', '0', '0'],
             ['1', '0', '1', '1', '1'],
@@ -38,12 +38,12 @@ describe( '85. Maximal rectangle', () => {
         expect( maximalRectangle( matrix ) ).toEqual( 6 );
     } );
 
-    it( 'Example 2', () => {
+    it( 'case 2', () => {
         const matrix = [['0']];
         expect( maximalRectangle( matrix ) ).toEqual( 0 );
     } );
 
-    it( 'Example 3', () => {
+    it( 'case 3', () => {
         const matrix = [['1']];
         expect( maximalRectangle( matrix ) ).toEqual( 1 );
     } );

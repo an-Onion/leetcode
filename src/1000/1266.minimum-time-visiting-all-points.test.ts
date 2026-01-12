@@ -1,10 +1,9 @@
 function minTimeToVisitAllPoints( points: number[][] ): number {
-    let [x0, x1] = points[0];
     let ret = 0;
     for ( let i = 1; i < points.length; ++i ) {
+        const [x0, x1] = points[i - 1];
         const [y0, y1] = points[i];
         ret += Math.max( Math.abs( x0 - y0 ), Math.abs( x1 - y1 ) );
-        [x0, x1] = points[i];
     }
     return ret;
 }
