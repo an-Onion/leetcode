@@ -1,13 +1,13 @@
 function minimumAbsDifference( arr: number[] ): number[][] {
     const ret = [];
-    let sofar = Infinity;
+    let best = Infinity;
     arr.sort( ( a, b ) => a - b );
 
     for ( let i = 1; i < arr.length; ++i ) {
         const delta = arr[i] - arr[i - 1];
-        if ( delta > sofar ) continue;
-        if ( delta < sofar ) {
-            sofar = delta;
+        if ( delta > best ) continue;
+        if ( delta < best ) {
+            best = delta;
             ret.length = 0;
         }
         ret.push( [arr[i - 1], arr[i]] );
