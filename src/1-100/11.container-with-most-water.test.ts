@@ -6,7 +6,7 @@ function maxArea(height: number[]): number {
         const area = Math.min(height[l], height[r]) * (r - l);
         sofar = Math.max(sofar, area);
         if (height[l] < height[r]) l++;
-        else if (height[l] === height[r]) r--, l++;
+        else if (height[l] === height[r]) (r--, l++);
         else r--;
     }
 
