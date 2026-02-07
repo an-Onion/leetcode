@@ -1,7 +1,7 @@
 {
-  "cSpell.words": [
-    "leetcode",
-    "nums",
-    "strs",
-  ]
+    "cSpell.words": ["leetcode", "nums", "strs"],
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    },
+    "eslint.validate": ["javascript", "typescript"]
 }
