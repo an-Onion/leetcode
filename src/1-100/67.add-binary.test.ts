@@ -10,7 +10,7 @@ function addBinary( a: string, b: string ): string {
     return x.toString( 2 );
 }
 
-describe( 'Add Binary', () => {
+describe( '67. Add Binary', () => {
     it( '11 + 1', () => {
         expect( addBinary( '11', '1' ) ).toBe( '100' );
     } );
