@@ -22,7 +22,7 @@ function readBinaryWatch( turnedOn: number ): string[] {
 }
 
 describe( '401. Binary Watch', () => {
-    it( '1', () => {
+    it( 'case 1', () => {
         expect( readBinaryWatch( 1 ) ).toEqual( [
             '0:01',
             '0:02',
@@ -37,7 +37,7 @@ describe( '401. Binary Watch', () => {
         ] );
     } );
 
-    it( '9', () => {
+    it( 'case 2', () => {
         expect( readBinaryWatch( 9 ) ).toEqual( [] );
     } );
 } );
