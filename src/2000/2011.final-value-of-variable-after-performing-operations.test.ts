@@ -1,6 +1,6 @@
 function finalValueAfterOperations( operations: string[] ): number {
     return operations.reduce(
-        ( acc, cur ) => ( cur.includes( '++' ) ? ++acc : --acc ),
+        ( acc, cur ) => ( cur.includes( '++' ) ? acc + 1 : acc - 1 ),
         0,
     );
 }

@@ -11,7 +11,7 @@ function maxDiff( num: number ): number {
     const regex = new RegExp( `[^0${s[0]}]` );
     const p0 = s.search( regex );
 
-    let sMin = s;
+    let sMin: string;
 
     if ( s[0] === '1' && p0 !== -1 ) {
         sMin = s.replaceAll( s[p0], '0' );
