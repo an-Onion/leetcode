@@ -1,14 +1,17 @@
 function maxRotateFunction( nums: number[] ): number {
-    const sum = nums.reduce( ( a, b ) => a + b, 0 );
-    const N = nums.length;
-    let F = nums.reduce( ( a, b, i ) => a + b * i, 0 );
-    let ret = F;
+    const n = nums.length;
+    if ( n === 0 ) return 0;
 
-    for ( let i = 1; i < N; i++ ) {
-        F += sum - N * nums[N - i];
-        ret = Math.max( ret, F );
+    const sum = nums.reduce( ( a, b ) => a + b, 0 );
+    let currentF = nums.reduce( ( a, b, i ) => a + b * i, 0 );
+    let maxResult = currentF;
+
+    for ( let i = 1; i < n; i++ ) {
+        const lastElement = nums[n - i];
+        currentF += sum - n * lastElement;
+        maxResult = Math.max( maxResult, currentF );
     }
-    return ret;
+    return maxResult;
 }
 
 describe( '396. rotate-function', () => {
