@@ -1,13 +1,23 @@
-import { rotate } from '../src/1-100/48.rotate-image';
+export function rotate( matrix: number[][] ): void {
+    const N = matrix.length;
+
+    matrix.reverse();
+
+    for ( let i = 0; i < N; ++i ) {
+        for ( let j = 0; j < i; ++j ) {
+            [matrix[i][j], matrix[j][i]] = [matrix[j][i], matrix[i][j]];
+        }
+    }
+}
 
 describe( 'Rotate Image', () => {
-    it( '1', () => {
+    it( 'case 1', () => {
         const matrix = [[1]];
         rotate( matrix );
         expect( matrix ).toStrictEqual( [[1]] );
     } );
 
-    it( '2', () => {
+    it( 'case 2', () => {
         const matrix = [
             [1, 2],
             [3, 4],
@@ -19,7 +29,7 @@ describe( 'Rotate Image', () => {
         ] );
     } );
 
-    it( '3', () => {
+    it( 'case 3', () => {
         const matrix = [
             [1, 2, 3],
             [4, 5, 6],
