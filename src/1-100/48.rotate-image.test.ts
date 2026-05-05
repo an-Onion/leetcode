@@ -10,7 +10,7 @@ export function rotate( matrix: number[][] ): void {
     }
 }
 
-describe( 'Rotate Image', () => {
+describe( '48. Rotate Image', () => {
     it( 'case 1', () => {
         const matrix = [[1]];
         rotate( matrix );
