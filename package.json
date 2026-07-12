@@ -16,14 +16,14 @@
         "prettier": "^3.8.1",
         "ts-jest": "^29.4.6",
         "ts-node": "^10",
-        "typescript-eslint": "^8.56.0"
+        "typescript-eslint": "^8.58.0"
     },
     "dependencies": {
         "@datastructures-js/deque": "1.0.8",
         "@datastructures-js/priority-queue": "^6.3.5",
         "@datastructures-js/queue": "^4.3.0",
         "lodash": "^4.17.23",
-        "typescript": "^5.9.0"
+        "typescript": "^6.0.0"
     },
     "lint-staged": {
         "*.{ts,js}": [

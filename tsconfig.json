@@ -5,13 +5,12 @@
         "target": "ESNext",
         "experimentalDecorators": true,
         "allowJs": true,
-        "allowSyntheticDefaultImports": true,
         "forceConsistentCasingInFileNames": true,
         "sourceMap": true,
         "resolveJsonModule": true,
-        "baseUrl": "./",
+        "types": ["jest"],
         "paths": {
-            "@/*": ["src/*"]
+            "@/*": ["./src/*"]
         }
     },
     "include": ["src/**/*", "test/**/*"]
