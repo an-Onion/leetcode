@@ -18,34 +18,32 @@ class MedianFinder {
         }
 
         if ( this.maxHeap.size() === this.minHeap.size() ) {
-            if ( num <= this.minHeap.front().element ) {
+            if ( num <= this.minHeap.front()! ) {
                 this.maxHeap.enqueue( num );
                 return;
             }
-            this.maxHeap.enqueue( this.minHeap.dequeue().element );
+            this.maxHeap.enqueue( this.minHeap.dequeue()! );
             this.minHeap.enqueue( num );
             return;
         }
         // maxHeap.size = minHeap.size + 1
 
-        if ( num >= this.maxHeap.front().element ) {
+        if ( num >= this.maxHeap.front()! ) {
             this.minHeap.enqueue( num );
             return;
         }
 
-        this.minHeap.enqueue( this.maxHeap.dequeue().element );
+        this.minHeap.enqueue( this.maxHeap.dequeue()! );
 
         this.maxHeap.enqueue( num );
     }
 
     findMedian(): number {
         if ( this.maxHeap.size() === this.minHeap.size() ) {
-            return (
-                ( this.maxHeap.front().element + this.minHeap.front().element ) / 2
-            );
+            return ( this.maxHeap.front()! + this.minHeap.front()! ) / 2;
         }
 
-        return this.maxHeap.front().element;
+        return this.maxHeap.front()!;
     }
 }
 

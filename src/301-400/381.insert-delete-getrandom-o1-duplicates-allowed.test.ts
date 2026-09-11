@@ -11,7 +11,7 @@ class RandomizedCollection {
             this.map.set( val, new Set() );
         }
         this.array.push( val );
-        const set = this.map.get( val );
+        const set = this.map.get( val )!;
 
         set.add( this.array.length - 1 );
 
@@ -23,17 +23,17 @@ class RandomizedCollection {
             return false;
         }
 
-        const targetSet = this.map.get( val );
-        let idx: number;
+        const targetSet = this.map.get( val )!;
+        let idx = -1;
         for ( const it of targetSet ) {
             idx = it;
             break;
         }
 
-        const rear = this.array.at( -1 );
+        const rear = this.array.at( -1 )!;
         this.array[idx] = rear;
         targetSet.delete( idx );
-        const rearSet = this.map.get( rear );
+        const rearSet = this.map.get( rear )!;
         rearSet.add( idx );
         rearSet.delete( this.array.length - 1 );
 

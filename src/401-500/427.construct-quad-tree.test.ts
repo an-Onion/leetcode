@@ -25,7 +25,7 @@ export class _Node {
 function construct( grid: number[][] ): _Node | null {
     return DFS( 0, 0, grid.length, grid.length );
 
-    function DFS( r0: number, c0: number, r1: number, c1: number ) {
+    function DFS( r0: number, c0: number, r1: number, c1: number ): _Node {
         for ( let i = r0; i < r1; ++i ) {
             for ( let j = c0; j < c1; ++j ) {
                 if ( grid[i][j] !== grid[r0][c0] ) {
@@ -51,7 +51,7 @@ describe( '427.construct-quad-tree', () => {
             [1, 0],
         ];
 
-        const result = construct( grid );
+        const result = construct( grid )!;
         expect( result.val ).toEqual( true );
         expect( result.isLeaf ).toEqual( false );
 
